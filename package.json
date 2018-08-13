@@ -4,7 +4,7 @@
   "description": "Personal Website",
   "main": "assets/js/main.js",
   "scripts": {
-    "start-dev": "fastic",
+    "start": "fastic",
     "build": "gulp",
     "clean": "gulp clean",
     "deploy": "gulp && now dist && now alias"
