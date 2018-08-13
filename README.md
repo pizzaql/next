@@ -31,4 +31,4 @@
 
 ## License
 
-MIT
+This website is based on [Roman Nurik's site](https://github.com/romannurik/roman.nurik.net), licensed under the [Apache License 2.0 License](https://github.com/romannurik/roman.nurik.net/blob/master/LICENSE).
