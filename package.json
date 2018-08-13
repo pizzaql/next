@@ -6,7 +6,8 @@
   "scripts": {
     "start": "fastic",
     "build": "gulp",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "dist": "gulp && now dist"
   },
   "repository": {
     "type": "git",

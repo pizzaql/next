@@ -201,13 +201,13 @@ body {
 }
 
 .icons .twitter::after {
-	background-image: url(../fonts/icon_twitter.svg);
+	background-image: url(../images/twitter.svg);
 }
 
 .icons .github::after {
-	background-image: url(../fonts/icon_github.svg);
+	background-image: url(../images/github.svg);
 }
 
 .icons .email::after {
-	background-image: url(../fonts/icon_email.svg);
+	background-image: url(../images/email.svg);
 }
