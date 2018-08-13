@@ -7,11 +7,6 @@ html {
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	font-family: 'Roboto Slab', serif;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }
 
 .content a,
@@ -20,17 +15,9 @@ body {
 }
 
 body {
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
 	flex-direction: column;
-	-webkit-justify-content: flex-start;
-	-ms-flex-pack: start;
 	justify-content: flex-start;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -45,26 +32,18 @@ body {
 
 .bottom,
 .top {
-	-webkit-flex: 1 0 auto;
-	-ms-flex: 1 0 auto;
 	flex: 1 0 auto;
 }
 
 .content,
 .content-container {
 	position: relative;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 }
 
 .content-container {
 	background-color: #212121;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-flex: 0 0 auto;
-	-ms-flex: 0 0 auto;
 	flex: 0 0 auto;
 	width: 100%;
 }
@@ -89,8 +68,6 @@ body {
 	padding: 24px;
 	width: 300px;
 	color: rgba(255, 255, 255, 0.8);
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
 	flex-direction: column;
 	font-size: 24px;
 	line-height: 32px;
@@ -164,12 +141,10 @@ body {
 .avatar {
 	width: 128px;
 	height: 128px;
-	background: url(../images/avatar.jpg);
+	background: url(../images/avatar.png);
 	background-size: cover;
 	border-radius: 50%;
 	background-color: #525252;
-	-webkit-align-self: center;
-	-ms-flex-item-align: center;
 	align-self: center;
 	border: 4px solid #fff;
 }
@@ -183,14 +158,8 @@ body {
 }
 
 .icons {
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
 	flex-direction: row;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	margin: 0 -8px;
 }

@@ -21,10 +21,6 @@ const paths = {
   img: {
   	src: 'assets/images/*',
     dest: 'dist/assets/images'
-  },
-  fonts: {
-  	src: 'assets/fonts/*',
-    dest: 'dist/assets/fonts'
   }
 };
 
@@ -38,7 +34,7 @@ export function html() {
 
 export function css() {
   return gulp.src(paths.css.src)
-		.pipe(cleanCSS({compatibility: 'ie8'}))
+		.pipe(cleanCSS())
 		.pipe(gulp.dest(paths.css.dest));
 }
 
@@ -50,19 +46,14 @@ export function js() {
 
 export function img() {
   return gulp.src(paths.img.src)
-		.pipe(imagemin())
+    .pipe(imagemin([
+      imagemin.optipng(),
+      imagemin.svgo()
+]))
 		.pipe(gulp.dest(paths.img.dest));
 }
 
-export function fonts() {
-  return gulp.src(paths.fonts.src)
-		.pipe(imagemin([
-			imagemin.svgo()
-		]))
-		.pipe(gulp.dest(paths.fonts.dest));
-}
-
-const build = gulp.series(clean, gulp.parallel(html, css, js, img, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, js, img));
 gulp.task('build', build);
 
 export default build;
