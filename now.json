@@ -1,0 +1,39 @@
+{
+    "alias": ["kepinski.me", "www.kepinski.me"],
+    "name": "kepinski",
+    "static": {
+        "cleanUrls": true,
+        "directoryListing": false,
+        "headers": [
+            {
+                "headers": [
+                    {
+                        "key": "Strict-Transport-Security",
+                        "value": "max-age=31536000"
+                    },
+                    {
+                        "key": "X-Content-Type-Options",
+                        "value": "nosniff"
+                    },
+                    {
+                        "key": "X-Frame-Options",
+                        "value": "SAMEORIGIN"
+                    }
+                ],
+                "source": "*"
+            },
+            {
+                "headers": [
+                    {
+                        "key": "Cache-Control",
+                        "value": "public, max-age=31536000, immutable"
+                    }
+                ],
+                "source": "**/*"
+            }
+        ],
+        "renderSingle": true,
+        "trailingSlash": false
+    },
+    "type": "static"
+}
