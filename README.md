@@ -4,9 +4,7 @@
 
 *Source code of my personal website.*
 
-<a href="https://kepinski.me">
-	<img src="screenshot.jpg" width="600">
-</a>
+![](https://github.com/xxczaki/kepinski.me/blob/master/screenshot.png)
 
 ## Dev
 
@@ -21,15 +19,11 @@
  
 # Build with gulp
 
- $ npm build
+ $ npm run build
  
 # Clean the dist directory
 
- $ npm clean
- 
-# Deploy using now
-
- $ npm deploy
+ $ npm run clean
  
 ```
 
