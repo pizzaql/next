@@ -29,6 +29,9 @@
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/xxczaki/kepinski.me)
 
-## License
+### License
 
 This website is based on [Roman Nurik's site](https://github.com/romannurik/roman.nurik.net), licensed under the [Apache License 2.0 License](https://github.com/romannurik/roman.nurik.net/blob/master/LICENSE).
+
+
+![Sponsored by Browserstack](https://imgur.com/l3iy9C6.png)
