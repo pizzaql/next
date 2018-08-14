@@ -30,6 +30,6 @@
     "gulp-htmlclean": "^2.7.22",
     "gulp-imagemin": "^4.1.0",
     "gulp-uglify": "^3.0.1",
-    "now": "^11.3.9"
+    "now": "^12.0.0-canary.73"
   }
 }
