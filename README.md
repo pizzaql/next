@@ -30,4 +30,5 @@
 This website is based on [Roman Nurik's site](https://github.com/romannurik/roman.nurik.net), licensed under the [Apache License 2.0 License](https://github.com/romannurik/roman.nurik.net/blob/master/LICENSE).
 
 
-![Sponsored by Browserstack](https://imgur.com/l3iy9C6.png)
+
+<a href="https://www.browserstack.com/"><img src="https://imgur.com/l3iy9C6.png" alt="Sponsored by BrowserStack"></a>
