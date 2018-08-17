@@ -2,7 +2,7 @@
 
 > Personal website 🚀
 
-*Source code of my personal website.*
+*The website targets the latest version of Chrome, Safari, and Firefox.*
 
 ![](https://github.com/xxczaki/kepinski.me/blob/master/screenshot.png)
 
