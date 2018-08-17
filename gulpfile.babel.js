@@ -1,6 +1,6 @@
 import gulp from 'gulp';
+import sass from 'gulp-sass';
 import uglify from 'gulp-uglify';
-import cleanCSS from 'gulp-clean-css';
 import htmlclean from 'gulp-htmlclean';
 import imagemin from 'gulp-imagemin';
 import del from 'del';
@@ -10,8 +10,8 @@ const paths = {
     src: 'index.html',
     dest: 'dist'
   },
-  css: {
-    src: 'assets/css/*.css',
+  scss: {
+    src: 'assets/scss/*.scss',
     dest: 'dist/assets/css'
   },
   js: {
@@ -29,13 +29,13 @@ export const clean = () => del([ 'dist' ]);
 export function html() {
   return gulp.src(paths.html.src)
 		.pipe(htmlclean())
-    	.pipe(gulp.dest(paths.html.dest));
+    .pipe(gulp.dest(paths.html.dest));
 }
 
-export function css() {
-  return gulp.src(paths.css.src)
-		.pipe(cleanCSS())
-		.pipe(gulp.dest(paths.css.dest));
+export function scss() {
+  return gulp.src(paths.scss.src)
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(gulp.dest(paths.scss.dest));
 }
 
 export function js() {
@@ -53,7 +53,7 @@ export function img() {
 		.pipe(gulp.dest(paths.img.dest));
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, img));
+const build = gulp.series(clean, gulp.parallel(html, scss, js, img));
 gulp.task('build', build);
 
 export default build;

@@ -5,9 +5,7 @@
   "main": "assets/js/main.js",
   "scripts": {
     "start": "fastic",
-    "build": "gulp",
-    "clean": "gulp clean",
-    "dist": "gulp && now dist"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -29,7 +27,7 @@
     "gulp-clean-css": "^3.10.0",
     "gulp-htmlclean": "^2.7.22",
     "gulp-imagemin": "^4.1.0",
-    "gulp-uglify": "^3.0.1",
-    "now": "^12.0.0-canary.73"
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1"
   }
 }
