@@ -6,6 +6,10 @@
 
 ![](https://github.com/xxczaki/kepinski.me/blob/master/preview.png)
 
+## Lighthouse Scores
+
+![Lighthouse Scores](https://lighthouse.now.sh/?perf=100&a11y=100&bp=100&seo=100)
+
 ## Dev
 
 Built using:
@@ -14,6 +18,8 @@ Built using:
 - [PostCSS](https://postcss.org/)
 - [Babel](https://babeljs.io/)
 - [modern-normalize](https://github.com/sindresorhus/modern-normalize)
+
+Hosted with [now](https://now.sh) 🔺
 
 To start a webpack-dev-server, at port 8080, just run:
 ``` bash
