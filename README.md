@@ -10,25 +10,26 @@
 
 Built using:
 
-- [Web Starter Kit](https://developers.google.com/web/starter-kit/)
-- [Sass](http://sass-lang.com/)
-- [Gulp](http://gulpjs.com/)
+- [Webpack](https://webpack.js.org/)
+- [PostCSS](https://postcss.org/)
 - [Babel](https://babeljs.io/)
 - [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 
-To build the site (which gets output in the dist directory), just run:
+To start a webpack-dev-server, at port 8080, just run:
+``` bash
+$ npm install
+$ npm start
+```
+
+To build the site (which gets output in the build directory), run:
 
 ``` bash
  $ npm install
- $ gulp
+ $ npm run build
 ```
-
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/xxczaki/kepinski.me)
 
 ### License
 
-This website is based on [Roman Nurik's site](https://github.com/romannurik/roman.nurik.net), licensed under the [Apache License 2.0 License](https://github.com/romannurik/roman.nurik.net/blob/master/LICENSE).
-
-
+MIT
 
 <a href="https://www.browserstack.com/"><img src="https://imgur.com/l3iy9C6.png" width="512" alt="Sponsored by BrowserStack"></a>
