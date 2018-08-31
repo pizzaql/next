@@ -16,9 +16,9 @@
 
 ## Dev
 
-Built using:
-
 > Hosted with [now](https://now.sh) 🔺
+
+Built using:
 
 - [Webpack](https://webpack.js.org/)
 - [PostCSS](https://postcss.org/)
