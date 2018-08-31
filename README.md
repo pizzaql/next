@@ -4,7 +4,7 @@
 
 *The website targets the latest version of Chrome, Safari, and Firefox.*
 
-![](https://github.com/xxczaki/kepinski.me/blob/master/screenshot.png)
+![](https://github.com/xxczaki/kepinski.me/blob/master/preview.png)
 
 ## Dev
 
