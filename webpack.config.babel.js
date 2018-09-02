@@ -2,9 +2,9 @@ import path from 'path';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
-import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import ResourceHintWebpackPlugin from 'resource-hints-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import SizePlugin from 'size-plugin';
 
 module.exports = {
 	entry: {
@@ -16,6 +16,11 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		filename: 'main.js'
+	},
+	stats: 'minimal',
+	devServer: {
+		compress: true,
+		stats: 'minimal'
 	},
 	module: {
 		rules: [
@@ -58,13 +63,13 @@ module.exports = {
 		]
 	},
 	plugins: [
+		new SizePlugin(),
 		new HtmlWebpackPlugin({
 			template: './src/index.html'
 		}),
 		new ScriptExtHtmlWebpackPlugin({
-			defaultAttribute: 'defer'
+			defaultAttribute: 'async'
 		}),
-		new FaviconsWebpackPlugin('./src/images/rocket.png'),
 		new ResourceHintWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: 'main.css'
