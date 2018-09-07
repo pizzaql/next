@@ -12,19 +12,19 @@ WebFont.load({
 	}
 });
 
-// Handle dark/light theme button
-btns.forEach(async btn => {
-	await btn.addEventListener('click', handleThemeUpdate);
-});
-
 // Update CSS class, when the button is pressed
-async function handleThemeUpdate(e) {
+const handleThemeUpdate = async e => {
 	if (e.target.dataset.theme === 'light') {
 		await body.classList.add('light-theme');
 	} else {
 		await body.classList.remove('light-theme');
 	}
-}
+};
+
+// Handle dark/light theme button
+btns.forEach(async btn => {
+	await btn.addEventListener('click', handleThemeUpdate);
+});
 
 // Some DevTools console messages ✨
 console.log('%cWelcome!', 'color: black; font-size: 25px; font-weight: bold;');

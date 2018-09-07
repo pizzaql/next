@@ -1,5 +1,4 @@
 import path from 'path';
-import CleanWebpackPlugin from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ResourceHintWebpackPlugin from 'resource-hints-webpack-plugin';
@@ -73,7 +72,6 @@ module.exports = {
 		new ResourceHintWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: 'main.css'
-		}),
-		new CleanWebpackPlugin(['build'])
+		})
 	]
 };
