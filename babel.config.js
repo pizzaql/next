@@ -6,7 +6,7 @@ const presets = [
       chrome: "69",
       safari: "11.1",
       opera: "55"
-    }]
+    }],
 ];
 
 module.exports = { presets };
