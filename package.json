@@ -12,7 +12,7 @@
     "clean": "del build"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.0.1",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "7.0.0",
     "@babel/register": "^7.0.0",
@@ -34,7 +34,7 @@
     "size-plugin": "^1.0.1",
     "stylelint": "^9.5.0",
     "stylelint-config-recommended": "^2.1.0",
-    "webpack": "^4.17.2",
+    "webpack": "^4.19.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8",
     "xo": "^0.23.0"
