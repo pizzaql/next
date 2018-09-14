@@ -1,8 +1,7 @@
 const presets = [
-  ["@babel/env", {
-    targets: "last 1 version",
-    }],
+	['@babel/env', {
+		targets: 'last 1 version'
+	}]
 ];
 
-module.exports = { presets };
-   
+module.exports = {presets};
