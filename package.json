@@ -8,7 +8,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development",
-    "test": "xo && stylelint 'src/main.css'",
+    "test": "xo --fix && stylelint 'src/main.css' && cat babel.config.js",
     "clean": "del build"
   },
   "devDependencies": {
