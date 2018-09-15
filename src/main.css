@@ -68,7 +68,7 @@ a {
 
 /* Header */
 header {
-  font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'Europa', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   position: relative;
 }
 
@@ -131,7 +131,7 @@ footer {
 
 
 /* Common */
-main, footer { font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; }
+main, footer { font-family: 'Europa', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; }
 header, footer { padding: 16px 0; }
 
 
