@@ -7,7 +7,7 @@ const btns = document.querySelectorAll('.btns > button');
 
 // Load Google Fonts
 WebFont.load({
-	typekit: { id: 'zuj7cbd' }
+	typekit: {id: 'zuj7cbd'}
 });
 
 // Update CSS class, when the button is pressed
