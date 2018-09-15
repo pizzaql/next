@@ -5,7 +5,7 @@ import WebFont from 'webfontloader';
 const {body} = document;
 const btns = document.querySelectorAll('.btns > button');
 
-// Load Google Fonts
+// Load Typekit font
 WebFont.load({
 	typekit: {id: 'zuj7cbd'}
 });
