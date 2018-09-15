@@ -7,9 +7,7 @@ const btns = document.querySelectorAll('.btns > button');
 
 // Load Google Fonts
 WebFont.load({
-	google: {
-		families: ['Roboto Slab:400,600']
-	}
+	typekit: { id: 'zuj7cbd' }
 });
 
 // Update CSS class, when the button is pressed
