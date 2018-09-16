@@ -38,7 +38,7 @@ To build the site (which gets output in the build directory), run:
 ## TODO
 
 * [ ] Make modern-normalize working
-* [ ] Use Service Worker
+* [ ] Make this website a PWA
 
 ### License
 
