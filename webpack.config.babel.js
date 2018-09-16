@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ResourceHintWebpackPlugin from 'resource-hints-webpack-plugin';
 import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
+import OfflinePlugin from 'offline-plugin';
 
 module.exports = {
 	entry: {
@@ -69,6 +70,7 @@ module.exports = {
 		}),
 		new ScriptExtHtmlWebpackPlugin({
 			defaultAttribute: 'async'
-		})
+		}),
+		new OfflinePlugin()
 	]
 };
