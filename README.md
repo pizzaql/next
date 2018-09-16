@@ -30,10 +30,18 @@ $ npm start
 ```
 
 To build the site (which gets output in the build directory), run:
-
 ``` bash
- $ npm install
  $ npm run build
+```
+
+To lint all JS & CSS files, run:
+```bash
+ $ npm test
+```
+
+To clean the build directory, run:
+```bash
+ $ npm run clean
 ```
 
 ## TODO
