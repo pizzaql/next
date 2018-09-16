@@ -19,7 +19,6 @@
 Built using:
 
 - [Webpack](https://webpack.js.org/)
-- [PostCSS](https://postcss.org/)
 - [Babel](https://babeljs.io/)
 - [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 
