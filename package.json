@@ -32,6 +32,7 @@
     "webpack": "^4.19.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8",
+    "webpack-pwa-manifest": "^3.7.1",
     "xo": "^0.23.0"
   },
   "xo": {
