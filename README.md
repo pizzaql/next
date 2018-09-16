@@ -35,6 +35,11 @@ To build the site (which gets output in the build directory), run:
  $ npm run build
 ```
 
+## TODO
+
+* [ ] Make modern-normalize working
+* [ ] Make this website a PWA
+
 ### License
 
 MIT
