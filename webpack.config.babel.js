@@ -78,6 +78,7 @@ module.exports = {
 			short_name: 'kepinski',
 			description: 'Personal Website of Antoni Kepinski',
 			background_color: '#212121',
+			theme_color: '#212121',
 			icons: [
 				{
 					src: path.resolve('src/images/rocket-192.png'),
