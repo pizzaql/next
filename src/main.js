@@ -5,23 +5,25 @@ import WebFont from 'webfontloader';
 const {body} = document;
 const btns = document.querySelectorAll('.btns > button');
 
-// Load Typekit font
+// Load Google Fonts
 WebFont.load({
-	typekit: {id: 'zuj7cbd'}
+	google: {
+		families: ['Open Sans:400']
+	}
 });
 
 // Update CSS class, when the button is pressed
-const handleThemeUpdate = async e => {
+const handleThemeUpdate = e => {
 	if (e.target.dataset.theme === 'light') {
-		await body.classList.add('light-theme');
+		body.classList.add('light-theme');
 	} else {
-		await body.classList.remove('light-theme');
+		body.classList.remove('light-theme');
 	}
 };
 
 // Handle dark/light theme button
-btns.forEach(async btn => {
-	await btn.addEventListener('click', handleThemeUpdate);
+btns.forEach(btn => {
+	btn.addEventListener('click', handleThemeUpdate);
 });
 
 // Some DevTools console messages ✨

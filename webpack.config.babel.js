@@ -3,12 +3,10 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ResourceHintWebpackPlugin from 'resource-hints-webpack-plugin';
 import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
-import SizePlugin from 'size-plugin';
 
 module.exports = {
 	entry: {
 		app: [
-			'@babel/polyfill',
 			'./src/app.js'
 		]
 	},
@@ -38,7 +36,7 @@ module.exports = {
 				use: [
 					MiniCssExtractPlugin.loader,
 					'css-loader',
-					'postcss-loader'
+					'clean-css-loader'
 				]
 			},
 			{
@@ -62,16 +60,15 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new SizePlugin(),
 		new HtmlWebpackPlugin({
 			template: './src/index.html'
-		}),
-		new ScriptExtHtmlWebpackPlugin({
-			defaultAttribute: 'async'
 		}),
 		new ResourceHintWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: 'main.css'
+		}),
+		new ScriptExtHtmlWebpackPlugin({
+			defaultAttribute: 'async'
 		})
 	]
 };
