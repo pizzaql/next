@@ -84,12 +84,12 @@ module.exports = {
 			icons: [
 				{
 					src: path.resolve('src/images/rocket-192.png'),
-					size: '192x192'
+					size: '192x192',
+					ios: true
 				},
 				{
 					src: path.resolve('src/images/rocket-512.png'),
-					size: '512x512',
-					ios: true
+					size: '512x512'
 				}
 			]
 		}),
