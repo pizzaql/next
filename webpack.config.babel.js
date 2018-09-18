@@ -79,6 +79,8 @@ module.exports = {
 			description: 'Personal Website of Antoni Kepinski',
 			background_color: '#212121',
 			theme_color: '#212121',
+			inject: true,
+			ios: true,
 			icons: [
 				{
 					src: path.resolve('src/images/rocket-192.png'),
@@ -86,7 +88,8 @@ module.exports = {
 				},
 				{
 					src: path.resolve('src/images/rocket-512.png'),
-					size: '512x512'
+					size: '512x512',
+					ios: true
 				}
 			]
 		}),
