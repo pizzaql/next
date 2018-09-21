@@ -4,15 +4,19 @@
   "description": "Personal Website v2",
   "license": "MIT",
   "author": "Antoni Kepinski",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxczaki/kepinski.me"
+  },
   "main": "src/app.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "npm run clean && webpack --mode production",
     "start": "webpack-dev-server --mode development",
     "test": "xo && stylelint 'src/main.css'",
     "clean": "del build"
   },
   "devDependencies": {
-     "@babel/core": "^7.1.0",
+    "@babel/core": "^7.1.0",
     "@babel/preset-env": "7.1.0",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.2",
@@ -24,9 +28,7 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "0.4.3",
     "offline-plugin": "^5.0.5",
-    "resource-hints-webpack-plugin": "0.0.2",
     "script-ext-html-webpack-plugin": "^2.0.1",
-    "speed-measure-webpack-plugin": "^1.2.2",
     "stylelint": "^9.5.0",
     "stylelint-config-recommended": "^2.1.0",
     "webpack": "^4.19.1",
@@ -46,7 +48,6 @@
     "extends": "stylelint-config-recommended"
   },
   "dependencies": {
-    "modern-normalize": "^0.5.0",
     "webfontloader": "^1.6.28"
   }
 }

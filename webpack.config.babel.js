@@ -1,7 +1,6 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import ResourceHintWebpackPlugin from 'resource-hints-webpack-plugin';
 import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 import WebpackPwaManifest from 'webpack-pwa-manifest';
 import OfflinePlugin from 'offline-plugin';
@@ -63,13 +62,16 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './src/index.html'
+			template: './src/index.html',
+			minify: {
+				collapseWhitespace: true
+			}
 		}),
-		new ResourceHintWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: 'main.css'
 		}),
 		new ScriptExtHtmlWebpackPlugin({
+			prefetch: /\.js$/,
 			defaultAttribute: 'async'
 		}),
 		/* eslint-disable camelcase */
