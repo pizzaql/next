@@ -44,11 +44,6 @@ To clean the build directory, run:
  $ npm run clean
 ```
 
-## TODO
-
-* [x] Make this website a PWA
-* [ ] Make modern-normalize working
-
 ### License
 
 MIT
