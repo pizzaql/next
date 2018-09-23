@@ -96,8 +96,9 @@ header .btns {
 header button {
   height: 20px; width: 20px;
   border-radius: 50%;
+  border-style: solid;
   cursor: pointer;
-  outline: none;
+  outline: 0;
 }
 
 header .btns button:first-child {
@@ -123,7 +124,7 @@ main p { line-height: 29px; }
 /* Footer */
 footer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
