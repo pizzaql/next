@@ -46,7 +46,7 @@ To clean the build directory, run:
 
 ## Info
 
-This site was bootstrapped with [static-webpack-boilerplate](https://github.com/xxczaki/static-webpack-boilerplate) 🦄
+This site was bootstrapped with the [static-webpack-boilerplate](https://github.com/xxczaki/static-webpack-boilerplate) 🦄
 
 ### License
 
