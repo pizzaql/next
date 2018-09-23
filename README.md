@@ -44,6 +44,10 @@ To clean the build directory, run:
  $ npm run clean
 ```
 
+## Info
+
+This site was bootstrapped with [static-webpack-boilerplate](https://github.com/xxczaki/static-webpack-boilerplate) 🦄
+
 ### License
 
 MIT
