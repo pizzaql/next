@@ -5,12 +5,14 @@ import WebFont from 'webfontloader';
 const {body} = document;
 const btns = document.querySelectorAll('.btns > button');
 
-// Load Google Fonts
-WebFont.load({
-	google: {
-		families: ['Open Sans:400']
-	}
-});
+// Some DevTools console messages ✨
+const info = () => {
+	const welcomeMessage = 'color: black; font-size: 25px; font-weight: bold;';
+	const infoMessage = 'color: grey; font-size: 10px; font-weight: bold;';
+
+	console.log('%cWelcome!', welcomeMessage);
+	console.log('%cWanna look into source code? Check out https://github.com/xxczaki/kepinski.me', infoMessage);
+};
 
 // Update CSS class, when the button is pressed
 const handleThemeUpdate = e => {
@@ -26,6 +28,11 @@ btns.forEach(btn => {
 	btn.addEventListener('click', handleThemeUpdate);
 });
 
-// Some DevTools console messages ✨
-console.log('%cWelcome!', 'color: black; font-size: 25px; font-weight: bold;');
-console.log('%cWanna look into source code? Check out https://github.com/xxczaki/kepinski.me', 'color: grey; font-size: 10px; font-weight: bold;');
+// Load Google Fonts
+WebFont.load({
+	google: {
+		families: ['Open Sans:400']
+	}
+});
+
+info();
