@@ -1,155 +1,103 @@
-/* Variables */
-:root {
-  --c-black: #212121;
-  --c-white: #ffffff;
-  --c-grey: #BDBDBD;
-  --c-light-grey: #D1D1D1;
-  --c-border: #737373;
-
-
-/* Dark Theme */
-  --c-bg: var(--c-black);
-  --c-text: var(--c-grey);
-  --c-heading: var(--c-white);
-  --c-link: var(--c-light-grey);
-}
-
-
-/* Light Theme */
-.light-theme {
-  --c-bg: var(--c-white);
-  --c-text: #333333;
-  --c-heading: var(--c-black);
-  --c-link: #111111;
-  --c-border: var(--c-grey);
-}
-
-
 /* Basic Styling */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  background: var(--c-bg);
-  color: var(--c-text);
-	-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeSpeed;
-  display: flex;
-  align-items: center;
-  transition: background .3s ease;
-}
-
 a {
-  transition: color .3s ease;
-  text-decoration: none;
-  color: var(--c-link);
+  color: #070c10
 }
 
-
-/* Container */
-.container {
-  padding: 0 20px;
-  max-width: 510px;
-  margin: 0 auto;
-  opacity: 0;
-
-  animation-name: fadeIn;
-  -webkit-animation-duration: 0.8s;
-  animation-duration: 0.8s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
+body {
+  background: #fdfdfd;
+  color: #353735;
+  padding: 1em;
+  line-height: 1.8em;
+  font-family: Roboto Mono, monospace;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  word-wrap: break-word
 }
 
-
-/* Header */
-header {
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  position: relative;
+:focus {
+  outline: none
 }
 
-header h1,
-header h3 {
-  margin: 0;
-  letter-spacing: 1px;
+::selection {
+  background-color: #757575
 }
 
-header h1 {
-  margin-bottom: 6px;
-  color: var(--c-heading);
-}
-header h3 { color: var(--c-text); }
-
-header .btns {
-  position: absolute;
-  top: 50%; right: 0;
-  transform: translateY(-50%);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+details {
+  margin: 1em 0
 }
 
-header button {
-  height: 20px; width: 20px;
-  border-radius: 50%;
-  border-style: solid;
-  cursor: pointer;
-  outline: 0;
+summary::-webkit-details-marker {
+  font-size: 0.8em;
+  margin-right: 0.8em
 }
 
-header .btns button:first-child {
-  background: var(--c-black);
-  border-color: var(--c-white);
-}
-header .btns button:last-child {
-  background: var(--c-white);
-  border-color: var(--c-black);
+h2 {
+  font-size: 1.2em;
+  margin-top: 50px
 }
 
+.header,
+.wrapper {
+  width: 100%;
+  margin: 0 auto 30px;
+  max-width: 50em;
+  padding-left: 15px;
+  padding-right: 15px
+}
 
-/* Main */
+.no-underline {
+  text-decoration: none
+}
+
+.as-text {
+  display: inline;
+  font-size: inherit
+}
+
+a,
+header,
 main {
-  padding: 30px 0;
-  border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
+  box-sizing: border-box
 }
 
-main p { line-height: 29px; }
+a:hover {
+  text-decoration: none;
+  background: #353735;
+  color: #fdfdfd
+}
 
+button {
+  padding: 5px 6px 3px;
+  border-radius: 2px;
+  border: 0;
+  background: transparent;
+  color: #353735;
+  background-color: #efefef;
+  cursor: pointer
+}
 
-/* Footer */
-footer {
-  display: flex;
-  justify-content: space-around;
-  -webkit-user-select: none;
-  -moz-user-select: none;
+/* Dark Mode */
+.dark-mode {
+  color: #fdfdfd;
+  background: #212121
+}
+
+.dark-mode a {
+  color: #fafff7
+}
+
+.dark-mode a:hover {
+  background: #fdfdfd;
+  color: #1b1b1b
+}
+
+.dark-mode button {
+  color: #fdfdfd;
+  background-color: #303030;
   user-select: none;
 }
 
-
-/* Common */
-main, footer { font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; }
-header, footer { padding: 16px 0; }
-
-
-/* Animations */
-@-webkit-keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-
-/* Responsive */
-@media only screen and (max-width: 500px) {
-  footer { font-size: 14px; }
-  .btns { display: none; }
+.dark-mode button::before {
+  content: 'Not '
 }

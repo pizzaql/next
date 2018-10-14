@@ -1,7 +1,7 @@
 {
   "name": "kepinski.me",
-  "version": "2.0.0",
-  "description": "Personal Website v2",
+  "version": "3.0.0",
+  "description": "Personal Website v3",
   "license": "MIT",
   "author": "Antoni Kepinski",
   "repository": {
@@ -21,6 +21,7 @@
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.4",
     "clean-css-loader": "^1.1.0",
+    "critters-webpack-plugin": "^1.2.1",
     "css-loader": "1.0.0",
     "del-cli": "^1.1.0",
     "file-loader": "2.0.0",
@@ -41,7 +42,8 @@
     "envs": "browser",
     "ignores": [
       "src/app.js",
-      "build/main.js"
+      "build/main.js",
+      "build/sw.js"
     ]
   },
   "stylelint": {

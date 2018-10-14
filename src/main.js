@@ -2,8 +2,10 @@
 
 import WebFont from 'webfontloader';
 
-const {body} = document;
-const btns = document.querySelectorAll('.btns > button');
+const emoji = ['🚀', '🌐', '⚡', '🔥', '🦄'];
+const randomEmoji = document.querySelector('.re');
+const supportsLocalStorage = 'localStorage' in window;
+const darkModeButton = document.querySelector('.dm');
 
 // Some DevTools console messages ✨
 const info = () => {
@@ -14,24 +16,45 @@ const info = () => {
 	console.log('%cWanna look into source code? Check out https://github.com/xxczaki/kepinski.me', infoMessage);
 };
 
-// Update CSS class, when the button is pressed
-const handleThemeUpdate = e => {
-	if (e.target.dataset.theme === 'light') {
-		body.classList.add('light-theme');
-	} else {
-		body.classList.remove('light-theme');
-	}
-};
+// Choose random emoji
+if (randomEmoji) {
+	randomEmoji.textContent = emoji[Math.floor(Math.random() * emoji.length)];
+}
 
-// Handle dark/light theme button
-btns.forEach(btn => {
-	btn.addEventListener('click', handleThemeUpdate);
-});
+// Trigger an event, if the button is pressed
+if (darkModeButton) {
+	darkModeButton.addEventListener('click', switchMode);
+}
+
+// Check, if browser supports local storage
+if (supportsLocalStorage) {
+	const darkModeOn = localStorage.getItem('darkMode');
+	if (darkModeOn) {
+		switchMode();
+	}
+}
+
+// Switch mode
+function switchMode() {
+	const on = document.body.classList.toggle('dark-mode');
+
+	if (darkModeButton) {
+		darkModeButton.setAttribute('aria-pressed', on);
+	}
+	// If the browser supports local storage, save the preferred mode there
+	if (supportsLocalStorage) {
+		if (on) {
+			localStorage.setItem('darkMode', true);
+		} else {
+			localStorage.removeItem('darkMode');
+		}
+	}
+}
 
 // Load Google Fonts
 WebFont.load({
 	google: {
-		families: ['Open Sans:400']
+		families: ['Roboto Mono:400']
 	}
 });
 

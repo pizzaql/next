@@ -1,6 +1,7 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import Critters from 'critters-webpack-plugin';
 import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 import WebpackPwaManifest from 'webpack-pwa-manifest';
 import OfflinePlugin from 'offline-plugin';
@@ -73,6 +74,11 @@ module.exports = {
 		new ScriptExtHtmlWebpackPlugin({
 			prefetch: /\.js$/,
 			defaultAttribute: 'async'
+		}),
+		new Critters({
+			preload: 'swap',
+			preloadFonts: true,
+			compress: true
 		}),
 		/* eslint-disable camelcase */
 		new WebpackPwaManifest({
