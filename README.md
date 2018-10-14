@@ -4,9 +4,7 @@
 
 [![Build Status](https://travis-ci.org/xxczaki/kepinski.me.svg?branch=master)](https://travis-ci.org/xxczaki/kepinski.me) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
-*The website targets the latest version of Chrome, Safari, and Firefox.*
-
-![](https://github.com/xxczaki/kepinski.me/blob/master/preview.png)
+*The website targets the latest version of Chrome, Safari, and Firefox.
 
 ---
 
