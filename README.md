@@ -10,18 +10,18 @@
 
 ## Lighthouse Scores
 
-![Lighthouse Scores](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=100&seo=100)
+![Lighthouse Scores](https://lighthouse.now.sh/?perf=100&pwa=0&a11y=100&bp=100&seo=100)
 
 ## Dev
 
 Built using:
 
+- [React](https://reactjs.org/)
+- [styled-components](https://www.styled-components.com/)
 - [Webpack](https://webpack.js.org/)
-- [Babel](https://babeljs.io/)
-- [Offline Plugin](https://github.com/NekR/offline-plugin)
 - [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 
-To start a webpack-dev-server, at port 8080, just run:
+To start a webpack-dev-server with HMR, at port 5000, just run:
 ``` bash
 $ npm install
 $ npm start
@@ -31,20 +31,6 @@ To build the site (which gets output in the build directory), run:
 ``` bash
  $ npm run build
 ```
-
-To lint all JS & CSS files, run:
-```bash
- $ npm test
-```
-
-To clean the build directory, run:
-```bash
- $ npm run clean
-```
-
-## Info
-
-This site was bootstrapped with the [static-webpack-boilerplate](https://github.com/xxczaki/static-webpack-boilerplate) 🦄
 
 ### License
 
