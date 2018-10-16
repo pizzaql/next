@@ -18,13 +18,13 @@
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "script-ext-html-webpack-plugin": "^2.0.1",
+    "styled-components": "^4.0.0-beta.11.3",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "styled-components": "^4.0.0-beta.11.3"
+    "react-dom": "^16.5.2"
   }
 }

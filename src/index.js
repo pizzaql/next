@@ -9,8 +9,10 @@ import Details from './components/details.js';
 import Description from './components/description.js';
 import Link from './components/link.js';
 
+// Import avatar
 import image from '../public/images/avatar.jpg';
 
+// Global Style
 const GlobalStyle = createGlobalStyle`
   body {
     background: #212121;
@@ -38,9 +40,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+// Render page
 ReactDOM.render(
     <Container>
-      <Avatar src={image}/>
+      <Avatar src={image} draggable="false"/>
       <Header>Antoni Kepinski</Header>
       <Details>
       <summary>
