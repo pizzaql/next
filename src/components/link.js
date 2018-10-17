@@ -5,12 +5,6 @@ const Link = styled.a`
     box-sizing: border-box;
     text-decoration: none;
     user-select: none
-    
-    &&:hover {
-        text-decoration: none;
-        background: #353735;
-        color: #fdfdfd
-    }
 `
 
 export default Link;

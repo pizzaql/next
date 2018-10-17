@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components'
 import WebFont from 'webfontloader';
 
+// Import Components
 import Container from './components/container.js';
 import Avatar from './components/avatar.js';
 import Header from './components/header.js';
@@ -33,6 +34,12 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeSpeed;
     word-wrap: break-word
   }
+
+  a:hover {
+    text-decoration: none;
+    background: #353735;
+    color: #fdfdfd
+  } 
 
   :focus {
     outline: none
