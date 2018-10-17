@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components'
+import WebFont from 'webfontloader';
 
 import Container from './components/container.js';
 import Avatar from './components/avatar.js';
@@ -11,6 +12,13 @@ import Link from './components/link.js';
 
 // Import avatar
 import image from '../public/images/avatar.jpg';
+
+// Load Google Fonts
+WebFont.load({
+	google: {
+		families: ['Roboto Mono:400']
+	}
+});
 
 // Global Style
 const GlobalStyle = createGlobalStyle`
@@ -44,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
 ReactDOM.render(
     <Container>
       <Avatar src={image} draggable="false"/>
-      <Header>Antoni Kepinski</Header>
+      <Header>Antoni Kepinski ⚡</Header>
       <Details>
       <summary>
         <Description class="as-text">About me</Description>
