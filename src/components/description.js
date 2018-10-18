@@ -6,6 +6,6 @@ const Description = styled.h2`
     font-size: inherit;
     box-sizing: border-box;
     user-select: none
-`
+`;
 
 export default Description;

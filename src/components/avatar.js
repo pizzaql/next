@@ -6,6 +6,6 @@ const Avatar = styled.img`
     height: 128px;
     background-color: #fff;
     padding: 4px
-`
+`;
 
 export default Avatar;

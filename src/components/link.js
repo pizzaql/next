@@ -5,6 +5,6 @@ const Link = styled.a`
     box-sizing: border-box;
     text-decoration: none;
     user-select: none
-`
+`;
 
 export default Link;
