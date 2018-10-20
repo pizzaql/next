@@ -4,7 +4,6 @@ import {createGlobalStyle} from 'styled-components';
 import WebFont from 'webfontloader';
 
 // Import Components
-import image from '../public/images/avatar.jpg';
 import Container from './components/container';
 import Avatar from './components/avatar';
 import Header from './components/header';
@@ -12,7 +11,8 @@ import Details from './components/details';
 import Description from './components/description';
 import Link from './components/link';
 
-// Import avatar
+// Import image
+import image from '../public/images/avatar.jpg';
 
 // Load Google Fonts
 WebFont.load({
