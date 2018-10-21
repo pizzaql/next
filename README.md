@@ -34,6 +34,10 @@ To build the site (which gets output in the build directory), run:
  $ npm run build
 ```
 
+## Info
+
+This site was bootstrapped with the [styled-react-boilerplate](https://github.com/xxczaki/styled-react-boilerplate) :unicorn:
+
 ### License
 
 MIT
