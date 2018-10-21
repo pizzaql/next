@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
 // Render page
 ReactDOM.render(
 	<Container>
-		<Avatar src={image} draggable="false"/>
+		<Avatar src={image} draggable="false" alt="Antoni Kepinski"/>
 		<Header>Antoni Kepinski ⚡</Header>
 		<Details>
 			<summary>
