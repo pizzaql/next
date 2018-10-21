@@ -78,7 +78,7 @@ ReactDOM.render(
 				<li><Link href="https://github.com/xxczaki/fastic/">Fastic</Link></li>
 				<li><Link href="https://github.com/xxczaki/speedo-cli/">Speedo CLI</Link></li>
 				<li><Link href="https://github.com/xxczaki/xa/">XA</Link></li>
-				<li><Link href="https://github.com/xxczaki/status-git">XA</status-git></li>
+				<li><Link href="https://github.com/xxczaki/status-git">Status Git</Link></li>
 			</ul>
 		</Details>
 		<Details>
