@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import {createGlobalStyle} from 'styled-components';
 import WebFont from 'webfontloader';
 
-// Import image
-import image from '../public/images/avatar.jpg';
+// Import images
+import me from '../public/images/avatar.jpg';
 
 // Import Components
 import Container from './components/container';
@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
 // Render page
 ReactDOM.render(
 	<Container>
-		<Avatar src={image} draggable="false" alt="Antoni Kepinski"/>
+		<Avatar src={me} draggable="false" alt="Antoni Kepinski"/>
 		<Header>Antoni Kepinski ⚡</Header>
 		<Details>
 			<summary>
