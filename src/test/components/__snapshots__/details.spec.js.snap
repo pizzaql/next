@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details renders correctly 1`] = `
+.c0 {
+  margin: 1em 0;
+}
+
+<details
+  className="c0"
+/>
+`;

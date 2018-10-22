@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders correctly 1`] = `
+.c0 {
+  color: #fafff7;
+  box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<a
+  className="c0"
+/>
+`;

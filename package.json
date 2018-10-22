@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --open --mode development",
     "build": "webpack --mode production",
-    "test": "xo && stylelint './src/**/*.js'"
+    "test": "xo && stylelint './src/**/*.js' && jest"
   },
   "main": "src/index.js",
   "repository": "https://github.com/xxczaki/kepinski.me",
@@ -15,6 +15,8 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-styled-components": "^1.8.0",
     "eslint-config-xo-react": "^0.17.0",
@@ -26,14 +28,17 @@
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.5.0",
-    "webpack": "^4.21.0",
+    "webpack": "^4.22.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
     "xo": "^0.23.0"
   },
   "dependencies": {
+    "jest": "^23.6.0",
+    "jest-styled-components": "^6.2.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-test-renderer": "^16.5.2",
     "styled-components": "^4.0.2",
     "webfontloader": "^1.6.28"
   },

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar renders correctly 1`] = `
+.c0 {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  background-color: #fff;
+  padding: 4px;
+}
+
+<img
+  className="c0"
+/>
+`;

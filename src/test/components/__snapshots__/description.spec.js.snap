@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Description renders correctly 1`] = `
+.c0 {
+  margin-top: 50px;
+  display: inline;
+  font-size: inherit;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<h2
+  className="c0"
+/>
+`;
