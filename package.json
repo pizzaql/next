@@ -30,7 +30,7 @@
     "stylelint-processor-styled-components": "^1.5.0",
     "webpack": "^4.22.0",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9",
+    "webpack-dev-server": "^3.1.10",
     "xo": "^0.23.0"
   },
   "dependencies": {
@@ -46,6 +46,7 @@
     "extends": "xo-react",
     "envs": "browser",
     "esnext": true,
+    "ignores": "src/test",
     "rules": {
       "react/no-unescaped-entities": null
     }
