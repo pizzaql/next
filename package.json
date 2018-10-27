@@ -46,7 +46,10 @@
     "extends": "xo-react",
     "envs": "browser",
     "esnext": true,
-    "ignores": "src/test",
+    "ignores": [
+      "src/test",
+      "src/index.js"
+    ],
     "rules": {
       "react/no-unescaped-entities": null
     }
