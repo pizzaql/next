@@ -37,8 +37,8 @@ const GlobalStyle = createGlobalStyle`
 
   a:hover {
     text-decoration: none;
-    background: #353735;
-    color: #fdfdfd
+    background: #fdfdfd;
+    color: #1b1b1b
   } 
 
   :focus {
@@ -85,11 +85,8 @@ ReactDOM.render(
 			<summary>
 				<Description class="as-text">Social Media & Contact</Description>
 			</summary>
-			<ul className="list list-items">
-				<li><Link href="https://github.com/xxczaki" rel="me">GitHub</Link></li>
-				<li><Link href="https://twitter.com/dokwadratu" rel="me">Twitter</Link></li>
-				<li><Link href="mailto:a@kepinski.me?Subject=Hello" rel="me">Mail</Link></li>
-			</ul>
+				<p>I write code on <Link href="https://github.com/xxczaki" rel="me">GitHub</Link> & post short thoughts on <Link href="https://twitter.com/dokwadratu" rel="me">Twitter</Link>.</p>
+				<Link href="mailto:a@kepinski.me?Subject=Hello" rel="me">Get in touch 👋</Link>
 		</Details>
 		<GlobalStyle/>
 	</Container>,
