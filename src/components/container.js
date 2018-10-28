@@ -5,7 +5,7 @@ const Container = styled.div`
     flex-direction: column;
     width: 100%;
     margin: 0 auto 30px;
-    max-width: 50em;
+    max-width: 60em;
     padding-left: 15px;
     padding-right: 15px
 `;

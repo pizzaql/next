@@ -23,7 +23,23 @@ module.exports = {
 			},
 			{
 				test: /\.(jpg|png)$/,
-				loader: 'file-loader'
+				use: [
+					'file-loader',
+					{
+						loader: 'img-loader',
+						options: {
+							plugins: [
+								require('imagemin-mozjpeg')({
+									progressive: true
+								}),
+								require('imagemin-pngquant')({
+									floyd: 0.5,
+									speed: 5
+								})
+							]
+						}
+					}
+				]
 			}
 		]
 	},
