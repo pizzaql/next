@@ -9,10 +9,6 @@
 
 ---
 
-## Lighthouse Scores
-
-![Lighthouse Scores](https://lighthouse.now.sh/?perf=100&pwa=0&a11y=100&bp=100&seo=100)
-
 ## Dev
 
 Built using:
