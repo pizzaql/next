@@ -85,7 +85,7 @@ ReactDOM.render(
 			<summary>
 				<Description class="as-text">Social Media & Contact</Description>
 			</summary>
-				<p>I write code on <Link href="https://github.com/xxczaki" rel="me">GitHub</Link> & post short thoughts on <Link href="https://twitter.com/dokwadratu" rel="me">Twitter</Link>.</p>
+				<p>I write code on <Link href="https://github.com/xxczaki" rel="me">GitHub</Link>, post short thoughts on <Link href="https://twitter.com/dokwadratu" rel="me">Twitter</Link> & the longer ones on my <Link href="https://medium.com/kepinski-dev-blog" rel="me">Blog</Link></p>
 				<Link href="mailto:a@kepinski.me?Subject=Hello" rel="me">Get in touch 👋</Link>
 		</Details>
 		<GlobalStyle/>
