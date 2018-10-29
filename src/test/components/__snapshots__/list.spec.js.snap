@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders correctly 1`] = `
+.c0 {
+  position: relative;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1.2em;
+}
+
+.c0 li:before {
+  content: "›";
+  position: absolute;
+  left: 0;
+}
+
+<ul
+  className="c0"
+/>
+`;

@@ -11,6 +11,7 @@ import Container from './components/container';
 import Avatar from './components/avatar';
 import Header from './components/header';
 import Details from './components/details';
+import List from './components/list';
 import Description from './components/description';
 import Link from './components/link';
 
@@ -65,7 +66,7 @@ ReactDOM.render(
 			<summary>
 				<Description class="as-text">Projects</Description>
 			</summary>
-			<ul className="list list-items">
+			<List>
 				<li><Link href="https://github.com/xxczaki/cash-cli/">Cash CLI</Link></li>
 				<li><Link href="https://github.com/elcalc/elcalc/">Elcalc</Link></li>
 				<li><Link href="https://github.com/xxczaki/oji/">Oji</Link></li>
@@ -73,7 +74,7 @@ ReactDOM.render(
 				<li><Link href="https://github.com/xxczaki/speedo-cli/">Speedo CLI</Link></li>
 				<li><Link href="https://github.com/xxczaki/xa/">XA</Link></li>
 				<li><Link href="https://github.com/xxczaki/status-git">Status Git</Link></li>
-			</ul>
+			</List>
 		</Details>
 		<Details>
 			<summary>
