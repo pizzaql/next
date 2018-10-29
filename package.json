@@ -56,5 +56,8 @@
     "rules": {
       "react/no-unescaped-entities": null
     }
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
