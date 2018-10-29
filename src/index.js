@@ -35,12 +35,6 @@ const GlobalStyle = createGlobalStyle`
     word-wrap: break-word
   }
 
-  a:hover {
-    text-decoration: none;
-    background: #fdfdfd;
-    color: #1b1b1b
-  } 
-
   :focus {
     outline: none
   }
@@ -58,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
 // Render page
 ReactDOM.render(
 	<Container>
-		<Avatar src={me} draggable="false" alt="Antoni Kepinski"/>
+	<Avatar src={me} draggable="false" alt="Antoni Kepinski"/>
 		<Header>Antoni Kepinski ⚡</Header>
 		<Details>
 			<summary>
