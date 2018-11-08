@@ -11,6 +11,8 @@
 
 ## Dev
 
+> Hosted with [now Δ](https://zeit.com/now)
+
 Built using:
 
 - [React](https://reactjs.org/)
@@ -25,10 +27,7 @@ $ npm install
 $ npm start
 ```
 
-To build the site (which gets output in the build directory), run:
-``` bash
- $ npm run build
-```
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/zpnk/hello-world)
 
 ## Info
 
