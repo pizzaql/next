@@ -7,6 +7,10 @@ exports[`Avatar renders correctly 1`] = `
   height: 128px;
   background-color: #fff;
   padding: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 <img

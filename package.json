@@ -4,7 +4,7 @@
   "description": "Personal Website built with React & styled-components",
   "scripts": {
     "start": "webpack-dev-server --hot --open --mode development",
-    "build": "webpack --mode production",
+    "now-build": "npm test && webpack --mode production",
     "test": "xo && stylelint './src/**/*.js' && jest"
   },
   "main": "src/index.js",
@@ -12,8 +12,8 @@
   "author": "Antoni Kepinski",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0 ",
     "babel-jest": "^23.6.0",
@@ -29,7 +29,7 @@
     "img-loader": "^3.0.1",
     "jest": "^23.6.0",
     "jest-styled-components": "^6.2.2",
-    "react-test-renderer": "^16.6.0",
+    "react-test-renderer": "^16.6.1",
     "script-ext-html-webpack-plugin": "^2.1.2",
     "stylelint": "^9.7.1",
     "stylelint-config-recommended": "^2.1.0",
@@ -41,8 +41,8 @@
     "xo": "^0.23.0"
   },
   "dependencies": {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
     "styled-components": "^4.0.3",
     "webfontloader": "^1.6.28"
   },
