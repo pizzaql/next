@@ -29,6 +29,7 @@
     "fontfaceobserver": "^2.0.13",
     "next": "^7.0.2",
     "react": "^16.6.1",
+    "react-dom": "^16.6.1",
     "styled-components": "^4.1.0"
   },
   "xo": {
