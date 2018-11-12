@@ -34,6 +34,7 @@ export default class MyDocument extends Document {
 					<meta name="og:site_name" content="kepinski.me" />
 					<meta name="fb:admins" content="100001509073874" />
 					<meta name="og:type" content="website" />
+					<link rel="icon" href="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/favicon.png" />
 					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@0.5.0/modern-normalize.min.css" />
 					{this.props.styleTags}
 				</Head>

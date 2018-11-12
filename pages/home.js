@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
 
 export default Home => (
 	<Container>
-		<Avatar src="/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
+		<Avatar src="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
 		<Header>Antoni Kepinski ⚡</Header>
 		<Details>
 			<summary>

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start -p 8000",
+    "start": "next start",
     "test": "xo && stylelint './pages/**/*.js' && jest"
   },
   "main": "pages/index.js",
@@ -29,7 +29,7 @@
     "fontfaceobserver": "^2.0.13",
     "next": "^7.0.2",
     "react": "^16.6.1",
-    "styled-components": "^4.0.3"
+    "styled-components": "^4.1.0"
   },
   "xo": {
     "extends": "xo-react",
