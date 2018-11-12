@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
-import Details from '../../components/details';
+import Details from '../../pages/components/details';
 
 test('Details renders correctly', async () => {
 	const tree = await renderer.create(<Details/>).toJSON();

@@ -3,15 +3,16 @@ const presets = [
 		targets: 'last 1 version',
 		shippedProposals: true
 	}],
-	['@babel/preset-react', {
-		useBuiltIns: true
-	}]
+	['next/babel']
 ];
 
 const plugins = [
 	['babel-plugin-styled-components', {
 		minify: true,
-		pure: true
+		pure: true,
+		ssr: true,
+		displayName: true,
+		preprocess: false
 	}]
 ];
 

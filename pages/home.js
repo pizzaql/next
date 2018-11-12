@@ -1,10 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {createGlobalStyle} from 'styled-components';
-import WebFont from 'webfontloader';
-
-// Import images
-import me from '../public/images/avatar.jpg';
 
 // Import Components
 import Container from './components/container';
@@ -14,13 +9,6 @@ import Details from './components/details';
 import List from './components/list';
 import Description from './components/description';
 import Link from './components/link';
-
-// Load Google Fonts
-WebFont.load({
-	google: {
-		families: ['Roboto Mono:400']
-	}
-});
 
 // Global Style
 const GlobalStyle = createGlobalStyle`
@@ -35,7 +23,6 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeSpeed;
     word-wrap: break-word
   }
-
   :focus {
     outline: none
   }
@@ -43,28 +30,26 @@ const GlobalStyle = createGlobalStyle`
   ::selection {
     background-color: #9E9E9E
   }
-
   summary::-webkit-details-marker {
     font-size: 0.8em;
     margin-right: 0.8em
   }
 `;
 
-// Render page
-ReactDOM.render(
+export default Home => (
 	<Container>
-	<Avatar src={me} draggable="false" alt="Antoni Kepinski"/>
+		<Avatar src="/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
 		<Header>Antoni Kepinski ⚡</Header>
 		<Details>
 			<summary>
-				<Description class="as-text">About me</Description>
+				<Description>About me</Description>
 			</summary>
 			<p>I'm 15 years old Node.js Developer, currently living in Poland.</p>
 			<p>I love making cool CLI apps & modules.</p>
 		</Details>
 		<Details>
 			<summary>
-				<Description class="as-text">Projects</Description>
+				<Description >Projects</Description>
 			</summary>
 			<List>
 				<li><Link href="https://github.com/xxczaki/cash-cli/">Cash CLI</Link></li>
@@ -78,12 +63,11 @@ ReactDOM.render(
 		</Details>
 		<Details>
 			<summary>
-				<Description class="as-text">Social Media & Contact</Description>
+				<Description>Social Media & Contact</Description>
 			</summary>
-				<p>I write code on <Link href="https://github.com/xxczaki" rel="me">GitHub</Link>, post short thoughts on <Link href="https://twitter.com/dokwadratu" rel="me">Twitter</Link> & the longer ones on my <Link href="https://medium.com/kepinski-dev-blog" rel="me">Blog</Link>.</p>
-				<Link href="mailto:a@kepinski.me?Subject=Hello" rel="me">Get in touch 👋</Link>
+			<p>I write code on <Link href="https://github.com/xxczaki" rel="me">GitHub</Link>, post short thoughts on <Link href="https://twitter.com/dokwadratu" rel="me">Twitter</Link> & the longer ones on my <Link href="https://medium.com/kepinski-dev-blog" rel="me">Blog</Link>.</p>
+			<Link href="mailto:a@kepinski.me?Subject=Hello" rel="me">Get in touch 👋</Link>
 		</Details>
 		<GlobalStyle/>
-	</Container>,
-	document.getElementById('root')
+	</Container>
 );
