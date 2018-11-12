@@ -12,7 +12,7 @@ const Fonts = () => {
 
 	try {
 		roboto.load().then(() => {
-			document.documentElement.classList.add('roboto+mono');
+			document.documentElement.classList.add('loaded');
 			consola.success('Fonts loaded!');
 		});
 	} catch (error) {
