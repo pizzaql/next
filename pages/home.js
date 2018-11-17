@@ -39,7 +39,11 @@ const GlobalStyle = createGlobalStyle`
 // Template
 export default Home => (
 	<Container>
-		<Avatar src="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
+	<picture>
+  	<source type="image/webp" srcset="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.webp" draggable="false" alt="Antoni Kepinski"/>
+  	<source type="image/jpeg" srcset="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
+  	<Avatar src="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
+	</picture>
 		<Header>Antoni Kepinski ⚡</Header>
 		<Details>
 			<summary>
