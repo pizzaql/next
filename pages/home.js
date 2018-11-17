@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+// Template
 export default Home => (
 	<Container>
 		<Avatar src="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
@@ -49,8 +50,9 @@ export default Home => (
 		</Details>
 		<Details>
 			<summary>
-				<Description >Projects</Description>
+				<Description>Projects</Description>
 			</summary>
+			<p>Here is a list of my featured projects:</p>
 			<List>
 				<li><Link href="https://github.com/xxczaki/cash-cli/">Cash CLI</Link></li>
 				<li><Link href="https://github.com/elcalc/elcalc/">Elcalc</Link></li>

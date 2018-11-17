@@ -17,21 +17,10 @@ Built using:
 
 - [React](https://reactjs.org/)
 - [styled-components](https://www.styled-components.com/)
-- [Webpack](https://webpack.js.org/)
+- [Next.js](https://nextjs.org/)
 - [modern-normalize](https://github.com/sindresorhus/modern-normalize)
-- [stylelint](https://stylelint.io/)
-
-To start a webpack-dev-server with HMR, at port 5000, just run:
-``` bash
-$ npm install
-$ npm start
-```
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/xxczaki/kepinski.me)
-
-## Info
-
-This site was bootstrapped with the [styled-react-boilerplate](https://github.com/xxczaki/styled-react-boilerplate) :unicorn:
 
 ### License
 

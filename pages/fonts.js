@@ -1,6 +1,7 @@
 const FontFaceObserver = require('fontfaceobserver');
 const consola = require('consola');
 
+// Load fonts
 const Fonts = () => {
 	const link = document.createElement('link');
 	link.href = 'https://fonts.googleapis.com/css?family=Roboto+Mono:400';

@@ -17,7 +17,7 @@
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
     "jest-styled-components": "^6.3.1",
-    "react-test-renderer": "^16.6.1",
+    "react-test-renderer": "^16.6.3",
     "stylelint": "^9.8.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",
@@ -25,12 +25,12 @@
     "xo": "^0.23.0"
   },
   "dependencies": {
-    "consola": "^2.2.4",
+    "consola": "^2.2.6",
     "fontfaceobserver": "^2.0.13",
     "next": "^7.0.2",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "styled-components": "^4.1.0"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "styled-components": "^4.1.1"
   },
   "xo": {
     "extends": "xo-react",
