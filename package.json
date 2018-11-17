@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Personal Website built with Next.js, React & styled-components",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "start": "next start",
     "test": "xo && stylelint './pages/**/*.js' && jest"
   },
   "main": "pages/index.js",
@@ -30,7 +30,8 @@
     "next": "^7.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "styled-components": "^4.1.1"
+    "styled-components": "^4.1.1",
+    "sw-precache-webpack-plugin": "^0.11.5"
   },
   "xo": {
     "extends": "xo-react",

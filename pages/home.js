@@ -58,21 +58,21 @@ export default Home => (
 			</summary>
 			<p>Here is a list of my featured projects:</p>
 			<List>
-				<li><Link href="https://github.com/xxczaki/cash-cli/">Cash CLI</Link></li>
-				<li><Link href="https://github.com/elcalc/elcalc/">Elcalc</Link></li>
-				<li><Link href="https://github.com/xxczaki/oji/">Oji</Link></li>
-				<li><Link href="https://github.com/xxczaki/fastic/">Fastic</Link></li>
-				<li><Link href="https://github.com/xxczaki/speedo-cli/">Speedo CLI</Link></li>
-				<li><Link href="https://github.com/xxczaki/xa/">XA</Link></li>
-				<li><Link href="https://github.com/xxczaki/airly-cli">Airly CLI</Link></li>
+				<li><Link href="https://github.com/xxczaki/cash-cli/" target="_blank" rel="noopener">Cash CLI</Link></li>
+				<li><Link href="https://github.com/elcalc/elcalc/" target="_blank" rel="noopener">Elcalc</Link></li>
+				<li><Link href="https://github.com/xxczaki/oji/" target="_blank" rel="noopener">Oji</Link></li>
+				<li><Link href="https://github.com/xxczaki/fastic/" target="_blank" rel="noopener">Fastic</Link></li>
+				<li><Link href="https://github.com/xxczaki/speedo-cli/" target="_blank" rel="noopener">Speedo CLI</Link></li>
+				<li><Link href="https://github.com/xxczaki/xa/" target="_blank" rel="noopener">XA</Link></li>
+				<li><Link href="https://github.com/xxczaki/airly-cli" target="_blank" rel="noopener">Airly CLI</Link></li>
 			</List>
 		</Details>
 		<Details>
 			<summary>
 				<Description>Social Media & Contact</Description>
 			</summary>
-			<p>I write code on <Link href="https://github.com/xxczaki" rel="me">GitHub</Link>, post short thoughts on <Link href="https://twitter.com/dokwadratu" rel="me">Twitter</Link> & the longer ones on my <Link href="https://medium.com/kepinski-dev-blog" rel="me">Blog</Link>.</p>
-			<Link href="mailto:a@kepinski.me?Subject=Hello" rel="me">Get in touch 👋</Link>
+			<p>I write code on <Link href="https://github.com/xxczaki" target="_blank" rel="noopener">GitHub</Link>, post short thoughts on <Link href="https://twitter.com/dokwadratu" target="_blank" rel="noopener">Twitter</Link> & the longer ones on my <Link href="https://medium.com/kepinski-dev-blog" target="_blank" rel="noopener">Blog</Link>.</p>
+			<Link href="mailto:a@kepinski.me?Subject=Hello" target="_blank" rel="noopener">Get in touch 👋</Link>
 		</Details>
 		<GlobalStyle/>
 	</Container>
