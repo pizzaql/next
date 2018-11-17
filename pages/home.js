@@ -1,5 +1,4 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 import {createGlobalStyle} from 'styled-components';
 
 // Import Components
@@ -40,13 +39,11 @@ const GlobalStyle = createGlobalStyle`
 // Template
 export default Home => (
 	<Container>
-	<LazyLoad height={128}>
 	<picture>
   	<source type="image/webp" srcSet="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.webp" draggable="false" alt="Antoni Kepinski"/>
   	<source type="image/jpeg" srcSet="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
   	<Avatar src="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
 	</picture>
-	</LazyLoad>
 		<Header>Antoni Kepinski ⚡</Header>
 		<Details>
 			<summary>
