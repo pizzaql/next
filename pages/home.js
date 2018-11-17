@@ -40,9 +40,9 @@ const GlobalStyle = createGlobalStyle`
 export default Home => (
 	<Container>
 	<picture>
-  	<source type="image/webp" srcSet="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.webp" draggable="false" alt="Antoni Kepinski"/>
-  	<source type="image/jpeg" srcSet="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
-  	<Avatar src="https://cdn.jsdelivr.net/gh/xxczaki/kepinski.me/static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
+  	<source type="image/webp" srcSet="static/avatar.webp" draggable="false" alt="Antoni Kepinski"/>
+  	<source type="image/jpeg" srcSet="static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
+  	<Avatar src="static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
 	</picture>
 		<Header>Antoni Kepinski ⚡</Header>
 		<Details>
