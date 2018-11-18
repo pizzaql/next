@@ -5,6 +5,7 @@ const List = styled.ul`
 	list-style: none;
 	margin-left: 0;
 	padding-left: 1.2em;
+	padding-bottom: 12px;
 
 li:before {
     content: "›";

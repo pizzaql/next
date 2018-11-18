@@ -9,6 +9,8 @@ import Details from './components/details';
 import List from './components/list';
 import Description from './components/description';
 import Link from './components/link';
+import Github from './components/github';
+import Vector from './components/vector';
 
 // Global Style
 const GlobalStyle = createGlobalStyle`
@@ -65,6 +67,7 @@ export default Home => (
 				<li><Link href="https://github.com/xxczaki/xa/" target="_blank" rel="noopener">XA</Link></li>
 				<li><Link href="https://github.com/xxczaki/airly-cli" target="_blank" rel="noopener">Airly CLI</Link></li>
 			</List>
+			<Github href="https://github.com/xxczaki?tab=repositories" target="_blank" rel="noopener"><Vector src="static/github.svg" alt="Github"/>See more on GitHub</Github>
 		</Details>
 		<Details>
 			<summary>

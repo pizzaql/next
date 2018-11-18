@@ -3,6 +3,7 @@
 exports[`Details renders correctly 1`] = `
 .c0 {
   margin: 1em 0;
+  cursor: pointer;
 }
 
 <details

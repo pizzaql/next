@@ -6,6 +6,7 @@ exports[`List renders correctly 1`] = `
   list-style: none;
   margin-left: 0;
   padding-left: 1.2em;
+  padding-bottom: 12px;
 }
 
 .c0 li:before {
