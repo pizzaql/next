@@ -56,7 +56,6 @@ export default Home => (
 			<summary>
 				<Description>Projects</Description>
 			</summary>
-			<p>Here is a list of my featured projects:</p>
 			<List>
 				<li><Link href="https://github.com/xxczaki/cash-cli/" target="_blank" rel="noopener">Cash CLI</Link></li>
 				<li><Link href="https://github.com/elcalc/elcalc/" target="_blank" rel="noopener">Elcalc</Link></li>
