@@ -25,6 +25,7 @@
     "xo": "^0.23.0"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.8.0",
     "consola": "^2.2.6",
     "fontfaceobserver": "^2.0.13",
     "next": "^7.0.2",
