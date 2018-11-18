@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Personal Website built with Next.js, React & styled-components",
   "scripts": {
-    "dev": "node server.js",
-    "start": "NODE_ENV=production node server.js",
+    "dev": "next",
+    "start": "next start",
     "build": "next build",
     "test": "xo && stylelint './pages/**/*.js' && jest"
   },
@@ -22,7 +22,6 @@
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.5.0",
-    "sw-precache-webpack-plugin": "^0.11.5",
     "xo": "^0.23.0"
   },
   "dependencies": {
