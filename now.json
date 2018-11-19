@@ -2,7 +2,7 @@
     "version": 2,
     "alias": ["kepinski.me", "www.kepinski.me"],
     "builds": [
-        { "src": "next.config.js", "use": "@now/next" },
+        { "src": "next.config.js", "use": "@now/next@canary" },
         { "src": "static/**/*", "use": "@now/static" }
       ],
     "regions": ["all"]
