@@ -8,6 +8,7 @@ const Github = styled.a`
   border-radius: 3px;
   transition: all .3s ease;
   background-color: #333;
+  background-position: center;
   text-decoration: none;
   &:hover {
     background-color: #444;

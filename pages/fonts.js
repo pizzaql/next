@@ -13,10 +13,11 @@ const Fonts = () => {
 
 	try {
 		roboto.load().then(() => {
-			document.documentElement.classList.add('loaded');
+			document.documentElement.classList.add('fonts="loaded"');
 			consola.success('Fonts loaded!');
 		});
 	} catch (error) {
+		document.documentElement.classList.add('fonts="error"');
 		consola.error(new Error('Failed loading fonts!'));
 	}
 };
