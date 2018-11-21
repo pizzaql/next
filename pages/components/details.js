@@ -4,8 +4,7 @@ const Details = styled.details`
     margin: 1em 0;
 
     summary {
-    font-size: 0.8em;
-    cursor: pointer
+    cursor: pointer;
   }
 
     summary::-webkit-details-marker {
