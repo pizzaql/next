@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 const Details = styled.details`
     margin: 1em 0;
-    cursor: pointer;
+
+    summary {
+    font-size: 0.8em;
+    cursor: pointer
+  }
 
     summary::-webkit-details-marker {
     font-size: 0.8em;
