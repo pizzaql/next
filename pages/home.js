@@ -25,16 +25,13 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeSpeed;
     word-wrap: break-word
   }
+	
   :focus {
     outline: none
   }
   
   ::selection {
     background-color: #9E9E9E
-  }
-  summary::-webkit-details-marker {
-    font-size: 0.8em;
-    margin-right: 0.8em
   }
 `;
 

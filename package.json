@@ -25,7 +25,7 @@
     "xo": "^0.23.0"
   },
   "dependencies": {
-    "@sentry/browser": "^4.3.2",
+    "@sentry/browser": "^4.3.4",
     "babel-plugin-styled-components": "^1.8.0",
     "consola": "^2.3.0",
     "fontfaceobserver": "^2.0.13",
