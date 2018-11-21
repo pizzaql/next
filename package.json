@@ -13,6 +13,7 @@
   "author": "Antoni Kepinski <a@kepinski.me> (https://kepinski.me)",
   "license": "MIT",
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.8.0",
     "eslint-config-xo-react": "^0.17.0",
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
@@ -26,8 +27,6 @@
   },
   "dependencies": {
     "@sentry/browser": "^4.3.4",
-    "babel-plugin-styled-components": "^1.8.0",
-    "consola": "^2.3.0",
     "fontfaceobserver": "^2.0.13",
     "next": "^7.0.2",
     "react": "^16.6.3",

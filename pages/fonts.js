@@ -1,5 +1,4 @@
 const FontFaceObserver = require('fontfaceobserver');
-const consola = require('consola');
 
 // Load fonts
 const Fonts = () => {
@@ -14,11 +13,10 @@ const Fonts = () => {
 	try {
 		roboto.load().then(() => {
 			document.documentElement.classList.add('fonts="loaded"');
-			consola.success('Fonts loaded!');
+			console.log('Fonts loaded!');
 		});
 	} catch (error) {
 		document.documentElement.classList.add('fonts="error"');
-		consola.error(new Error('Failed loading fonts!'));
 	}
 };
 
