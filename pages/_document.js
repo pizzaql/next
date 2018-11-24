@@ -1,11 +1,10 @@
 import Document, {Head, Main, NextScript} from 'next/document';
 import {ServerStyleSheet} from 'styled-components';
-import * as Sentry from '@sentry/browser';
 
 export default class MyDocument extends Document {
-	static getInitialProps({renderPage}) {
+	static async getInitialProps({renderPage}) {
 		const sheet = new ServerStyleSheet();
-		const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
+		const page = await renderPage(App => props => sheet.collectStyles(<App {...props} />));
 		const styleTags = sheet.getStyleElement();
 		return {...page, styleTags};
 	}

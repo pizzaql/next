@@ -1,14 +1,14 @@
 const FontFaceObserver = require('fontfaceobserver');
 
 // Load fonts
-const Fonts = () => {
-	const link = document.createElement('link');
-	link.href = 'https://fonts.googleapis.com/css?family=Roboto+Mono:400';
-	link.rel = 'stylesheet';
+const Fonts = async () => {
+	const link = await document.createElement('link');
+	link.href = await 'https://fonts.googleapis.com/css?family=Roboto+Mono:400';
+	link.rel = await 'stylesheet';
 
 	document.head.appendChild(link);
 
-	const roboto = new FontFaceObserver('Roboto Mono');
+	const roboto = await new FontFaceObserver('Roboto Mono');
 
 	try {
 		roboto.load().then(() => {
