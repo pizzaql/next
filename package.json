@@ -27,11 +27,10 @@
   },
   "dependencies": {
     "fontfaceobserver": "^2.1.0",
-    "next": "^7.0.2",
+    "next": "^7.0.2-canary.38",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "styled-components": "^4.1.2",
-    "styled-theming": "^2.2.0"
+    "styled-components": "^4.1.2"
   },
   "xo": {
     "extends": "xo-react",
