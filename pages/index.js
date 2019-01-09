@@ -1,6 +1,5 @@
 import React from 'react';
-import * as Sentry from '@sentry/browser';
-import Home from './home'
+import Home from './home';
 import Fonts from './fonts';
 
 class Index extends React.Component {
