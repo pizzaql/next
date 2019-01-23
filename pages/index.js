@@ -45,9 +45,9 @@ class Index extends React.Component {
 		return (
 			<Container>
 				<picture>
-					<source type="image/webp" srcSet="static/avatar.webp" draggable="false" alt="Antoni Kepinski"/>
-					<source type="image/jpeg" srcSet="static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
-					<Avatar src="static/avatar.jpg" draggable="false" alt="Antoni Kepinski"/>
+					<source type="image/webp" srcSet="static/avatar.webp" importance="high" draggable="false" alt="Antoni Kepinski"/>
+					<source type="image/jpeg" srcSet="static/avatar.jpg" importance="high" draggable="false" alt="Antoni Kepinski"/>
+					<Avatar src="static/avatar.jpg" importance="high" draggable="false" alt="Antoni Kepinski"/>
 				</picture>
 				<Header>Antoni Kepinski ⚡</Header>
 				<Details>
