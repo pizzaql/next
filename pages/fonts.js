@@ -1,12 +1,12 @@
-const FontFaceObserver = require('fontfaceobserver');
+import FontFaceObserver from 'fontfaceobserver';
 
 // Load fonts
-const Fonts = async () => {
+const fonts = async () => {
 	const link = await document.createElement('link');
 	link.href = await 'https://fonts.googleapis.com/css?family=Roboto+Mono:400';
 	link.rel = await 'stylesheet';
 
-	document.head.appendChild(link);
+	document.head.append(link);
 
 	const roboto = await new FontFaceObserver('Roboto Mono');
 
@@ -20,4 +20,4 @@ const Fonts = async () => {
 	}
 };
 
-export default Fonts;
+export default fonts;
