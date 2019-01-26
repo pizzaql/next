@@ -1,21 +1,10 @@
 const presets = [
-	['@babel/preset-env', {
+	['babel-preset-gatsby', {
 		targets: {
 			esmodules: true
 		},
 		useBuiltIns: 'usage'
-	}],
-	['next/babel']
-];
-
-const plugins = [
-	['babel-plugin-styled-components', {
-		minify: true,
-		pure: true,
-		ssr: true,
-		displayName: true,
-		preprocess: false
 	}]
 ];
 
-module.exports = {presets, plugins};
+module.exports = {presets};

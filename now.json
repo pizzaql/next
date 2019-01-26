@@ -2,8 +2,7 @@
     "version": 2,
     "alias": ["kepinski.me", "www.kepinski.me"],
     "builds": [
-        { "src": "next.config.js", "use": "@now/next" },
-        { "src": "static/**/*", "use": "@now/static" }
+        { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
       ],
     "regions": ["all"]
 }
