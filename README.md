@@ -7,8 +7,6 @@
 
 *The website targets the latest version of Chrome, Safari, and Firefox.
 
-![Screenshot](screenshot.png)
-
 ---
 
 ## Dev
