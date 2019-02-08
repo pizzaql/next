@@ -9,6 +9,12 @@
 
 ---
 
+## Highlights
+
+- Perfect Lighthouse Score
+- Works offline
+- 100 % Responsive
+
 ## Dev
 
 > Hosted with [now Δ](https://zeit.com/now)
