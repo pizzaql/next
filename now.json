@@ -4,5 +4,14 @@
     "builds": [
         { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
       ],
+    "routes": [
+      {
+        "src": "/", 
+        "headers": {
+          "cache-control": "s-maxage=2628000, maxage=0",
+          "accept-encoding": "br"
+        }
+      }
+    ],
     "regions": ["all"]
 }
