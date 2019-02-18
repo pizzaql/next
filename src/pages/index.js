@@ -14,11 +14,14 @@ import Github from '../components/github';
 import Vector from '../components/vector';
 import Seo from '../components/seo';
 
+// Load modern-normalize
+import '../../node_modules/modern-normalize/modern-normalize.css';
+
 // Global Style
 const GlobalStyle = createGlobalStyle`
   body {
     background: #212121;
-	  color: #fff;
+	color: #fff;
     padding: 1em;
     line-height: 1.5em;
     font-family: Roboto Mono, monospace !important;
@@ -60,7 +63,7 @@ const IndexPage = () => (
 				<li><Link href="https://github.com/xxczaki/fastic/" target="_blank" rel="noopener">Fastic</Link></li>
 				<li><Link href="https://github.com/xxczaki/speedo-cli/" target="_blank" rel="noopener">Speedo CLI</Link></li>
 				<li><Link href="https://github.com/xxczaki/xa/" target="_blank" rel="noopener">XA</Link></li>
-				<li><Link href="https://github.com/xxczaki/airly-cli" target="_blank" rel="noopener">Airly CLI</Link></li>
+				<li><Link href="https://github.com/xxczaki/airly" target="_blank" rel="noopener">Airly</Link></li>
 				<li><Link href="https://github.com/xxczaki/pizzaql" target="_blank" rel="noopener">PizzaQL</Link></li>
 			</List>
 			<Github href="https://github.com/xxczaki?tab=repositories" target="_blank" rel="noopener"><Vector draggable="false" importance="low" src={withPrefix('/img/github.svg')} alt="Github"/>See more on GitHub</Github>
