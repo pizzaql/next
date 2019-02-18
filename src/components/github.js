@@ -10,6 +10,7 @@ const Github = styled.a`
   background-color: #333;
   background-position: center;
   text-decoration: none;
+  user-select: none;
 
   &:hover {
       background-color: #444;
