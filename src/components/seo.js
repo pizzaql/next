@@ -78,7 +78,6 @@ function Seo({description, lang, meta, keywords, title}) {
 							.concat(meta)}
 					>
 						<link rel="icon" href={withPrefix('/img/favicon.png')}/>
-						<link rel="preload" href="https://cdn.jsdelivr.net/npm/modern-normalize@0.5.0/modern-normalize.min.css" as="style" onLoad="this.rel='stylesheet'"/>
 					</Helmet>
 				);
 			}}

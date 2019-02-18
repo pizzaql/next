@@ -10,8 +10,9 @@ const Github = styled.a`
   background-color: #333;
   background-position: center;
   text-decoration: none;
+
   &:hover {
-    background-color: #444;
+      background-color: #444;
   }
 `;
 

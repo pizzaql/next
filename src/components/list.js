@@ -6,11 +6,12 @@ const List = styled.ul`
 	margin-left: 0;
 	padding-left: 1.2em;
 	padding-bottom: 12px;
-li:before {
-    content: "›";
-	position: absolute;
-	left: 0;
-}
+
+	li:before {
+		content: "›";
+		position: absolute;
+		left: 0;
+	}
 `;
 
 export default List;
