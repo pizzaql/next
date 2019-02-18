@@ -21,7 +21,7 @@ import '../../node_modules/modern-normalize/modern-normalize.css';
 const GlobalStyle = createGlobalStyle`
   body {
     background: #212121;
-	color: #fff;
+		color: #fff;
     padding: 1em;
     line-height: 1.5em;
     font-family: Roboto Mono, monospace !important;
