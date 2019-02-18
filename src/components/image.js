@@ -24,7 +24,8 @@ const Image = () => (
 					height: '125px',
 					backgroundColor: '#fff',
 					padding: '4px',
-					userSelect: 'none'
+					userSelect: 'none',
+					WebkitUserDrag: 'none'
 				}}
 				style={{height: '140px'}}
 				alt="Antoni Kepinski"
