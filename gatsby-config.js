@@ -3,7 +3,8 @@ module.exports = {
 	siteMetadata: {
 		title: 'Antoni Kepinski',
 		description: 'My name is Antoni Kepinski, I am Full Stack Developer from Poland.',
-		author: '@dokwadratu'
+		author: '@dokwadratu',
+		siteUrl: 'https://kepinski.me'
 	},
 	pathPrefix: '/img',
 	plugins: [
@@ -36,6 +37,7 @@ module.exports = {
 				icon: 'static/img/favicon.png'
 			}
 		},
+		'gatsby-plugin-sitemap',
 		{
 			resolve: 'gatsby-plugin-google-analytics',
 			options: {
