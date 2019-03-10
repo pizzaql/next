@@ -18,6 +18,13 @@ module.exports = {
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		{
+			resolve: 'gatsby-plugin-styled-components',
+			options: {
+				minify: true,
+				pure: true
+			}
+		},
+		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: 'Antoni Kepinski',
@@ -27,6 +34,14 @@ module.exports = {
 				theme_color: '#212121',
 				display: 'standalone',
 				icon: 'static/img/favicon.png'
+			}
+		},
+		{
+			resolve: 'gatsby-plugin-google-analytics',
+			options: {
+				trackingId: 'UA-128978465-1',
+				anonymize: true,
+				respectDNT: true
 			}
 		},
 		'gatsby-plugin-offline'
