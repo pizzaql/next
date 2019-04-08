@@ -13,9 +13,9 @@
 
 - Perfect Lighthouse Score
 - Works offline
-- 100 % Responsive
+- 100% Responsive
 
-## Dev
+## Development
 
 > Hosted with [now Δ](https://zeit.com/now)
 
