@@ -1,6 +1,7 @@
 import React from 'react';
 import {withPrefix} from 'gatsby';
 import {createGlobalStyle} from 'styled-components';
+import emoji from 'react-easy-emoji';
 
 // Import components
 import Container from '../components/container';
@@ -44,7 +45,7 @@ const IndexPage = () => (
 	<Container>
 		<Seo title="Home" keywords={['Antoni Kepinski', 'developer', 'kepinski.me']}/>
 		<Image/>
-		<Header>Antoni Kepinski ⚡</Header>
+		<Header>Antoni Kepinski {emoji('⚡')}</Header>
 		<Details>
 			<summary>
 				<Description>About me</Description>
@@ -62,9 +63,9 @@ const IndexPage = () => (
 				<li><Link href="https://github.com/xxczaki/oji/" target="_blank" rel="noopener">Oji</Link></li>
 				<li><Link href="https://github.com/xxczaki/fastic/" target="_blank" rel="noopener">Fastic</Link></li>
 				<li><Link href="https://github.com/xxczaki/speedo-cli/" target="_blank" rel="noopener">Speedo CLI</Link></li>
-				<li><Link href="https://github.com/xxczaki/xa/" target="_blank" rel="noopener">XA</Link></li>
 				<li><Link href="https://github.com/xxczaki/airly" target="_blank" rel="noopener">Airly</Link></li>
 				<li><Link href="https://github.com/xxczaki/pizzaql" target="_blank" rel="noopener">PizzaQL</Link></li>
+				<li><Link href="https://github.com/xxczaki/currency-converter/" target="_blank" rel="noopener">Currency Converter</Link></li>
 			</List>
 			<Github href="https://github.com/xxczaki?tab=repositories" target="_blank" rel="noopener"><Vector draggable="false" importance="low" src={withPrefix('/img/github.svg')} alt="Github"/>See more on GitHub</Github>
 		</Details>
