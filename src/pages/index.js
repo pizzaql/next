@@ -74,7 +74,7 @@ const IndexPage = () => (
 				<Description>Social Media & Contact</Description>
 			</summary>
 			<p>I write code on <Link href="https://github.com/xxczaki" target="_blank" rel="noopener">GitHub</Link>, post short thoughts on <Link href="https://twitter.com/dokwadratu" target="_blank" rel="noopener">Twitter</Link> & the longer ones on my <Link href="https://medium.com/kepinski-dev-blog" target="_blank" rel="noopener">Blog</Link>.</p>
-			<Link href="mailto:a@kepinski.me?Subject=Hello" target="_blank" rel="noopener">Get in touch 👋</Link>
+			<Link href="mailto:a@kepinski.me?Subject=Hello" target="_blank" rel="noopener">Get in touch {emoji('👋')}</Link>
 		</Details>
 		<GlobalStyle/>
 	</Container>
