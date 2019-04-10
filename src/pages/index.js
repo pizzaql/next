@@ -67,7 +67,7 @@ const IndexPage = () => (
 				<li><Link href="https://github.com/xxczaki/pizzaql" target="_blank" rel="noopener">PizzaQL</Link></li>
 				<li><Link href="https://github.com/xxczaki/currency-converter/" target="_blank" rel="noopener">Currency Converter</Link></li>
 			</List>
-			<Github href="https://github.com/xxczaki?tab=repositories" target="_blank" rel="noopener"><Vector draggable="false" importance="low" src={withPrefix('/img/github.svg')} alt="Github"/>See more on GitHub</Github>
+			<Github href="https://github.com/xxczaki?tab=repositories" target="_blank" rel="noopener"><Vector draggable="false" importance="low" loading="lazy" src={withPrefix('/img/github.svg')} alt="Github"/>See more on GitHub</Github>
 		</Details>
 		<Details>
 			<summary>
