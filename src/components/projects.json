@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Cash CLI",
+        "url": "https://github.com/xxczaki/cash-cli/"
+    },
+    {
+        "name": "Elcalc",
+        "url": "https://github.com/elcalc/elcalc/"
+    },
+    {
+        "name": "Oji",
+        "url": "https://github.com/xxczaki/oji/"
+    },
+    {
+        "name": "Fastic",
+        "url": "https://github.com/xxczaki/fastic/"
+    },
+    {
+        "name": "Speedo CLI",
+        "url": "https://github.com/xxczaki/speedo-cli/"
+    },
+    {
+        "name": "Airly",
+        "url": "https://github.com/xxczaki/airly"
+    },
+    {
+        "name": "PizzaQL",
+        "url": "https://github.com/xxczaki/pizzaql"
+    },
+    {
+        "name": "Currency Converter",
+        "url": "https://github.com/xxczaki/currency-converter/"
+    }
+]
