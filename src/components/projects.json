@@ -1,34 +1,61 @@
 [
     {
-        "name": "Cash CLI",
-        "url": "https://github.com/xxczaki/cash-cli/"
-    },
-    {
-        "name": "Elcalc",
-        "url": "https://github.com/elcalc/elcalc/"
-    },
-    {
-        "name": "Oji",
-        "url": "https://github.com/xxczaki/oji/"
-    },
-    {
-        "name": "Fastic",
-        "url": "https://github.com/xxczaki/fastic/"
-    },
-    {
-        "name": "Speedo CLI",
-        "url": "https://github.com/xxczaki/speedo-cli/"
-    },
-    {
-        "name": "Airly",
-        "url": "https://github.com/xxczaki/airly"
-    },
-    {
         "name": "PizzaQL",
-        "url": "https://github.com/xxczaki/pizzaql"
+        "url": "https://github.com/xxczaki/pizzaql",
+        "tags": [
+            "React",
+            "Next.js",
+            "GraphQL"
+        ]
     },
     {
         "name": "Currency Converter",
-        "url": "https://github.com/xxczaki/currency-converter/"
+        "url": "https://github.com/xxczaki/currency-converter/",
+        "tags": [
+            "React",
+            "Next.js"
+        ]
+    },
+    {
+        "name": "Cash CLI",
+        "url": "https://github.com/xxczaki/cash-cli/",
+        "tags": [
+            "Node.js"
+        ]
+    },
+    {
+        "name": "Elcalc",
+        "url": "https://github.com/elcalc/elcalc/",
+        "tags": [
+            "Electron"
+        ]
+    },
+    {
+        "name": "Oji",
+        "url": "https://github.com/xxczaki/oji/",
+        "tags": [
+            "Node.js"
+        ]
+    },
+    {
+        "name": "Fastic",
+        "url": "https://github.com/xxczaki/fastic/",
+        "tags": [
+            "Node.js"
+        ]
+    },
+    {
+        "name": "Speedo CLI",
+        "url": "https://github.com/xxczaki/speedo-cli/",
+        "tags": [
+            "Node.js"
+        ]
+    },
+    {
+        "name": "Airly",
+        "url": "https://github.com/xxczaki/airly",
+        "tags": [
+            "Node.js"
+        ]
     }
 ]
