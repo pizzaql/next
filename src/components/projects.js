@@ -18,6 +18,10 @@ const tag = tags => {
 			return {background: '#68a063', color: '#000'};
 		}
 
+		if (name === 'TypeScript') {
+			return {background: '#007acc', color: '#fff'};
+		}
+
 		if (name === 'GraphQL') {
 			return {background: '#e535ab', color: '#000'};
 		}
