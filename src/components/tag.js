@@ -2,11 +2,9 @@ import styled from 'styled-components';
 
 const Tag = styled.span`
     display: inline-flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-box-align: center;
-    vertical-align: 2px;
     flex-direction: row;
+    text-align: center;
+    vertical-align: 2px;
     align-items: center;
     position: relative;
     border: none;
