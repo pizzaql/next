@@ -52,10 +52,18 @@
         ]
     },
     {
-        "name": "Airly",
-        "url": "https://github.com/xxczaki/airly",
+        "name": "is-dnt",
+        "url": "https://github.com/xxczaki/is-dnt",
         "tags": [
             "TypeScript"
+        ]
+    },
+    {
+        "name": "kepinski.me",
+        "url": "https://github.com/xxczaki/kepinski.me",
+        "tags": [
+            "React",
+            "Gatsby"
         ]
     }
 ]
