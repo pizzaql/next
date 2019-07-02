@@ -30,6 +30,10 @@ const tag = tags => {
 			return {background: '#000', color: '#fff'};
 		}
 
+		if (name === 'Gatsby') {
+			return {background: '#663399', color: '#fff'};
+		}
+
 		if (name === 'Electron') {
 			return {background: '#2f3243', color: '#fff'};
 		}
