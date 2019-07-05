@@ -19,6 +19,7 @@ const Tag = styled.span`
     margin-bottom: 10px;
     margin-left: 1px;
     margin-right: 4px;
+    user-select: none;
 `;
 
 export default Tag;
