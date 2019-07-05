@@ -8,7 +8,7 @@ const Container = styled.div`
     max-width: 60em;
     padding-top: 15px;
     padding-left: 15px;
-    padding-right: 15px
+    padding-right: 15px;
 `;
 
 export default Container;
