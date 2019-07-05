@@ -2,7 +2,7 @@
 module.exports = {
 	siteMetadata: {
 		title: 'Antoni Kepinski',
-		description: 'My name is Antoni Kepinski, I am Full Stack Developer from Poland.',
+		description: 'My name is Antoni Kepinski, I am Node.js Developer from Poland.',
 		author: '@dokwadratu',
 		siteUrl: 'https://kepinski.me'
 	},
