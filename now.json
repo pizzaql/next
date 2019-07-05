@@ -4,22 +4,5 @@
     "builds": [
         { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
     ],
-    "routes": [
-      {
-        "src": "/static/(.*)",
-        "dest": "/static/$1",
-        "headers": { "cache-control": "public,max-age=31536000,immutable" }
-      },
-      {
-        "src": "/(.*\\.(js|json|css|ico|jpg|png|webp)$)",
-        "dest": "/$1",
-        "headers": { "cache-control": "public,max-age=31536000,immutable" }
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/$1",
-        "headers": { "cache-control": "public, max-age=0, must-revalidate" }
-      }
-    ],
     "regions": ["all"]
 }
