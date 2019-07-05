@@ -15,13 +15,7 @@ const Github = styled.a`
   outline: none;
 
     &:hover {
-        background: #444 radial-gradient(circle, transparent 1%, #444 1%) center/15000%;
-    }
-
-    &:active {
-        background-color: #555;
-        background-size: 100%;
-        transition: background 0s;
+        background: #3b3b3b radial-gradient(circle, transparent 1%, #3b3b3b 1%) center/15000%;
     }
 `;
 
