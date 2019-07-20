@@ -26,8 +26,6 @@ Built using:
 - [styled-components](https://www.styled-components.com/)
 - [modern-normalize](https://github.com/sindresorhus/modern-normalize)
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/xxczaki/kepinski.me)
-
 ### License
 
 MIT
