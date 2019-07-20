@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "alias": ["kepinski.me", "www.kepinski.me"],
     "builds": [
         { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
     ],
