@@ -8,6 +8,7 @@ import Image from '../components/image';
 import Details from '../components/details';
 import Description from '../components/description';
 import Projects from '../components/projects';
+import Podcast from '../components/podcast';
 import Link from '../components/link';
 import Seo from '../components/seo';
 
@@ -62,6 +63,7 @@ const IndexPage = () => (
 			<p>I write code on <Link href="https://github.com/xxczaki" target="_blank" rel="noopener">GitHub</Link>, post short thoughts on <Link href="https://twitter.com/dokwadratu" target="_blank" rel="noopener">Twitter</Link> & the longer ones on my <Link href="https://medium.com/kepinski-dev-blog" target="_blank" rel="noopener">Blog</Link>.</p>
 			<Link href="mailto:a@kepinski.me?Subject=Hello" target="_blank" rel="noopener">Get in touch <span role="img" aria-label="waving hand">👋</span></Link>
 		</Details>
+		<Podcast/>
 		<GlobalStyle/>
 	</Container>
 );

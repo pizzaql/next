@@ -78,6 +78,8 @@ function Seo({description, lang, meta, keywords, title}) {
 							.concat(meta)}
 					>
 						<link rel="icon" href={withPrefix('/img/favicon.png')}/>
+						{/* Changelog Podcast player */}
+						<script async src="//cdn.changelog.com/embed.js"/>
 					</Helmet>
 				);
 			}}
