@@ -47,8 +47,8 @@ const IndexPage = () => (
 			<summary>
 				<Description>About me</Description>
 			</summary>
-			<p>I&apos;m 16 years old Node.js Developer, currently living in Poland.</p>
-			<p>I love making websites, CLI tools & modules.</p>
+			<p>I&apos;m 16 years old developer, currently living in Poland.</p>
+			<p>I&apos;m currently maintaining <Link href="https://github.com/bitinn/node-fetch" target="_blank" rel="noopener">node-fetch</Link>, an open-source library, that brings window.fetch API to Node.js</p>
 		</Details>
 		<Details>
 			<summary>
