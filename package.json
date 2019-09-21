@@ -5,23 +5,23 @@
   "author": "Antoni Kepinski <a@kepinski.me> (https://kepinski.me)",
   "dependencies": {
     "core-js": "^3.2.1",
-    "gatsby": "^2.15.1",
-    "gatsby-image": "^2.2.15",
-    "gatsby-plugin-google-analytics": "^2.1.12",
-    "gatsby-plugin-manifest": "^2.2.12",
-    "gatsby-plugin-offline": "^3.0.0",
-    "gatsby-plugin-react-helmet": "^3.1.5",
-    "gatsby-plugin-sharp": "^2.2.18",
-    "gatsby-plugin-sitemap": "^2.2.9",
-    "gatsby-plugin-styled-components": "^3.1.3",
-    "gatsby-source-filesystem": "^2.1.18",
-    "gatsby-transformer-sharp": "^2.2.12",
+    "gatsby": "^2.15.20",
+    "gatsby-image": "^2.2.20",
+    "gatsby-plugin-google-analytics": "^2.1.17",
+    "gatsby-plugin-manifest": "^2.2.18",
+    "gatsby-plugin-offline": "^3.0.8",
+    "gatsby-plugin-react-helmet": "^3.1.8",
+    "gatsby-plugin-sharp": "^2.2.25",
+    "gatsby-plugin-sitemap": "^2.2.14",
+    "gatsby-plugin-styled-components": "^3.1.6",
+    "gatsby-source-filesystem": "^2.1.26",
+    "gatsby-transformer-sharp": "^2.2.16",
     "modern-normalize": "^0.5.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "styled-components": "^4.3.2",
+    "styled-components": "^5.0.0-beta.8",
     "typeface-roboto-mono": "0.0.75"
   },
   "devDependencies": {
@@ -30,8 +30,8 @@
     "eslint-config-xo-react": "^0.20.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
-    "stylelint": "^10.1.0",
-    "stylelint-config-recommended": "^2.2.0",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.8.0",
     "xo": "^0.24.0"
@@ -65,7 +65,7 @@
     "extends": "xo-react",
     "settings": {
       "react": {
-        "version": "16.8"
+        "version": "16.9"
       }
     },
     "rules": {
