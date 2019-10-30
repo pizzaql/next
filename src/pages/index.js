@@ -1,6 +1,6 @@
 import React from 'react';
 import {createGlobalStyle} from 'styled-components';
-import loadable from '@loadable/component'
+import loadable from '@loadable/component';
 
 // Import components
 import Container from '../components/container';
@@ -15,8 +15,8 @@ import Seo from '../components/seo';
 // Load modern-normalize
 import '../../node_modules/modern-normalize/modern-normalize.css';
 
-const Podcast = loadable(() => import('./../components/podcast'), {
-	fallback: <div>Loading...</div>,
+const Podcast = loadable(() => import('../components/podcast'), {
+	fallback: <div>Loading...</div>
 });
 
 // Global Style
