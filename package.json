@@ -66,9 +66,12 @@
     "extends": "xo-react",
     "settings": {
       "react": {
-        "version": "16.9"
+        "version": "16.11"
       }
     },
+    "ignores": [
+      "static/player.js"
+    ],
     "rules": {
       "import/no-unassigned-import": "off"
     }
