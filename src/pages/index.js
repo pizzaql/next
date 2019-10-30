@@ -1,5 +1,6 @@
 import React from 'react';
 import {createGlobalStyle} from 'styled-components';
+import loadable from '@loadable/component'
 
 // Import components
 import Container from '../components/container';
@@ -8,12 +9,15 @@ import Image from '../components/image';
 import Details from '../components/details';
 import Description from '../components/description';
 import Projects from '../components/projects';
-import Podcast from '../components/podcast';
 import Link from '../components/link';
 import Seo from '../components/seo';
 
 // Load modern-normalize
 import '../../node_modules/modern-normalize/modern-normalize.css';
+
+const Podcast = loadable(() => import('./../components/podcast'), {
+	fallback: <div>Loading...</div>,
+});
 
 // Global Style
 const GlobalStyle = createGlobalStyle`
