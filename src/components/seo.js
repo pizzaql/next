@@ -79,7 +79,7 @@ function Seo({description, lang, meta, keywords, title}) {
 					>
 						<link rel="icon" href={withPrefix('/img/favicon.png')}/>
 						{/* Changelog Podcast player */}
-						<script async src="//cdn.changelog.com/embed.js"/>
+						<script async src={withPrefix('player.js')}/>
 					</Helmet>
 				);
 			}}
