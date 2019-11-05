@@ -8,7 +8,7 @@ const Image = () => (
       query {
         placeholderImage: file(relativePath: { eq: "avatar.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 125, maxHeight: 125, quality: 85) {
+            fluid(maxWidth: 180, maxHeight: 180, quality: 85) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -20,15 +20,16 @@ const Image = () => (
 				fluid={data.placeholderImage.childImageSharp.fluid}
 				imgStyle={{
 					borderRadius: '50%',
-					width: '125px',
-					height: '125px',
+					width: '180px',
+					height: '180px',
 					backgroundColor: '#fff',
 					padding: '4px',
 					userSelect: 'none',
 					WebkitUserDrag: 'none'
 				}}
-				style={{height: '140px'}}
+				style={{height: '180px'}}
 				alt="Antoni Kepinski"
+				draggable={false}
 			/>
 		)}
 	/>

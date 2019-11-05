@@ -9,8 +9,8 @@
         ]
     },
     {
-        "name": "Currency Converter",
-        "url": "https://github.com/xxczaki/currency-converter/",
+        "name": "Quick Air",
+        "url": "https://github.com/xxczaki/quick-air/",
         "tags": [
             "React",
             "Next.js"
@@ -24,46 +24,10 @@
         ]
     },
     {
-        "name": "Elcalc",
-        "url": "https://github.com/elcalc/elcalc/",
-        "tags": [
-            "Electron"
-        ]
-    },
-    {
-        "name": "Oji",
-        "url": "https://github.com/xxczaki/oji/",
-        "tags": [
-            "Node.js"
-        ]
-    },
-    {
-        "name": "Fastic",
-        "url": "https://github.com/xxczaki/fastic/",
-        "tags": [
-            "Node.js"
-        ]
-    },
-    {
-        "name": "Speedo CLI",
-        "url": "https://github.com/xxczaki/speedo-cli/",
-        "tags": [
-            "Node.js"
-        ]
-    },
-    {
         "name": "Cashify",
         "url": "https://github.com/xxczaki/cashify",
         "tags": [
             "TypeScript"
-        ]
-    },
-    {
-        "name": "kepinski.me",
-        "url": "https://github.com/xxczaki/kepinski.me",
-        "tags": [
-            "React",
-            "Gatsby"
         ]
     }
 ]

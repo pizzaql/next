@@ -1,56 +1,33 @@
 import React from 'react';
-import {withPrefix} from 'gatsby';
+import {Box, Heading, Button, Stack, Text, Tag} from '@chakra-ui/core';
 
-import List from './list';
-import Link from './link';
-import Github from './github';
-import Vector from './vector';
-import Tag from './tag';
 import projects from './projects.json';
+import getTagColor from './utils/tag-color';
 
-const tag = tags => {
-	const getTagColor = name => {
-		if (name === 'React') {
-			return {background: '#61dbfb', color: '#000'};
-		}
-
-		if (name === 'Node.js') {
-			return {background: '#68a063', color: '#000'};
-		}
-
-		if (name === 'TypeScript') {
-			return {background: '#007acc', color: '#fff'};
-		}
-
-		if (name === 'GraphQL') {
-			return {background: '#e535ab', color: '#000'};
-		}
-
-		if (name === 'Next.js') {
-			return {background: '#000', color: '#fff'};
-		}
-
-		if (name === 'Gatsby') {
-			return {background: '#663399', color: '#fff'};
-		}
-
-		if (name === 'Electron') {
-			return {background: '#2f3243', color: '#fff'};
-		}
-	};
-
-	return tags.map(tag => <Tag key={tag} style={{backgroundColor: getTagColor(tag).background, color: getTagColor(tag).color}}>{tag}</Tag>);
-};
-
-const Projects = () => (
-	<>
-		<List>
+const Projects = () => {
+	return (
+		<Box p={5} rounded="lg" shadow="md" borderWidth="1px" maxWidth="35em">
+			<Heading as="h2" size="lg">Projects</Heading>
+			<br/>
+			<Text>Here are some of my projects:</Text>
+			<br/>
 			{projects.map(el => (
-				<li key={el.name}><Link href={el.url} target="_blank" rel="noopener">{el.name}</Link> {tag(el.tags)}</li>
+				<Box key={el.name} p={5} rounded="lg" shadow="md">
+					<Heading paddingBottom={2} as="h3" size="md">{el.name}</Heading>
+					<Stack isInline spacing={2}>
+						{el.tags.map(tag => (
+							<Tag key={tag} style={{color: getTagColor(tag).color}} backgroundColor={getTagColor(tag).background} size="sm">{tag}</Tag>
+						))}
+					</Stack>
+					<a href={el.url} target="_blank" rel="noopener noreferrer">
+						<Button marginTop={5} leftIcon="external-link" variantColor="gray.600" variant="outline">
+    Check it out
+						</Button>
+					</a>
+				</Box>
 			))}
-		</List>
-		<Github href="https://github.com/xxczaki?tab=repositories" target="_blank" rel="noopener"><Vector draggable="false" importance="low" loading="lazy" src={withPrefix('/img/github.svg')} alt="Github"/>See more on GitHub</Github>
-	</>
-);
+		</Box>
+	);
+};
 
 export default Projects;
