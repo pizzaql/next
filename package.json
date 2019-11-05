@@ -4,37 +4,34 @@
   "version": "1.0.0",
   "author": "Antoni Kepinski <a@kepinski.me> (https://kepinski.me)",
   "dependencies": {
-    "@loadable/component": "^5.10.3",
-    "core-js": "^3.3.5",
-    "gatsby": "^2.17.7",
+    "@chakra-ui/core": "^0.4.1",
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "core-js": "^3.3.6",
+    "emotion-theming": "^10.0.19",
+    "gatsby": "^2.17.8",
     "gatsby-image": "^2.2.30",
-    "gatsby-plugin-google-analytics": "^2.1.23",
+    "gatsby-plugin-chakra-ui": "^0.1.0",
+    "gatsby-plugin-google-analytics": "^2.1.24",
     "gatsby-plugin-manifest": "^2.2.26",
-    "gatsby-plugin-offline": "^3.0.17",
+    "gatsby-plugin-offline": "^3.0.18",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.36",
     "gatsby-plugin-sitemap": "^2.2.19",
-    "gatsby-plugin-styled-components": "^3.1.11",
     "gatsby-source-filesystem": "^2.1.35",
     "gatsby-transformer-sharp": "^2.3.2",
-    "modern-normalize": "^0.5.0",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
-    "styled-components": "^5.0.0-beta.11-cgsmulti",
-    "typeface-roboto-mono": "0.0.75"
+    "react-icons": "^3.8.0",
+    "typeface-open-sans": "0.0.75"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "babel-plugin-styled-components": "^1.10.6",
     "eslint-config-xo-react": "^0.20.0",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
-    "stylelint": "^11.1.1",
-    "stylelint-config-recommended": "^3.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.8.0",
     "xo": "^0.25.3"
   },
   "keywords": [
@@ -46,7 +43,7 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "now-build": "npm run build",
-    "test": "xo && stylelint 'src/**/*.js'"
+    "test": "xo"
   },
   "repository": {
     "type": "git",
@@ -69,11 +66,9 @@
         "version": "16.11"
       }
     },
-    "ignores": [
-      "static/player.js"
-    ],
     "rules": {
-      "import/no-unassigned-import": "off"
+      "import/no-unassigned-import": "off",
+      "jsx-a11y/anchor-is-valid": "off"
     }
   }
 }
