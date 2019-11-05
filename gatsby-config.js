@@ -19,13 +19,6 @@ module.exports = {
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		{
-			resolve: 'gatsby-plugin-styled-components',
-			options: {
-				minify: true,
-				pure: true
-			}
-		},
-		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: 'Antoni Kepinski',
@@ -38,6 +31,7 @@ module.exports = {
 			}
 		},
 		'gatsby-plugin-sitemap',
+		'gatsby-plugin-chakra-ui',
 		{
 			resolve: 'gatsby-plugin-google-analytics',
 			options: {
