@@ -7,7 +7,7 @@ const Social = () => (
 		<Heading as="h2" size="lg">Social Media & Contact</Heading>
 		<br/>
 		<a href="https://github.com/xxczaki" target="_blank" rel="noopener noreferrer">
-			<Button m={2} leftIcon={FaGithub} variantColor="gray" variant="solid">
+			<Button m={2} leftIcon={FaGithub} variantColor="gray.600" variant="outline">
     Github
 			</Button>
 		</a>
