@@ -1,1 +1,1 @@
-import 'typeface-roboto-mono';
+import 'typeface-open-sans';
