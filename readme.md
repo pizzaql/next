@@ -3,7 +3,6 @@
 > Personal website 🚀
 
 [![Build Status](https://travis-ci.org/xxczaki/kepinski.me.svg?branch=master)](https://travis-ci.org/xxczaki/kepinski.me) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
-[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 *The website targets the latest version of Chrome, Safari, and Firefox.
 
@@ -23,8 +22,8 @@ Built using:
 
 - [React](https://reactjs.org/)
 - [Gatsby](https://www.gatsbyjs.org/)
-- [styled-components](https://www.styled-components.com/)
-- [modern-normalize](https://github.com/sindresorhus/modern-normalize)
+- [Chakra UI](https://chakra-ui.com/)
+- [react-icons](https://react-icons.netlify.com/#/)
 
 ### License
 
