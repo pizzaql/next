@@ -1,6 +1,7 @@
 [
     {
         "name": "PizzaQL",
+        "description": "Modern order placement & management system for pizza restaurants.",
         "url": "https://github.com/xxczaki/pizzaql",
         "tags": [
             "React",
@@ -10,7 +11,8 @@
     },
     {
         "name": "Quick Air",
-        "url": "https://github.com/xxczaki/quick-air/",
+        "description": "Check air quality near you quickly, using Airly API.",
+        "url": "https://quick-air.now.sh",
         "tags": [
             "React",
             "Next.js"
@@ -18,6 +20,7 @@
     },
     {
         "name": "Cash CLI",
+        "description": "Convert currency rates directly from your terminal!",
         "url": "https://github.com/xxczaki/cash-cli/",
         "tags": [
             "Node.js"
@@ -25,8 +28,10 @@
     },
     {
         "name": "Cashify",
+        "description": "Lightweight currency conversion library, successor of money.js",
         "url": "https://github.com/xxczaki/cashify",
         "tags": [
+            "Node.js",
             "TypeScript"
         ]
     }
