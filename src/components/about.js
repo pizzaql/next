@@ -14,7 +14,7 @@ const About = () => (
             When it comes to offline activities, I hugely enjoy travelling and riding a bike <span role="img" aria-label="bike emoji">🚴</span>
 		</Text>
 		<br/>
-		<Text>I&apos;m currently maintaining <Link isExternal href="https://github.com/bitinn/node-fetch" target="_blank" rel="noopener noreferrer" color="teal.500">node-fetch</Link>, an open-source library, that brings window.fetch API to Node.js</Text>
+		<Text>I&apos;m currently maintaining <Link isExternal href="https://github.com/bitinn/node-fetch" color="teal.500">node-fetch</Link>, an open-source library, that brings window.fetch API to Node.js</Text>
 	</Box>
 );
 
