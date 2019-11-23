@@ -1,74 +1,79 @@
 {
-  "name": "kepinski-gatsby",
-  "description": "Personal site built with Gatsby, React & styled-components",
-  "version": "1.0.0",
-  "author": "Antoni Kepinski <a@kepinski.me> (https://kepinski.me)",
-  "dependencies": {
-    "@chakra-ui/core": "^0.4.1",
-    "@emotion/core": "^10.0.22",
-    "@emotion/styled": "^10.0.23",
-    "core-js": "^3.4.1",
-    "emotion-theming": "^10.0.19",
-    "gatsby": "^2.17.15",
-    "gatsby-image": "^2.2.33",
-    "gatsby-plugin-chakra-ui": "^0.1.0",
-    "gatsby-plugin-google-analytics": "^2.1.27",
-    "gatsby-plugin-manifest": "^2.2.28",
-    "gatsby-plugin-offline": "^3.0.21",
-    "gatsby-plugin-react-helmet": "^3.1.15",
-    "gatsby-plugin-sharp": "^2.3.0",
-    "gatsby-plugin-sitemap": "^2.2.21",
-    "gatsby-source-filesystem": "^2.1.37",
-    "gatsby-transformer-sharp": "^2.3.5",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-icons": "^3.8.0",
-    "typeface-open-sans": "0.0.75"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint-config-xo-react": "^0.20.0",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
-    "xo": "^0.25.3"
-  },
-  "keywords": [
-    "kepinski"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "build": "gatsby build",
-    "now-build": "npm run build",
-    "test": "xo"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/xxczaki/kepinski.me"
-  },
-  "bugs": {
-    "url": "https://github.com/xxczaki/kepinski.me/issues"
-  },
-  "xo": {
-    "nodeVersion": ">=10",
-    "parser": "babel-eslint",
-    "envs": [
-      "node",
-      "browser",
-      "jest"
-    ],
-    "extends": "xo-react",
-    "settings": {
-      "react": {
-        "version": "16.11"
-      }
+    "name": "kepinski-gatsby",
+    "description": "Personal site built with Gatsby, React & styled-components",
+    "version": "1.0.0",
+    "author": {
+        "name": "Antoni Kepinski",
+        "email": "a@kepinski.me",
+        "url": "https://kepinski.me"
     },
-    "rules": {
-      "import/no-unassigned-import": "off",
-      "jsx-a11y/anchor-is-valid": "off"
-    }
-  }
+    "dependencies": {
+        "@chakra-ui/core": "^0.4.1",
+        "@emotion/core": "^10.0.22",
+        "@emotion/styled": "^10.0.23",
+        "core-js": "^3.4.2",
+        "emotion-theming": "^10.0.19",
+        "gatsby": "^2.18.2",
+        "gatsby-image": "^2.2.33",
+        "gatsby-plugin-chakra-ui": "^0.1.0",
+        "gatsby-plugin-google-analytics": "^2.1.28",
+        "gatsby-plugin-manifest": "^2.2.29",
+        "gatsby-plugin-offline": "^3.0.22",
+        "gatsby-plugin-react-helmet": "^3.1.15",
+        "gatsby-plugin-sharp": "^2.3.2",
+        "gatsby-plugin-sitemap": "^2.2.21",
+        "gatsby-source-filesystem": "^2.1.38",
+        "gatsby-transformer-sharp": "^2.3.5",
+        "prop-types": "^15.7.2",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-helmet": "^5.2.1",
+        "react-icons": "^3.8.0",
+        "typeface-open-sans": "^0.0.75"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.3",
+        "eslint-config-xo-react": "^0.20.0",
+        "eslint-plugin-react": "^7.16.0",
+        "eslint-plugin-react-hooks": "^2.3.0",
+        "xo": "^0.25.3"
+    },
+    "keywords": [
+        "kepinski"
+    ],
+    "license": "MIT",
+    "scripts": {
+        "develop": "gatsby develop",
+        "start": "npm run develop",
+        "build": "gatsby build",
+        "now-build": "npm run build",
+        "test": "xo"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xxczaki/kepinski.me.git"
+    },
+    "bugs": {
+        "url": "https://github.com/xxczaki/kepinski.me/issues"
+    },
+    "xo": {
+        "nodeVersion": ">=10",
+        "parser": "babel-eslint",
+        "envs": [
+            "node",
+            "browser",
+            "jest"
+        ],
+        "extends": "xo-react",
+        "settings": {
+            "react": {
+                "version": "16.11"
+            }
+        },
+        "rules": {
+            "import/no-unassigned-import": "off",
+            "jsx-a11y/anchor-is-valid": "off"
+        }
+    },
+    "homepage": "https://github.com/xxczaki/kepinski.me#readme"
 }
