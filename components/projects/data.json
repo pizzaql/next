@@ -6,7 +6,8 @@
         "tags": [
             "React",
             "Next.js",
-            "GraphQL"
+			"GraphQL",
+			"Prisma"
         ]
     },
     {
@@ -17,12 +18,22 @@
             "React",
             "Next.js"
         ]
+	},
+	{
+        "name": "Welding Toolbox 2",
+        "description": "An app containing a set of useful welding tools, written in React Native",
+        "url": "https://quick-air.now.sh",
+        "tags": [
+            "React Native",
+			"Mobile"
+        ]
     },
     {
         "name": "Cash CLI",
         "description": "Convert currency rates directly from your terminal!",
         "url": "https://github.com/xxczaki/cash-cli/",
         "tags": [
+			"CLI",
             "Node.js"
         ]
     },
@@ -33,6 +44,15 @@
         "tags": [
             "Node.js",
             "TypeScript"
+        ]
+	},
+	{
+        "name": "odc",
+        "description": "Update npm dependencies easily!",
+        "url": "https://github.com/xxczaki/odc",
+        "tags": [
+			"CLI",
+            "Node.js"
         ]
     }
 ]

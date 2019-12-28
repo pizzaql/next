@@ -1,7 +1,20 @@
 {
     "version": 2,
-    "builds": [
-        { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
+    "routes": [
+      {
+        "src": "^/service-worker.js$",
+        "dest": "/_next/static/service-worker.js",
+        "headers": {
+          "cache-control": "public, max-age=43200, immutable",
+          "Service-Worker-Allowed": "/"
+        }
+      }
     ],
-    "regions": ["all"]
+    "builds": [
+      {
+        "src": "next.config.js",
+        "use": "@now/next"
+      }
+    ],
+		"regions": ["all"]
 }
