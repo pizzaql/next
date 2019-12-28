@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import {SimpleImg} from 'react-simple-img';
 import Tilt from 'react-parallax-tilt';
 
-// eslint-disable-next-line import/extensions
-import imageSrc from '../public/images/me.jpg?webp';
+import imageSrc from '../public/images/me.jpg';
 import imagePlaceholder from '../public/images/placeholder.svg';
 
 const Wrapper = styled.div`
@@ -15,7 +14,7 @@ const Wrapper = styled.div`
 const Me = () => (
 	<Wrapper>
 		<Tilt>
-			<SimpleImg src={imageSrc} placeholder={imagePlaceholder} width="20em" height="auto"/>
+			<SimpleImg alt="Me" src={imageSrc} placeholder={imagePlaceholder} width="20em" height="auto"/>
 		</Tilt>
 	</Wrapper>
 );
