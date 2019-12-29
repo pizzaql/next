@@ -6,8 +6,7 @@ import data from './data.json';
 const Wrapper = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-	position: relative;
-	gap: 15px;
+	gap: 17px;
 	padding-top: 2em;
 `;
 
@@ -27,7 +26,7 @@ const Element = styled.div`
 	cursor: pointer;
 
 	&:hover {
-		transform: translateY(-5px);
+		transform: scale(1.05);
 	}
 
 	a {
