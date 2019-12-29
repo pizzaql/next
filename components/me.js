@@ -12,11 +12,11 @@ const Wrapper = styled.div`
 `;
 
 const Me = () => (
-	<Wrapper>
-		<Tilt>
+	<Tilt gyroscope>
+		<Wrapper>
 			<SimpleImg src={imageSrc} placeholder={imagePlaceholder} width="18em" height="auto" alt="Me"/>
-		</Tilt>
-	</Wrapper>
+		</Wrapper>
+	</Tilt>
 );
 
 export default Me;
