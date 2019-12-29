@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import {SimpleImg} from 'react-simple-img';
 
 import data from './data.json';
+import imageSrc from '../../public/images/open.svg';
 
 const Wrapper = styled.div`
 	display: grid;
@@ -35,9 +37,20 @@ const Element = styled.div`
 	}
 `;
 
+const Top = styled.div`
+	display: flex;
+	justify-content: space-between;
+`;
+
 const Header = styled.h5`
 	font-size: 22px;
     margin: 0px 0px 10px;
+`;
+
+const Img = styled(SimpleImg)`
+	/* Change SVG color to #a8b2d1 */
+	filter: invert(81%) sepia(11%) saturate(734%) hue-rotate(189deg) brightness(90%) contrast(79%);
+	margin-top: -9px;
 `;
 
 const Description = styled.p`
@@ -69,7 +82,10 @@ const Projects = () => (
 				<Element key={el.name}>
 					<a href={el.url} target="_blank" rel="noopener noreferrer">
 						<header>
-							<Header>{el.name}</Header>
+							<Top>
+								<Header>{el.name}</Header>
+								<Img src={imageSrc} placeholder="black" width="1.3em" height="auto" alt="Open"/>
+							</Top>
 							<Description>
 								{el.description}
 							</Description>
