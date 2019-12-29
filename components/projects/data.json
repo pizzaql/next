@@ -22,10 +22,9 @@
 	{
         "name": "Welding Toolbox 2",
         "description": "An app containing a set of useful welding tools, written in React Native",
-        "url": "https://quick-air.now.sh",
+        "url": "https://play.google.com/store/apps/details?id=me.kepinski.weldingtoolbox2",
         "tags": [
-            "React Native",
-			"Mobile"
+            "React Native"
         ]
     },
     {
