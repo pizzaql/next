@@ -12,7 +12,7 @@
     "ava": {
         "require": [
             "@babel/register",
-			"./test/helpers/_ignore-utils.js"
+            "./test/helpers/_ignore-utils.js"
         ]
     },
     "xo": {
