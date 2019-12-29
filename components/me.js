@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `;
 
 const Me = () => (
-	<Tilt gyroscope>
+	<Tilt>
 		<Wrapper>
 			<SimpleImg src={imageSrc} placeholder={imagePlaceholder} width="18em" height="auto" alt="Me"/>
 		</Wrapper>
