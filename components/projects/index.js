@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import {SimpleImg} from 'react-simple-img';
 
-import data from './data.json';
 import imageSrc from '../../public/images/open.svg';
+import data from './data.json';
 
 const Wrapper = styled.div`
 	display: grid;
