@@ -41,7 +41,7 @@
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-parallax-tilt": "^1.3.29",
-        "react-simple-img": "^2.3.8",
+        "react-simple-img": "^2.3.9",
         "styled-components": "^5.0.0-fixhoist"
     },
     "devDependencies": {
