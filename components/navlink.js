@@ -20,7 +20,7 @@ const Wrapper = styled.a`
 `;
 
 const NavLink = ({title, href}) => (
-	<Link href={href}>
+	<Link scroll={false} href={href}>
 		{/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
 		<Wrapper>//{title}</Wrapper>
 	</Link>

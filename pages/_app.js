@@ -3,6 +3,8 @@ import Head from 'next/head';
 import React from 'react';
 import {createGlobalStyle} from 'styled-components';
 
+import Container from '../components/container';
+
 // Assets
 import SpaceMonoWoff from '../public/fonts/space-mono-v5-latin-regular.woff';
 import SpaceMonoWoff2 from '../public/fonts/space-mono-v5-latin-regular.woff2';
@@ -39,10 +41,12 @@ class MyApp extends App {
 		return (
 			<>
 				<GlobalStyle/>
-				<Head>
-					<title>Antoni Kepinski</title>
-				</Head>
-				<Component {...pageProps}/>
+				<Container>
+					<Head>
+						<title>Antoni Kepinski</title>
+					</Head>
+					<Component {...pageProps}/>
+				</Container>
 			</>
 		);
 	}
