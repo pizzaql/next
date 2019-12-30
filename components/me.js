@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 const Me = () => (
 	<Tilt>
 		<Wrapper>
-			<SimpleImg src={imageSrc} srcSet={imageSrcSet} placeholder={imagePlaceholder} width="18em" height="auto" alt="Me"/>
+			<SimpleImg src={imageSrc} srcSet={imageSrcSet} placeholder={imagePlaceholder} draggable={false} width="18em" height="auto" alt="Me"/>
 		</Wrapper>
 	</Tilt>
 );
