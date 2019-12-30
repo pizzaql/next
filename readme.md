@@ -13,7 +13,7 @@
 ## Highlights
 
 - Perfect Lighthouse Score
-- Works offline
+- Works offline (PWA)
 - 100% Responsive
 
 ## Development
