@@ -6,14 +6,15 @@ import PropTypes from 'prop-types';
 const Wrapper = styled.a`
 	color: #fafff7;
     box-sizing: border-box;
-    text-decoration: underline;
+    text-decoration: none;
     user-select: none;
     cursor: pointer;
 	margin-right: 1em;
+	box-shadow: inset 0 -1.5px 0 #fff;
+	transition: all .2s ease-in-out;
 
     &:hover {
-        text-decoration: none;
-        background: #fdfdfd;
+        box-shadow: inset 0 -33px 0 0 #fff;
         color: #1b1b1b
     }
 `;
