@@ -18,9 +18,7 @@
         "nodeVersion": ">=10",
         "parser": "babel-eslint",
         "rules": {
-            "import/no-unassigned-import": "off",
-            "import/no-unresolved": "off",
-            "react/jsx-child-element-spacing": "off"
+            "import/no-unassigned-import": "off"
         },
         "settings": {
             "react": {
