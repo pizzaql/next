@@ -48,8 +48,6 @@
         "next-fonts": "^0.19.0",
         "next-offline": "^4.0.6",
         "next-optimized-images": "^2.5.4",
-        "responsive-loader": "^1.2.0",
-        "sharp": "^0.23.4",
         "xo": "^0.25.3"
     }
 }
