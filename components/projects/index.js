@@ -50,7 +50,7 @@ const Header = styled.h5`
 const Img = styled(SimpleImg)`
 	/* Change SVG color to #a8b2d1 */
 	filter: invert(81%) sepia(11%) saturate(734%) hue-rotate(189deg) brightness(90%) contrast(79%);
-	margin-top: -9px;
+	margin-top: 7px;
 `;
 
 const Description = styled.p`
@@ -84,7 +84,7 @@ const Projects = () => (
 						<header>
 							<Top>
 								<Header>{el.name}</Header>
-								<Img src={imageSrc} placeholder="black" width="1.3em" height="auto" alt="Open"/>
+								<Img src={imageSrc} placeholder="black" width="1.3em" height="1.3em" alt="Open"/>
 							</Top>
 							<Description>
 								{el.description}
