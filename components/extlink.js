@@ -8,6 +8,7 @@ const ExtLink = styled.a`
     cursor: pointer;
 	box-shadow: inset 0 -1.5px 0 #fff;
 	transition: all .2s ease-in-out;
+    white-space: nowrap;
 
     &:hover {
         box-shadow: inset 0 -33px 0 0 #fff;
