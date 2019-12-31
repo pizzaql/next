@@ -12,9 +12,23 @@
 
 ## Highlights
 
-- Perfect Lighthouse Score
+- Great performance
 - Works offline (PWA)
 - 100% Responsive
+
+## Built with:
+
+**Main:**
+
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Styled Components](https://www.styled-components.com/)
+
+**Additional:**
+
+- [React Parallax Tilt](https://github.com/mkosir/react-parallax-tilt) - image animations
+- [React Simple Image](https://react-simple-img.now.sh) - image lazy loading
+- [Framer Motion](https://www.framer.com/motion/) - transitions
 
 ## Development
 
