@@ -114,7 +114,7 @@ export default class MyDocument extends Document {
 					<link rel="apple-touch-startup-image"
 						href="/apple-splash-1136-640.png"
 						media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/>
-					<link href="https://storage.googleapis.com" rel="preconnect" crossorigin/>
+					<link crossOrigin href="https://storage.googleapis.com" rel="preconnect"/>
 				</Head>
 				<body>
 					<Main/>
