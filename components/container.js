@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {motion} from 'framer-motion';
 import PropTypes from 'prop-types';
 
 import Header from './header';
@@ -19,19 +20,39 @@ const Wrapper = styled.div`
 	}
 `;
 
-const Container = props => (
-	<Wrapper>
-		<Header>
-			<h1>Antoni Kepinski</h1>
-		</Header>
-		<Nav>
-			<NavLink title="Home" href="/"/>
-			<NavLink title="Projects" href="/projects"/>
-			<NavLink title="Contact" href="/contact"/>
-		</Nav>
-		{props.children}
-	</Wrapper>
-);
+const Container = props => {
+	const config = {
+		type: 'spring',
+		damping: 100,
+		stiffness: 100
+	};
+
+	return (
+		<Wrapper>
+			<Header>
+				<motion.h1
+					transition={config}
+					initial={{y: -100, opacity: 0}}
+					animate={{y: 0, opacity: 1}}
+					exit={{y: 0, opacity: 0}}
+				>
+          Antoni Kepinski
+				</motion.h1>
+			</Header>
+			<Nav
+				transition={config}
+				initial={{x: -100, opacity: 0}}
+				animate={{x: 0, opacity: 1}}
+				exit={{x: 0, opacity: 0}}
+			>
+				<NavLink title="Home" href="/"/>
+				<NavLink title="Projects" href="/projects"/>
+				<NavLink title="Contact" href="/contact"/>
+			</Nav>
+			{props.children}
+		</Wrapper>
+	);
+};
 
 Container.propTypes = {
 	children: PropTypes.node.isRequired
