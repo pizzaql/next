@@ -1,6 +1,6 @@
-# [kepinski.me](https://kepinski.me)
+# [Site](https://kepinski.me)
 
-> Personal website 🚀
+> Personal website, built with React, Next.js & more 🚀
 
 [![Build Status](https://travis-ci.org/xxczaki/kepinski.me.svg?branch=master)](https://travis-ci.org/xxczaki/kepinski.me)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
