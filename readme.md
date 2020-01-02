@@ -15,6 +15,8 @@
 - Great performance
 - Works offline (PWA)
 - 100% Responsive
+- Fluid animations
+- Respects reduced motion setting
 
 ## Built with:
 
