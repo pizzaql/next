@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {SimpleImg} from 'react-simple-img';
-import Tilt from 'react-tilted'
+import Tilt from 'react-tilted';
 
 import imageSrc from '../public/images/me.jpg';
 import imagePlaceholder from '../public/images/placeholder.svg';
