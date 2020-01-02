@@ -7,15 +7,13 @@ import ExtLink from '../components/extlink';
 
 const Index = () => {
 	return (
-		<>
-			<Main>
-				<Box>
-					<p>I value my time, so make it worth it, and keep it succinct.</p>
-					<Mail/>
-					<p>You can also contact me on <ExtLink target="_blank" rel="noopener noreferrer" href="https://twitter.com/dokwadratu">Twitter</ExtLink>.</p>
-				</Box>
-			</Main>
-		</>
+		<Main>
+			<Box>
+				<p>I value my time, so make it worth it, and keep it succinct.</p>
+				<Mail/>
+				<p>You can also contact me on <ExtLink target="_blank" rel="noopener noreferrer" href="https://twitter.com/dokwadratu">Twitter</ExtLink>.</p>
+			</Box>
+		</Main>
 	);
 };
 

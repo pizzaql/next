@@ -5,11 +5,9 @@ import Projects from '../components/projects';
 
 const Index = () => {
 	return (
-		<>
-			<Main>
-				<Projects/>
-			</Main>
-		</>
+		<Main>
+			<Projects/>
+		</Main>
 	);
 };
 
