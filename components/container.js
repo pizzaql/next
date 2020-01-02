@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {motion} from 'framer-motion';
+import {motion, useReducedMotion} from 'framer-motion';
 import PropTypes from 'prop-types';
 
 import Header from './header';
@@ -21,6 +21,8 @@ const Wrapper = styled.div`
 `;
 
 const Container = props => {
+	const shouldReduceMotion = useReducedMotion();
+
 	const config = {
 		type: 'spring',
 		damping: 100,
@@ -32,18 +34,18 @@ const Container = props => {
 			<Header>
 				<motion.h1
 					transition={config}
-					initial={{y: -100, opacity: 0}}
-					animate={{y: 0, opacity: 1}}
-					exit={{y: 0, opacity: 0}}
+					initial={shouldReduceMotion ? {opacity: 0} : {y: -100, opacity: 0}}
+					animate={shouldReduceMotion ? {opacity: 1} : {y: 0, opacity: 1}}
+					exit={shouldReduceMotion ? {opacity: 0} : {y: 0, opacity: 0}}
 				>
           Antoni Kepinski
 				</motion.h1>
 			</Header>
 			<Nav
 				transition={config}
-				initial={{x: -100, opacity: 0}}
-				animate={{x: 0, opacity: 1}}
-				exit={{x: 0, opacity: 0}}
+				initial={shouldReduceMotion ? {opacity: 0} : {x: -100, opacity: 0}}
+				animate={shouldReduceMotion ? {opacity: 1} : {x: 0, opacity: 1}}
+				exit={shouldReduceMotion ? {opacity: 0} : {x: 0, opacity: 0}}
 			>
 				<NavLink title="Home" href="/"/>
 				<NavLink title="Projects" href="/projects"/>

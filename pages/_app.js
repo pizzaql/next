@@ -2,9 +2,9 @@ import App from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import {createGlobalStyle} from 'styled-components';
-import {AnimatePresence, motion} from 'framer-motion';
 
 import Container from '../components/container';
+import Transition from '../components/transition';
 
 // Assets
 import SpaceMonoWoff from '../public/fonts/space-mono-v5-latin-regular.woff';
@@ -40,13 +40,6 @@ class MyApp extends App {
 	render() {
 		const {Component, pageProps, router} = this.props;
 
-		const spring = {
-			type: 'spring',
-			damping: 20,
-			stiffness: 100,
-			when: 'beforeChildren'
-		};
-
 		return (
 			<>
 				<GlobalStyle/>
@@ -54,20 +47,9 @@ class MyApp extends App {
 					<title>Antoni Kepinski</title>
 				</Head>
 				<Container>
-					<AnimatePresence exitBeforeEnter>
-						<div className="page-transition-wrapper">
-							<motion.div
-								key={router.pathname}
-								transition={spring}
-								initial={{x: 300, opacity: 0}}
-								animate={{x: 0, opacity: 1}}
-								exit={{x: -300, opacity: 0}}
-								id="page-transition-container"
-							>
-								<Component {...pageProps} key={router.route}/>
-							</motion.div>
-						</div>
-					</AnimatePresence>
+					<Transition id={router.pathname}>
+						<Component {...pageProps} key={router.route}/>
+					</Transition>
 				</Container>
 			</>
 		);
