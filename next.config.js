@@ -23,6 +23,7 @@ const nextConfig = {
 			}
 		]
 	},
+	reactStrictMode: true,
 	experimental: {
 		modern: true,
 		granularChunks: true
