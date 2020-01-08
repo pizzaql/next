@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 	padding-top: 2em;
 `;
 
-const Element = styled.div`
+const Element = styled.a`
 	box-shadow: #212121 0px 10px 30px -15px;
     display: flex;
     -webkit-box-pack: justify;
@@ -26,6 +26,8 @@ const Element = styled.div`
     border-radius: 3px;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 	cursor: pointer;
+	color: inherit;
+	text-decoration: inherit;
 
 	&:hover {
 		transform: scale(1.05);
@@ -70,7 +72,7 @@ const Tags = styled.ul`
 
 const Tag = styled.li`
 	font-size: 13px;
-    color: rgb(136, 146, 176);
+    color: #8892B0;
     line-height: 1.75;
     margin-right: 15px;
 `;
@@ -78,25 +80,23 @@ const Tag = styled.li`
 const Projects = () => (
 	<Wrapper>
 		{data.map(el => (
-			<Element key={el.name}>
-				<a href={el.url} target="_blank" rel="noopener noreferrer">
-					<header>
-						<Top>
-							<Header>{el.name}</Header>
-							<Img src={imageSrc} placeholder="black" width="1.3em" height="1.3em" alt="Open"/>
-						</Top>
-						<Description>
-							{el.description}
-						</Description>
-					</header>
-					<footer>
-						<Tags>
-							{el.tags.map(name => (
-								<Tag key={name}>{name}</Tag>
-							))}
-						</Tags>
-					</footer>
-				</a>
+			<Element key={el.name} href={el.url} target="_blank" rel="noopener noreferrer">
+				<header>
+					<Top>
+						<Header>{el.name}</Header>
+						<Img src={imageSrc} placeholder="black" width="1.3em" height="1.3em" alt="Open"/>
+					</Top>
+					<Description>
+						{el.description}
+					</Description>
+				</header>
+				<footer>
+					<Tags>
+						{el.tags.map(name => (
+							<Tag key={name}>{name}</Tag>
+						))}
+					</Tags>
+				</footer>
 			</Element>
 		))}
 	</Wrapper>
