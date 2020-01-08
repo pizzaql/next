@@ -8,7 +8,10 @@
         "dev": "next dev",
         "start": "next start",
         "test": "xo"
-    },
+	},
+	"engines": {
+		"node": "12.x"
+	},
     "xo": {
         "envs": [
             "node",
