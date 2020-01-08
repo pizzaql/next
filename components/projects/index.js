@@ -76,32 +76,30 @@ const Tag = styled.li`
 `;
 
 const Projects = () => (
-	<>
-		<Wrapper>
-			{data.map(el => (
-				<Element key={el.name}>
-					<a href={el.url} target="_blank" rel="noopener noreferrer">
-						<header>
-							<Top>
-								<Header>{el.name}</Header>
-								<Img src={imageSrc} placeholder="black" width="1.3em" height="1.3em" alt="Open"/>
-							</Top>
-							<Description>
-								{el.description}
-							</Description>
-						</header>
-						<footer>
-							<Tags>
-								{el.tags.map(name => (
-									<Tag key={name}>{name}</Tag>
-								))}
-							</Tags>
-						</footer>
-					</a>
-				</Element>
-			))}
-		</Wrapper>
-	</>
+	<Wrapper>
+		{data.map(el => (
+			<Element key={el.name}>
+				<a href={el.url} target="_blank" rel="noopener noreferrer">
+					<header>
+						<Top>
+							<Header>{el.name}</Header>
+							<Img src={imageSrc} placeholder="black" width="1.3em" height="1.3em" alt="Open"/>
+						</Top>
+						<Description>
+							{el.description}
+						</Description>
+					</header>
+					<footer>
+						<Tags>
+							{el.tags.map(name => (
+								<Tag key={name}>{name}</Tag>
+							))}
+						</Tags>
+					</footer>
+				</a>
+			</Element>
+		))}
+	</Wrapper>
 );
 
 export default Projects;
