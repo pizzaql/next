@@ -16,7 +16,7 @@ const Index = () => {
 				<p>I am currently maintaining <ExtLink target="_blank" rel="noopener noreferrer" href="https://github.com/bitinn/node-fetch">node-fetch</ExtLink>, an open-source library, that brings window.fetch API to Node.js</p>
 				<p>Here are a few technologies I&apos;ve been working with recently:</p>
 				<Skills/>
-				<p>You should also check my <Link scroll={false} href="/uses"><ExtLink>developer setup</ExtLink></Link>.</p>
+				<p>You should also check my <Link href="/uses"><ExtLink>developer setup</ExtLink></Link>.</p>
 			</Box>
 			<div>
 				<Me/>

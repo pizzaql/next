@@ -6,11 +6,23 @@ import {createGlobalStyle} from 'styled-components';
 import Container from '../components/container';
 import Transition from '../components/transition';
 
-// Assets
+// Fonts
+import PlayfairDisplayWoff from '../public/fonts/playfair-display-v18-latin-regular.woff';
+import PlayfairDisplayWoff2 from '../public/fonts/playfair-display-v18-latin-regular.woff2';
 import SpaceMonoWoff from '../public/fonts/space-mono-v5-latin-regular.woff';
 import SpaceMonoWoff2 from '../public/fonts/space-mono-v5-latin-regular.woff2';
 
 const GlobalStyle = createGlobalStyle`
+	@font-face {
+		font-family: 'Playfair Display';
+		font-style: normal;
+		font-weight: 400;
+		font-display: fallback;
+		src: local('Playfair Display'), local('PlayfairDisplay-Regular'),
+			url(${PlayfairDisplayWoff2}) format('woff2'),
+			url(${PlayfairDisplayWoff}) format('woff');
+  	}
+
 	@font-face {
 		font-family: 'Space Mono';
 		font-style: normal;
@@ -22,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
   	}
 
 	body {
-		font-family: Space Mono, monospace;
+		font-family: 'Space Mono', monospace;
 		background-color: #121212;
 		color: #fff;
 		margin: auto;
