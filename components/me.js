@@ -4,7 +4,7 @@ import {SimpleImg} from 'react-simple-img';
 import Tilt from 'react-parallax-tilt';
 
 import imageSrc from '../public/images/me.jpg';
-import imagePlaceholder from '../public/images/placeholder.svg';
+import imagePlaceholder from '../public/images/me-placeholder.svg';
 
 const Wrapper = styled.div`
 	border: 10px solid #212121;
