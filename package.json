@@ -30,7 +30,7 @@
         }
     },
     "dependencies": {
-        "core-js": "^3.6.2",
+        "core-js": "^3.6.3",
         "framer-motion": "^1.7.0",
         "next": "^9.1.7",
         "prop-types": "^15.7.2",
@@ -41,7 +41,7 @@
         "styled-components": "^5.0.0-cgsmem"
     },
     "devDependencies": {
-        "@babel/core": "^7.7.7",
+        "@babel/core": "^7.8.0",
         "babel-eslint": "^10.0.3",
         "babel-plugin-styled-components": "^1.10.6",
         "eslint-config-xo-react": "^0.22.0",
