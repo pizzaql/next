@@ -15,9 +15,7 @@ const Wrapper = styled.div`
 const Element = styled.a`
 	box-shadow: #212121 0px 10px 30px -15px;
     display: flex;
-    -webkit-box-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
@@ -62,7 +60,6 @@ const Description = styled.p`
 const Tags = styled.ul`
 	display: flex;
     align-items: flex-end;
-    -webkit-box-flex: 1;
     flex-grow: 1;
     flex-wrap: wrap;
     padding: 0px;
