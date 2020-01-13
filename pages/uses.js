@@ -3,7 +3,6 @@ import React from 'react';
 import Main from '../components/main';
 import Box from '../components/box';
 import ExtLink from '../components/extlink';
-import Setup from '../components/setup';
 import Details from '../components/details';
 
 const Index = () => {
@@ -11,7 +10,6 @@ const Index = () => {
 		<Main>
 			<Box>
 				<p>Here you can find information about the hardware or software I own and use. Inspired by <ExtLink target="_blank" rel="noopener noreferrer" href="https://uses.tech/">/uses</ExtLink>.</p>
-				<Setup/>
 				<ul>
 					<li>Hardware and Desk
 						<ul>
