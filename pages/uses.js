@@ -23,7 +23,7 @@ const Index = () => {
 								</ul>
 							</li>
 							<li>Dell Latitude E7440 Notebook</li>
-							<li>2x 24&quot; Dell U2410</li>
+							<li>2x 24&quot; Dell U2410 Monitor</li>
 							<li>Logitech G413 Keyboard</li>
 							<li>Logitech MX Master 3 Mouse</li>
 							<li>Bose QuietComfort 25 Headphones</li>
