@@ -139,6 +139,9 @@ export default class MyDocument extends Document {
 				<body>
 					<Main/>
 					<NextScript/>
+					{/* Simple Analytics */}
+					<script async defer src="https://cdn.simpleanalytics.io/hello.js"/>
+					<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""/></noscript>
 				</body>
 			</html>
 		);
