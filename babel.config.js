@@ -4,7 +4,7 @@ const presets = [
 			targets: {
 				esmodules: true
 			},
-			corejs: 3,
+			corejs: '3.6',
 			useBuiltIns: 'usage'
 		}
 	}]
