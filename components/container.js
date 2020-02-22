@@ -38,7 +38,7 @@ const Container = props => {
 					animate={shouldReduceMotion ? {opacity: 1} : {y: 0, opacity: 1}}
 					exit={shouldReduceMotion ? {opacity: 0} : {y: 0, opacity: 0}}
 				>
-          Antoni Kepinski
+					Antoni Kepinski
 				</motion.h1>
 			</Header>
 			<Nav
