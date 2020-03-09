@@ -31,7 +31,7 @@
     },
     "dependencies": {
         "core-js": "^3.6.4",
-        "framer-motion": "^1.8.4",
+        "framer-motion": "^1.9.1",
         "next": "^9.2.2",
         "prop-types": "^15.7.2",
         "react": "^16.13.0",
@@ -41,11 +41,11 @@
         "styled-components": "^5.0.1"
     },
     "devDependencies": {
-        "@babel/core": "^7.8.6",
+        "@babel/core": "^7.8.7",
         "babel-eslint": "^10.1.0",
         "babel-plugin-styled-components": "^1.10.7",
         "eslint-config-xo-react": "^0.23.0",
-        "eslint-plugin-react": "^7.18.3",
+        "eslint-plugin-react": "^7.19.0",
         "eslint-plugin-react-hooks": "^2.5.0",
         "imagemin-mozjpeg": "^8.0.0",
         "imagemin-svgo": "^7.1.0",
