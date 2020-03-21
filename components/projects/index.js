@@ -76,20 +76,20 @@ const Tag = styled.li`
 
 const Projects = () => (
 	<Wrapper>
-		{data.map(el => (
-			<Element key={el.name} href={el.url} target="_blank" rel="noopener noreferrer">
+		{data.map(element => (
+			<Element key={element.name} href={element.url} target="_blank" rel="noopener noreferrer">
 				<header>
 					<Top>
-						<Header>{el.name}</Header>
+						<Header>{element.name}</Header>
 						<Img src={imageSrc} placeholder="black" width="1.3em" height="1.3em" alt="Open"/>
 					</Top>
 					<Description>
-						{el.description}
+						{element.description}
 					</Description>
 				</header>
 				<footer>
 					<Tags>
-						{el.tags.map(name => (
+						{element.tags.map(name => (
 							<Tag key={name}>{name}</Tag>
 						))}
 					</Tags>
