@@ -34,7 +34,7 @@
     "dependencies": {
         "core-js": "^3.6.4",
         "framer-motion": "^1.10.3",
-        "next": "^9.3.3",
+        "next": "^9.3.4",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
@@ -53,11 +53,11 @@
         "imagemin-svgo": "^7.1.0",
         "next-fonts": "^1.0.3",
         "next-offline": "^5.0.0",
-        "next-optimized-images": "^2.5.5",
+        "next-optimized-images": "^2.5.7",
         "stylelint": "^13.2.1",
         "stylelint-config-recommended": "^3.0.0",
         "stylelint-config-styled-components": "^0.1.1",
         "stylelint-processor-styled-components": "^1.10.0",
-        "xo": "^0.28.1"
+        "xo": "^0.28.2"
     }
 }
