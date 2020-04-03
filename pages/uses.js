@@ -39,7 +39,7 @@ const Index = () => {
 					</li>
 					<li>Personal gear
 						<ul>
-							<li>iPhone 6 16GB</li>
+							<li>iPhone 8 64GB</li>
 							<li>YubiKey 5 NFC</li>
 							<li><ExtLink target="_blank" rel="noopener noreferrer" href="https://redcanoebrands.com/shop/the-nasa-rocket-science-backpack/">Red Canoe NASA Backpack</ExtLink></li>
 						</ul>
