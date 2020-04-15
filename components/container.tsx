@@ -1,55 +1,51 @@
 import React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
-import {motion, useReducedMotion} from 'framer-motion';
 
-import Header from './header';
+import Logo from './logo';
 import Nav from './nav';
 import NavLink from './navlink';
+import Footer from './footer';
+
+import flashOutline from '../public/images/flash-outline.svg';
 
 interface Props {
 	children: React.ReactNode;
 }
 
 const Wrapper = styled.div`
+	position: fixed;
+    left: 0%;
+    top: auto;
+    right: 0%;
+    bottom: auto;
+    z-index: 10;
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	margin: auto;
+	padding: 16px;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 40em;
 `;
 
-const Container = ({children}: Props): JSX.Element => {
-	const shouldReduceMotion = useReducedMotion();
-
-	const config = {
-		type: 'spring',
-		damping: 100,
-		stiffness: 100
-	};
-
-	return (
+const Container = ({children}: Props): JSX.Element => (
+	<>
 		<Wrapper>
-			<Header>
-				<motion.h1
-					transition={config}
-					initial={shouldReduceMotion ? {opacity: 0} : {y: -100, opacity: 0}}
-					animate={shouldReduceMotion ? {opacity: 1} : {y: 0, opacity: 1}}
-					exit={shouldReduceMotion ? {opacity: 0} : {y: 0, opacity: 0}}
-				>
-					Antoni Kepinski
-				</motion.h1>
-			</Header>
-			<Nav
-				transition={config}
-				initial={shouldReduceMotion ? {opacity: 0} : {x: -100, opacity: 0}}
-				animate={shouldReduceMotion ? {opacity: 1} : {x: 0, opacity: 1}}
-				exit={shouldReduceMotion ? {opacity: 0} : {x: 0, opacity: 0}}
-			>
-				<NavLink title="Home" href="/"/>
-				<NavLink title="Projects" href="/projects"/>
-				<NavLink title="Contact" href="/contact"/>
+			<header>
+				<Link href="/">
+					<Logo src={flashOutline} draggable={false} alt="Flash"/>
+				</Link>
+			</header>
+			<Nav>
+				<NavLink title="Work" href="/"/>
+				<NavLink title="About" href="/about"/>
 			</Nav>
-			{children}
 		</Wrapper>
-	);
-};
+		{children}
+		<Footer>
+			<p>Copyright &copy; 2020 Antoni Kepinski</p>
+		</Footer>
+	</>
+);
 
 export default Container;

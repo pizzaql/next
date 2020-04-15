@@ -1,4 +1,5 @@
 import React from 'react';
+import {useRouter} from 'next/router';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -7,26 +8,35 @@ interface Props {
 	href: string;
 }
 
-const Wrapper = styled.a`
-	color: #fafff7;
-    box-sizing: border-box;
-    text-decoration: none;
-    user-select: none;
-    cursor: pointer;
-	margin-right: 1em;
-	box-shadow: inset 0 -1.5px 0 #fff;
-	transition: all .2s ease-in-out;
+interface WrapperProps {
+	active: boolean;
+}
 
-    &:hover {
-        box-shadow: inset 0 -33px 0 0 #fff;
-        color: #1b1b1b
-    }
+const Wrapper = styled.a`
+	border-radius: 8px;
+	text-decoration: none;
+    display: flex;
+    height: 32px;
+    margin-right: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    align-items: center;
+    border-bottom-style: none;
+    font-size: 14px;
+    font-weight: 600;
+	background-color: ${(props: WrapperProps) => props.active ? '#fff' : 'auto'};
+	color: ${(props: WrapperProps) => props.active ? '#18171D' : 'auto'};
+	cursor: pointer;
 `;
 
-const NavLink = ({title, href}: Props): JSX.Element => (
-	<Link scroll={false} href={href}>
-		<Wrapper>//{title}</Wrapper>
-	</Link>
-);
+const NavLink = ({title, href}: Props): JSX.Element => {
+	const router = useRouter();
+
+	return (
+		<Link scroll={false} href={href}>
+			<Wrapper active={router.pathname === href}>{title}</Wrapper>
+		</Link>
+	);
+};
 
 export default NavLink;

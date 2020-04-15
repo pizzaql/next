@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 const Details = styled.details`
-	cursor: pointer;
+	summary {
+		cursor: pointer;
+		outline: none;
+	}
 `;
 
 export default Details;

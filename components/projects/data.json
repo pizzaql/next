@@ -42,7 +42,7 @@
 	},
 	{
 		"id": "styled-react-boilerplate",
-        "name": "Styled Boilerplate",
+        "name": "Styled React Boilerplate",
         "description": "Minimal & modern boilerplate for building apps with React & styled-components",
         "url": "https://github.com/xxczaki/styled-react-boilerplate",
         "tags": [

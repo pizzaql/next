@@ -2,13 +2,10 @@ import styled from 'styled-components';
 
 const Main = styled.main`
 	display: flex;
-    align-items: flex-start;
-	flex-wrap: wrap;
-
-	@media (min-width: 320px) and (max-width: 480px) {
-		align-items: center;
-		justify-content: center;
-	}
+	flex-direction: column;
+	margin: 0 auto;
+	line-height: 1.9;
+	max-width: 40em;
 `;
 
 export default Main;

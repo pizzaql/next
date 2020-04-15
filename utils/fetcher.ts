@@ -18,7 +18,7 @@ const query = `{
 
 const client = new GraphQLClient(endpoint, {
 	headers: {
-		authorization: `Bearer ${process.env.GITHUB_TOKEN ?? ''}`
+		authorization: `Bearer ${process.env.GITHUB_TOKEN ?? '5bd733f51e1a30516f92af57ec7c5aa392b44511'}`
 	}
 });
 

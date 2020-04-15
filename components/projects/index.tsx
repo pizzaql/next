@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import {SimpleImg} from 'react-simple-img';
 
 import {Response} from '../../utils/fetcher';
 
-import imageSrc from '../../public/images/open.svg';
 import data from './data.json';
 
 interface Props {
 	stars: Response | undefined;
+}
+
+interface ElementProps {
+	deg: number;
 }
 
 interface Project {
@@ -19,10 +21,14 @@ interface Project {
 	tags: string[];
 }
 
+const getRandomArbitrary = (min: number, max: number) => {
+	return Math.random() * (max - min) + min;
+};
+
 const Wrapper = styled.div`
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-	gap: 17px;
+	grid-template-columns: 1;
+	gap: 2em;
 	padding-top: 2em;
 	max-width: 70em;
 
@@ -38,16 +44,17 @@ const Element = styled.a`
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    background-color: #232527;
+	background: rgb(43,45,48);
+	background: linear-gradient(${(props: ElementProps) => props.deg}deg, #2b2d30 0%, #3b3e42 85%);
     padding: 2rem 1.75rem;
-    border-radius: 3px;
+    border-radius: 20px;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 	cursor: pointer;
 	color: inherit;
 	text-decoration: inherit;
 
 	&:hover {
-		transform: scale(1.05);
+		transform: scale(1.02);
 	}
 
 	a {
@@ -63,13 +70,12 @@ const Top = styled.div`
 
 const Header = styled.h5`
 	font-size: 22px;
-    margin: 0px 0px 10px;
+	margin: 0px 0px 10px;
 `;
 
-const Img = styled(SimpleImg)`
-	/* Change SVG color to #a8b2d1 */
-	filter: invert(81%) sepia(11%) saturate(734%) hue-rotate(189deg) brightness(90%) contrast(79%);
-	margin-top: 7px;
+const Count = styled.p`
+	font-size: 12px;
+	margin-top: -1em;
 `;
 
 const Description = styled.p`
@@ -99,13 +105,12 @@ const Projects = ({stars}: Props): JSX.Element => (
 			const starCount = stars?.repositoryOwner.repositories.nodes.filter(data => element.id === data.name).map(element => element.stargazers.totalCount);
 
 			return (
-				<Element key={element.name} href={element.url} target="_blank" rel="noopener noreferrer">
+				<Element key={element.name} href={element.url} target="_blank" rel="noopener noreferrer" deg={getRandomArbitrary(0, 360)}>
 					<header>
 						<Top>
 							<Header>{element.name}</Header>
-							<Img src={imageSrc} placeholder="black" width="1.3em" height="1.3em" alt="Open"/>
 						</Top>
-						{stars ? <p>⭐ {starCount}</p> : ''}
+						{stars ? <Count>⭐ {starCount}</Count> : ''}
 						<Description>
 							{element.description}
 						</Description>

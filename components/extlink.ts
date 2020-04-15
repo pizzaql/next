@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 const ExtLink = styled.a`
-	color: #fafff7;
-    box-sizing: border-box;
+    background-image: linear-gradient(90deg, #666, #666);
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    text-shadow: .1em 0 #131415,-.1em 0 #131415,.05em 0 #131415,-.05em 0 #131415;
+    transition: color 0.2s;
+    outline: none;
+    color: inherit;
     text-decoration: none;
-    user-select: none;
-    cursor: pointer;
-	box-shadow: inset 0 -1.5px 0 #fff;
-	transition: all .2s ease-in-out;
-    white-space: nowrap;
 
     &:hover {
-        box-shadow: inset 0 -33px 0 0 #fff;
-        color: #1b1b1b
+        color: #666;
     }
 `;
 

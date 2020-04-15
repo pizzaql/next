@@ -1,10 +1,12 @@
 import styled from 'styled-components';
-import {motion} from 'framer-motion';
 
-const Nav = styled(motion.nav)`
+const Nav = styled.nav`
+    backdrop-filter: saturate(180%) blur(20px);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    height: 36px;
+    padding: 8px 2px;
+    align-items: center;
+    border-radius: 10px;
 `;
 
 export default Nav;
