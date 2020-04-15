@@ -7,7 +7,7 @@
         "build": "next build",
         "dev": "next dev",
         "start": "next start",
-        "test": "xo && stylelint './**/*.js'"
+        "test": "xo && stylelint './**/*.ts'"
     },
     "engines": {
         "node": "12.x"
