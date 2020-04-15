@@ -17,6 +17,8 @@
 - 100% Responsive
 - Fluid animations
 - Respects reduced motion setting
+- Features SSG data fetching
+- Written in TypeScript
 
 ## Built with:
 
@@ -31,6 +33,7 @@
 - [React Parallax Tilt](https://github.com/mkosir/react-parallax-tilt) - image animations
 - [React Simple Image](https://react-simple-img.now.sh) - image lazy loading
 - [Framer Motion](https://www.framer.com/motion/) - transitions
+- [NProgress](https://ricostacruz.com/nprogress/) - progress bar
 
 ## Development
 
