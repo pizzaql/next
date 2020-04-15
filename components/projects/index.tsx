@@ -105,7 +105,7 @@ const Projects = ({stars}: Props): JSX.Element => (
 							<Header>{element.name}</Header>
 							<Img src={imageSrc} placeholder="black" width="1.3em" height="1.3em" alt="Open"/>
 						</Top>
-						{stars ? <p>🟊 {starCount}</p> : ''}
+						{stars ? <p>⭐ {starCount}</p> : ''}
 						<Description>
 							{element.description}
 						</Description>
