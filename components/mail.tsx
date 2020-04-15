@@ -16,6 +16,7 @@ const shake = keyframes`
 	}
 `;
 
+/* eslint-disable @typescript-eslint/no-base-to-string */
 const Animated = styled.div`
 	&:hover {
 		animation: ${shake} 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -24,6 +25,7 @@ const Animated = styled.div`
   		perspective: 1000px;
 	}
 `;
+/* eslint-enable @typescript-eslint/no-base-to-string */
 
 const Wrapper = styled.a`
 	text-align: center;
@@ -32,7 +34,7 @@ const Wrapper = styled.a`
     font-size: 25px;
 `;
 
-const Mail = () => (
+const Mail = (): JSX.Element => (
 	<Animated>
 		<Wrapper href="mailto:a@kepinski.me">
 			a@kepinski.me

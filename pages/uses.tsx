@@ -1,11 +1,12 @@
 import React from 'react';
+import {NextPage} from 'next';
 
 import Main from '../components/main';
 import Box from '../components/box';
 import ExtLink from '../components/extlink';
 import Details from '../components/details';
 
-const Index = () => {
+const Index: NextPage<unknown> = () => {
 	return (
 		<Main>
 			<Box>

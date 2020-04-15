@@ -2,24 +2,43 @@ import React from 'react';
 import styled from 'styled-components';
 import {SimpleImg} from 'react-simple-img';
 
+import {Response} from '../../utils/fetcher';
+
 import imageSrc from '../../public/images/open.svg';
 import data from './data.json';
+
+interface Props {
+	stars: Response | undefined;
+}
+
+interface Project {
+	id: string;
+	name: string;
+	description: string;
+	url: string;
+	tags: string[];
+}
 
 const Wrapper = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
 	gap: 17px;
 	padding-top: 2em;
+	max-width: 70em;
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		max-width: 100%;
+	}
 `;
 
 const Element = styled.a`
-	box-shadow: #212121 0px 10px 30px -15px;
+	box-shadow: #232527 0px 10px 30px -15px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    background-color: #212121;
+    background-color: #232527;
     padding: 2rem 1.75rem;
     border-radius: 3px;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
@@ -74,28 +93,33 @@ const Tag = styled.li`
     margin-right: 15px;
 `;
 
-const Projects = () => (
+const Projects = ({stars}: Props): JSX.Element => (
 	<Wrapper>
-		{data.map(element => (
-			<Element key={element.name} href={element.url} target="_blank" rel="noopener noreferrer">
-				<header>
-					<Top>
-						<Header>{element.name}</Header>
-						<Img src={imageSrc} placeholder="black" width="1.3em" height="1.3em" alt="Open"/>
-					</Top>
-					<Description>
-						{element.description}
-					</Description>
-				</header>
-				<footer>
-					<Tags>
-						{element.tags.map(name => (
-							<Tag key={name}>{name}</Tag>
-						))}
-					</Tags>
-				</footer>
-			</Element>
-		))}
+		{data.map((element: Project) => {
+			const starCount = stars?.repositoryOwner.repositories.nodes.filter(data => element.id === data.name).map(element => element.stargazers.totalCount);
+
+			return (
+				<Element key={element.name} href={element.url} target="_blank" rel="noopener noreferrer">
+					<header>
+						<Top>
+							<Header>{element.name}</Header>
+							<Img src={imageSrc} placeholder="black" width="1.3em" height="1.3em" alt="Open"/>
+						</Top>
+						{stars ? <p>🟊 {starCount}</p> : ''}
+						<Description>
+							{element.description}
+						</Description>
+					</header>
+					<footer>
+						<Tags>
+							{element.tags.map(name => (
+								<Tag key={name}>{name}</Tag>
+							))}
+						</Tags>
+					</footer>
+				</Element>
+			);
+		})}
 	</Wrapper>
 );
 

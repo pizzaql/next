@@ -1,7 +1,27 @@
 [
+	{
+		"id": "node-fetch",
+        "name": "Node Fetch",
+        "description": "A light-weight module that brings window.fetch to Node.js",
+        "url": "https://github.com/node-fetch/node-fetch",
+        "tags": [
+            "Node.js"
+        ]
+	},
+	{
+		"id": "oji",
+        "name": "Oji",
+        "description": "Easily create text emoticons from your terminal",
+        "url": "https://github.com/xxczaki/oji",
+        "tags": [
+            "CLI",
+            "Node.js"
+        ]
+	},
     {
+		"id": "pizzaql",
         "name": "PizzaQL",
-        "description": "Modern order placement & management system for pizza restaurants.",
+        "description": "Modern order placement & management system for pizza restaurants",
         "url": "https://github.com/xxczaki/pizzaql",
         "tags": [
             "React",
@@ -9,34 +29,9 @@
 			"GraphQL",
 			"Prisma"
         ]
-    },
-    {
-        "name": "Quick Air",
-        "description": "Check air quality near you quickly, using Airly API.",
-        "url": "https://quick-air.now.sh",
-        "tags": [
-            "React",
-            "Next.js"
-        ]
 	},
 	{
-        "name": "Welding Toolbox 2",
-        "description": "An app containing a set of useful welding tools, written in React Native",
-        "url": "https://play.google.com/store/apps/details?id=me.kepinski.weldingtoolbox2",
-        "tags": [
-            "React Native"
-        ]
-    },
-    {
-        "name": "Cash CLI",
-        "description": "Convert currency rates directly from your terminal!",
-        "url": "https://github.com/xxczaki/cash-cli/",
-        "tags": [
-			"CLI",
-            "Node.js"
-        ]
-    },
-    {
+		"id": "cashify",
         "name": "Cashify",
         "description": "Lightweight currency conversion library, successor of money.js",
         "url": "https://github.com/xxczaki/cashify",
@@ -46,9 +41,21 @@
         ]
 	},
 	{
-        "name": "odc",
-        "description": "Update npm dependencies easily!",
-        "url": "https://github.com/xxczaki/odc",
+		"id": "styled-react-boilerplate",
+        "name": "Styled Boilerplate",
+        "description": "Minimal & modern boilerplate for building apps with React & styled-components",
+        "url": "https://github.com/xxczaki/styled-react-boilerplate",
+        "tags": [
+			"React",
+			"Styled Components",
+            "Webpack"
+        ]
+    },
+    {
+		"id": "cash-cli",
+        "name": "Cash CLI",
+        "description": "Convert currency rates directly from your terminal",
+        "url": "https://github.com/xxczaki/cash-cli/",
         "tags": [
 			"CLI",
             "Node.js"

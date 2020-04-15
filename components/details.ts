@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const Box = styled.details`
+const Details = styled.details`
 	cursor: pointer;
 `;
 
-export default Box;
+export default Details;

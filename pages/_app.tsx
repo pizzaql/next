@@ -1,7 +1,9 @@
-import App from 'next/app';
-import Head from 'next/head';
 import React from 'react';
+import {AppProps} from 'next/app';
+import Head from 'next/head';
+import Router from 'next/router';
 import {createGlobalStyle} from 'styled-components';
+import NProgress from 'nprogress';
 
 import Container from '../components/container';
 import Transition from '../components/transition';
@@ -11,6 +13,7 @@ import PlayfairDisplayWoff from '../public/fonts/playfair-display-v18-latin-regu
 import PlayfairDisplayWoff2 from '../public/fonts/playfair-display-v18-latin-regular.woff2';
 import SpaceMonoWoff from '../public/fonts/space-mono-v5-latin-regular.woff';
 import SpaceMonoWoff2 from '../public/fonts/space-mono-v5-latin-regular.woff2';
+import '../public/styles/nprogress.css';
 
 const GlobalStyle = createGlobalStyle`
 	@font-face {
@@ -35,37 +38,34 @@ const GlobalStyle = createGlobalStyle`
 
 	body {
 		font-family: 'Space Mono', monospace;
-		background-color: #121212;
+		background-color: #131415;
 		color: #fff;
-		margin: auto;
-		width: 100%;
 		font-size: 16px;
-		padding-top: 20px;
-		padding-bottom: 100px;
+		padding: 1em;
 		-webkit-font-smoothing: antialiased;
 		text-rendering: optimizeSpeed;
 		overflow-x: hidden;
 	}
 `;
 
-class MyApp extends App {
-	render() {
-		const {Component, pageProps, router} = this.props;
+Router.events.on('routeChangeStart', () => {
+	NProgress.start();
+});
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
-		return (
-			<>
-				<GlobalStyle/>
-				<Head>
-					<title>Antoni Kepinski</title>
-				</Head>
-				<Container>
-					<Transition id={router.pathname}>
-						<Component {...pageProps} key={router.route}/>
-					</Transition>
-				</Container>
-			</>
-		);
-	}
-}
+const myApp = ({Component, pageProps, router}: Readonly<AppProps>): JSX.Element => (
+	<>
+		<GlobalStyle/>
+		<Head>
+			<title>Antoni Kepinski</title>
+		</Head>
+		<Container>
+			<Transition id={router.pathname}>
+				<Component {...pageProps} key={router.route}/>
+			</Transition>
+		</Container>
+	</>
+);
 
-export default MyApp;
+export default myApp;

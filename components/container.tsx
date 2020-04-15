@@ -1,26 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import {motion, useReducedMotion} from 'framer-motion';
-import PropTypes from 'prop-types';
 
 import Header from './header';
 import Nav from './nav';
 import NavLink from './navlink';
 
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0 auto 30px;
-	padding-left: 3em;
-	padding-right: 20px;
+interface Props {
+	children: React.ReactNode;
+}
 
-	@media (min-width: 320px) and (max-width: 480px) {
-		padding-left: 20px;
-	}
+const Wrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 `;
 
-const Container = props => {
+const Container = ({children}: Props): JSX.Element => {
 	const shouldReduceMotion = useReducedMotion();
 
 	const config = {
@@ -51,13 +47,9 @@ const Container = props => {
 				<NavLink title="Projects" href="/projects"/>
 				<NavLink title="Contact" href="/contact"/>
 			</Nav>
-			{props.children}
+			{children}
 		</Wrapper>
 	);
-};
-
-Container.propTypes = {
-	children: PropTypes.node.isRequired
 };
 
 export default Container;

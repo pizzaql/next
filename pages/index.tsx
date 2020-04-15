@@ -1,4 +1,5 @@
 import React from 'react';
+import {NextPage} from 'next';
 
 import Main from '../components/main';
 import Box from '../components/box';
@@ -6,7 +7,7 @@ import ExtLink from '../components/extlink';
 import Skills from '../components/skills';
 import Me from '../components/me';
 
-const Index = () => {
+const Index: NextPage<unknown> = () => {
 	return (
 		<Main>
 			<Box>

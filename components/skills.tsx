@@ -27,7 +27,7 @@ const Element = styled.li`
 	}
 `;
 
-const Skills = () => (
+const Skills = (): JSX.Element => (
 	<List>
 		<Element>JavaScript (ES6+)</Element>
 		<Element>React</Element>

@@ -1,9 +1,9 @@
 import React from 'react';
-import Document, {Head, Main, NextScript} from 'next/document';
+import Document, {Head, Main, NextScript, DocumentContext} from 'next/document';
 import {ServerStyleSheet} from 'styled-components';
 
 export default class MyDocument extends Document {
-	static async getInitialProps(ctx) {
+	static async getInitialProps(ctx: DocumentContext) {
 		const sheet = new ServerStyleSheet();
 		const originalRenderPage = ctx.renderPage;
 
@@ -28,15 +28,15 @@ export default class MyDocument extends Document {
 		}
 	}
 
-	render() {
+	render(): JSX.Element {
 		return (
 			<html lang="pl">
 				<Head>
 					<meta charSet="utf-8"/>
 					<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 					<meta name="description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
-					<meta name="theme-color" content="#121212"/>
-					<meta name="msapplication-TileColor" content="#121212"/>
+					<meta name="theme-color" content="#131415"/>
+					<meta name="msapplication-TileColor" content="#131415"/>
 					<meta name="apple-mobile-web-app-capable" content="yes"/>
 					<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 					<meta name="twitter:card" content="summary"/>

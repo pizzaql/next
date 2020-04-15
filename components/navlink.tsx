@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+
+interface Props {
+	title: string;
+	href: string;
+}
 
 const Wrapper = styled.a`
 	color: #fafff7;
@@ -19,16 +23,10 @@ const Wrapper = styled.a`
     }
 `;
 
-const NavLink = ({title, href}) => (
+const NavLink = ({title, href}: Props): JSX.Element => (
 	<Link scroll={false} href={href}>
-		{/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
 		<Wrapper>//{title}</Wrapper>
 	</Link>
 );
-
-NavLink.propTypes = {
-	title: PropTypes.string.isRequired,
-	href: PropTypes.string.isRequired
-};
 
 export default NavLink;
