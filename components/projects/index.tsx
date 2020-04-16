@@ -105,7 +105,14 @@ const Projects = ({stars}: Props): JSX.Element => (
 			const starCount = stars?.repositoryOwner.repositories.nodes.filter(data => element.id === data.name).map(element => element.stargazers.totalCount);
 
 			return (
-				<Element key={element.name} href={element.url} target="_blank" rel="noopener noreferrer" deg={getRandomArbitrary(0, 360)}>
+				<Element 
+					key={element.id} 
+					href={element.url} 
+					target="_blank" 
+					rel="noopener noreferrer" 
+					deg={getRandomArbitrary(0, 360)}
+					aria-label={element.name}
+				>
 					<header>
 						<Top>
 							<Header>{element.name}</Header>
