@@ -6,6 +6,7 @@ import Heading from '../components/heading';
 import Main from '../components/main';
 import ExtLink from '../components/extlink';
 import Skills from '../components/skills';
+import Social from '../components/social';
 
 import imageSrc from '../public/images/me.jpg';
 import imagePlaceholder from '../public/images/me-placeholder.svg';
@@ -18,9 +19,10 @@ const Index: NextPage<unknown> = () => {
 				placeholder={imagePlaceholder}
 				// @ts-ignore
 				draggable={false}
+				alt="Me"
 				width="15em"
 				height="15em"
-				alt="Me"
+				importance="high"
 				imgStyle={{borderRadius: '20px'}}
 				style={{paddingTop: '12em'}}
 			/>
@@ -31,8 +33,10 @@ const Index: NextPage<unknown> = () => {
 				I also maintain a collection of my own open source projects.
 				When it comes to offline activities, I hugely enjoy travelling, riding a bike and listening to music.
 			</p>
-			<p>Here are some technologies I&apos;ve with recently:</p>
+			<p>Here are a few technologies I&apos;ve been working with recently:</p>
 			<Skills/>
+			<p>Connect with me:</p>
+			<Social/>
 		</Main>
 	);
 };
