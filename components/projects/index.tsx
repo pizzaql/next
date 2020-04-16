@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 `;
 
 const Element = styled.a`
-	box-shadow: #232527 0px 10px 30px -15px;
+	box-shadow: #222 1em;
     display: flex;
     justify-content: space-between;
     flex-direction: column;

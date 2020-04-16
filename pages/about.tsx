@@ -2,7 +2,6 @@ import React from 'react';
 import {NextPage} from 'next';
 import {SimpleImg} from 'react-simple-img';
 
-import Heading from '../components/heading';
 import Main from '../components/main';
 import ExtLink from '../components/extlink';
 import Skills from '../components/skills';
@@ -24,9 +23,8 @@ const Index: NextPage<unknown> = () => {
 				height="15em"
 				importance="high"
 				imgStyle={{borderRadius: '20px'}}
-				style={{paddingTop: '12em'}}
 			/>
-			<Heading belowImg>Hi, my name is Antoni.</Heading>
+			<h1>Hi, my name is Antoni.</h1>
 			<p>
 				I&apos;m a 17 years old developer, currently based near Poznań, Poland.
 				Since late 2019 I&apos;m helping maintain <ExtLink href="https://github.com/node-fetch/node-fetch">node-fetch</ExtLink>, a lightweight library, which brings window.fetch API to Node.js.

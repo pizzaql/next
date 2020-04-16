@@ -45,6 +45,7 @@
     "dependencies": {
         "core-js": "^3.6.5",
         "graphql-request": "^1.8.2",
+        "lodash.debounce": "^4.0.8",
         "next": "^9.3.5",
         "nprogress": "^0.2.0",
         "react": "^16.13.1",
@@ -55,6 +56,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
+        "@types/lodash.debounce": "^4.0.6",
         "@types/nprogress": "^0.2.0",
         "@types/react": "^16.9.34",
         "@types/styled-components": "^5.1.0",

@@ -6,7 +6,7 @@ const ExtLink = styled.a`
     background-position: 0 100%;
     background-repeat: no-repeat;
     text-shadow: .1em 0 #131415,-.1em 0 #131415,.05em 0 #131415,-.05em 0 #131415;
-    transition: color 0.2s;
+    transition: color 0.1s ease-in-out;
     outline: none;
     color: inherit;
     text-decoration: none;

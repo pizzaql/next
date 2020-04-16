@@ -3,7 +3,8 @@ import {AppProps} from 'next/app';
 import Head from 'next/head';
 import Router from 'next/router';
 import {createGlobalStyle} from 'styled-components';
-import NProgress from 'nprogress';
+import debounce from 'lodash.debounce';
+import nprogress from 'nprogress';
 
 import Container from '../components/container';
 
@@ -38,22 +39,29 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		align-items: center;
 		justify-content: center;
-		font-family: 'Inter', sans-serif;
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 		background-color: #131415;
 		color: #fff;
 		font-size: 16px;
-		padding: 1em;
+		margin-top: -1em;
 		-webkit-font-smoothing: antialiased;
 		text-rendering: optimizeSpeed;
 		overflow-x: hidden;
 	}
 `;
 
-Router.events.on('routeChangeStart', () => {
-	NProgress.start();
+// Only show nprogress after 500ms (slow loading)
+const start = debounce(nprogress.start, 500);
+Router.events.on('routeChangeStart', start);
+Router.events.on('routeChangeComplete', () => {
+	start.cancel();
+	nprogress.done();
+	window.scrollTo(0, 0);
 });
-Router.events.on('routeChangeComplete', () => NProgress.done());
-Router.events.on('routeChangeError', () => NProgress.done());
+Router.events.on('routeChangeError', () => {
+	start.cancel();
+	nprogress.done();
+});
 
 const myApp = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => (
 	<>

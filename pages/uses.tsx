@@ -2,14 +2,13 @@ import React from 'react';
 import {NextPage} from 'next';
 
 import Main from '../components/main';
-import Heading from '../components/heading';
 import ExtLink from '../components/extlink';
 import Details from '../components/details';
 
 const Index: NextPage<unknown> = () => {
 	return (
 		<Main>
-			<Heading>Uses</Heading>
+			<h1>Uses</h1>
 			<p>Here you can find information about the hardware or software I own and use. Inspired by <ExtLink target="_blank" rel="noopener noreferrer" href="https://uses.tech/">/uses</ExtLink>.</p>
 			<ul>
 				<li>Hardware and Desk

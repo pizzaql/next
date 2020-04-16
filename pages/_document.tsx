@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
 
 	render(): JSX.Element {
 		return (
-			<html lang="pl">
+			<html lang="en">
 				<Head>
 					<meta charSet="utf-8"/>
 					<meta name="viewport" content="width=device-width, initial-scale=1.0"/>

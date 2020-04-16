@@ -2,7 +2,6 @@ import React from 'react';
 import {NextPage, GetStaticProps} from 'next';
 import useSWR from 'swr';
 
-import Heading from '../components/heading';
 import Main from '../components/main';
 import Projects from '../components/projects';
 
@@ -24,7 +23,7 @@ const Index: NextPage<Props> = (props: Readonly<Props>) => {
 
 	return (
 		<Main>
-			<Heading>Antoni Kepinski</Heading>
+			<h1>Antoni Kepinski</h1>
 			<p>{new Date().getFullYear() - 2003} years old frontend developer, open source enthusiast and classical music lover.</p>
 			<Projects stars={data}/>
 		</Main>
