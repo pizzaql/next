@@ -45,7 +45,7 @@ const Element = styled.a`
     align-items: flex-start;
     position: relative;
 	background: rgb(43,45,48);
-	background: linear-gradient(${(props: ElementProps) => props.deg}deg, #2b2d30 0%, #3b3e42 85%);
+	background: linear-gradient(${(props: ElementProps) => props.deg}deg, #2b2d30 0%, #5b5f66 85%);
     padding: 2rem 1.75rem;
     border-radius: 20px;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
