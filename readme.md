@@ -12,10 +12,9 @@
 
 ## Highlights
 
-- Great performance
+- Blazing fast (Next.js + SSG)
 - Works offline (PWA)
 - 100% Responsive
-- Features SSG data fetching
 - Written in TypeScript
 
 ## Built with:
@@ -45,6 +44,13 @@ $ npm run build
 # Lint
 $ npm test
 ```
+
+## Acknowledgments
+
+This site was inspired by 2 different and truly amazing ones:
+
+- [paco.im](https://paco.im)
+- [gabrielvaldivia.com/](https://www.gabrielvaldivia.com/)
 
 ### License
 
