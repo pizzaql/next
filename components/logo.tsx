@@ -3,15 +3,15 @@ import styled from 'styled-components';
 const Logo = styled.img`
     width: 2.5em;
     cursor: pointer;
-    transition: background-color 0.1s ease-in-out;
+    transition: background-color var(--transition);
     display: inline-flex;
     padding: 10px;
-	border-radius: 5px;
+	border-radius: var(--inline-radius);
 	margin: -10px;
-	margin-right: 0.5rem;
+	margin-right: var(--gap-half);
 
     &:hover {
-        background-color: #2b2d30;
+        background-color: var(--hover);
     }
 `;
 

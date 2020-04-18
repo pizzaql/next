@@ -5,7 +5,7 @@ const Nav = styled.nav`
     height: 36px;
     padding: 8px 2px;
     align-items: center;
-    border-radius: 10px;
+    border-radius: var(--radius);
 `;
 
 export default Nav;

@@ -21,7 +21,7 @@ const Element = styled.li`
 		content: "▹";
     	position: absolute;
     	left: 0px;
-    	color: #fff;
+    	color: var(--text);
     	font-size: 14px;
     	line-height: 12px;
 	}

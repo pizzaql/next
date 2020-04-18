@@ -5,7 +5,7 @@ const Main = styled.main`
 	flex-direction: column;
 	margin: 0 auto;
 	line-height: 1.9;
-	max-width: 45rem;
+	max-width: var(--main-content);
     padding: 0 1rem;
 `;
 

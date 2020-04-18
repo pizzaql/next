@@ -16,13 +16,13 @@ const Wrapper = styled.ul`
 const Image = styled(SimpleImg)`
 	width: 2em;
 	cursor: pointer;
-	transition: background-color 0.2s;
+	transition: background-color var(--transition);
 	display: inline-flex;
 	padding: 10px;
-	border-radius: 5px;
+	border-radius: var(--inline-radius);
 
 	&:hover {
-		background-color: #2b2d30;
+		background-color: var(--hover);
 	}
 `;
 

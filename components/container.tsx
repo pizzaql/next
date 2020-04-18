@@ -15,20 +15,20 @@ interface Props {
 
 const Header = styled.header`
 	z-index: 10;
-    margin: 2rem auto 3rem auto;
+    margin: var(--gap-double) auto var(--small-gap) auto;
     position: sticky;
-    padding: 1rem 0;
+    padding: var(--gap) 0;
     top: 0;
-    background-color: #131415cc;
-    backdrop-filter: saturate(180%) blur(20px);
-	transition: 0.1s ease-in-out;
+    background-color: var(--header);
+    backdrop-filter: var(--vibrancy);
+	transition: var(--slow);
 `;
 
 const Wrapper = styled.div`
 	height: 32px;
 	margin: 0 auto;
 	padding: 0 1rem;
-	max-width: 45rem;
+	max-width: var(--main-content);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

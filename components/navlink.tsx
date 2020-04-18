@@ -33,7 +33,7 @@ const NavLink = ({title, href}: Props): JSX.Element => {
 	const router = useRouter();
 
 	return (
-		<Link scroll={false} href={href}>
+		<Link href={href}>
 			<Wrapper active={router.pathname === href}>{title}</Wrapper>
 		</Link>
 	);

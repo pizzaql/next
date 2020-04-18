@@ -6,7 +6,7 @@ const Footer = styled.div`
     width: 100%;
     margin-top: 40px;
     align-items: center;
-    color: #fff;
+    color: var(--text);
     font-size: 14px;
     opacity: 0.5;
     text-align: center;
