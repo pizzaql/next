@@ -70,7 +70,7 @@
         "imagemin-mozjpeg": "^8.0.0",
         "imagemin-svgo": "^7.1.0",
         "next-fonts": "^1.0.3",
-        "next-offline": "^5.0.0",
+        "next-offline": "^5.0.1",
         "next-optimized-images": "^2.5.8",
         "stylelint": "^13.3.2",
         "stylelint-config-recommended": "^3.0.0",
