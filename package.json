@@ -26,7 +26,8 @@
             "import/extensions": "off",
             "unicorn/string-content": "off",
             "no-mixed-operators": "off",
-            "@typescript-eslint/prefer-readonly-parameter-types": "off"
+			"@typescript-eslint/prefer-readonly-parameter-types": "off",
+			"@typescript-eslint/restrict-template-expressions": "off"
         },
         "settings": {
             "react": {
