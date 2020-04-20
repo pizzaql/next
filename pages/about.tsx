@@ -7,15 +7,21 @@ import ExtLink from '../components/extlink';
 import Skills from '../components/skills';
 import Social from '../components/social';
 
-import imageSrc from '../public/images/me.jpg';
-import imagePlaceholder from '../public/images/me-placeholder.svg';
+import placeholder from '../public/images/me-placeholder.svg';
+import imageMedium from '../public/images/me-446.jpg';
+import imageSmall from '../public/images/me-200.jpg';
+import imageBig from '../public/images/me-767.jpg';
+
+const imageSrcSet = `${imageSmall} 200w, ${imageMedium} 446w, ${imageBig} 767w`;
 
 const Index: NextPage<unknown> = () => {
 	return (
 		<Main>
 			<SimpleImg
-				src={imageSrc}
-				placeholder={imagePlaceholder}
+				sizes="(max-width: 767px) 100vw, 767px"
+				srcSet={imageSrcSet}
+				src={imageBig}
+				placeholder={placeholder}
 				// @ts-ignore
 				draggable={false}
 				alt="Me"
