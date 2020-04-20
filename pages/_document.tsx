@@ -1,33 +1,7 @@
 import React from 'react';
-import Document, {Head, Main, NextScript, DocumentContext} from 'next/document';
-import {ServerStyleSheet} from 'styled-components';
+import Document, {Head, Main, NextScript} from 'next/document';
 
 export default class MyDocument extends Document {
-	static async getInitialProps(ctx: DocumentContext) {
-		const sheet = new ServerStyleSheet();
-		const originalRenderPage = ctx.renderPage;
-
-		try {
-			ctx.renderPage = () =>
-				originalRenderPage({
-					enhanceApp: App => props => sheet.collectStyles(<App {...props}/>)
-				});
-
-			const initialProps = await Document.getInitialProps(ctx);
-			return {
-				...initialProps,
-				styles: (
-					<>
-						{initialProps.styles}
-						{sheet.getStyleElement()}
-					</>
-				)
-			};
-		} finally {
-			sheet.seal();
-		}
-	}
-
 	render(): JSX.Element {
 		return (
 			<html lang="en">
@@ -134,7 +108,7 @@ export default class MyDocument extends Document {
 						rel="apple-touch-startup-image"
 						href="/apple-splash-1136-640.png"
 						media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/>
-					<link crossOrigin="true" href="https://storage.googleapis.com" rel="preconnect"/>
+					<link rel="preload" href="https://api.github.com/graphql" as="fetch" crossOrigin="anonymous"/>
 				</Head>
 				<body>
 					<Main/>
