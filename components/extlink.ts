@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import {styled} from 'linaria/react';
 
 const ExtLink = styled.a`
-    background-image: linear-gradient(90deg, #666, #666);
+    background-image: linear-gradient(90deg, var(--light-gray), var(--light-gray));
     background-size: 100% 1px;
     background-position: 0 100%;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@ const ExtLink = styled.a`
     text-decoration: none;
 
     &:hover {
-        color: #666;
+        color: var(--light-gray);
     }
 `;
 

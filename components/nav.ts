@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import {styled} from 'linaria/react';
 
 const Nav = styled.nav`
     display: flex;
