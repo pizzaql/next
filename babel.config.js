@@ -7,14 +7,8 @@ const presets = [
 			corejs: '3.6',
 			useBuiltIns: 'usage'
 		}
-	}]
+	}],
+	'linaria/babel'
 ];
 
-const plugins = [
-	['babel-plugin-styled-components', {
-		ssr: true,
-		pure: true
-	}]
-];
-
-module.exports = {presets, plugins};
+module.exports = {presets};
