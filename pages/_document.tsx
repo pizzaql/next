@@ -108,7 +108,6 @@ export default class MyDocument extends Document {
 						rel="apple-touch-startup-image"
 						href="/apple-splash-1136-640.png"
 						media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/>
-					<link rel="preload" href="https://api.github.com/graphql" as="fetch" crossOrigin="anonymous"/>
 				</Head>
 				<body>
 					<Main/>
