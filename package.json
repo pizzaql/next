@@ -26,8 +26,8 @@
             "import/extensions": "off",
             "unicorn/string-content": "off",
             "no-mixed-operators": "off",
-			"@typescript-eslint/prefer-readonly-parameter-types": "off",
-			"@typescript-eslint/restrict-template-expressions": "off"
+            "@typescript-eslint/prefer-readonly-parameter-types": "off",
+            "@typescript-eslint/restrict-template-expressions": "off"
         },
         "settings": {
             "react": {
@@ -50,8 +50,8 @@
         "lodash.debounce": "^4.0.8",
         "next": "^9.3.5",
         "nprogress": "^0.2.0",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
+        "react": "0.0.0-experimental-e5d06e34b",
+        "react-dom": "0.0.0-experimental-e5d06e34b",
         "react-simple-img": "^2.3.9",
         "swr": "^0.2.0"
     },
@@ -60,8 +60,8 @@
         "@types/lodash.debounce": "^4.0.6",
         "@types/nprogress": "^0.2.0",
         "@types/react": "^16.9.34",
-        "@typescript-eslint/eslint-plugin": "^2.28.0",
-        "@typescript-eslint/parser": "^2.28.0",
+        "@typescript-eslint/eslint-plugin": "^2.29.0",
+        "@typescript-eslint/parser": "^2.29.0",
         "@zeit/next-css": "^1.0.1",
         "eslint-config-xo-react": "^0.23.0",
         "eslint-config-xo-typescript": "^0.27.0",
