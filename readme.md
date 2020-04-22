@@ -31,7 +31,7 @@
 
 ## Development
 
-> Hosted with [now Δ](https://zeit.com/now)
+> Hosted with [Vercel ▲](https://vercel.com)
 
 ```bash
 # Run in development mode
