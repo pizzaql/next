@@ -1,4 +1,4 @@
-import {styled} from 'linaria/react';
+import styled from 'styled-components';
 
 const ExtLink = styled.a`
     background-image: linear-gradient(90deg, var(--light-gray), var(--light-gray));

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useRouter} from 'next/router';
 import Link from 'next/link';
-import {styled} from 'linaria/react';
+import styled from 'styled-components';
 
 interface Props {
 	title: string;
@@ -12,7 +12,7 @@ interface WrapperProps {
 	active: boolean;
 }
 
-const Wrapper = styled.a`
+const Wrapper = styled.a<WrapperProps>`
 	border-radius: 8px;
 	text-decoration: none;
     display: flex;
@@ -24,8 +24,8 @@ const Wrapper = styled.a`
     border-bottom-style: none;
     font-size: 14px;
     font-weight: 600;
-	background-color: ${(props: WrapperProps) => props.active ? '#fff' : 'auto'};
-	color: ${(props: WrapperProps) => props.active ? '#18171D' : 'auto'};
+	background-color: ${props => props.active ? '#fff' : 'auto'};
+	color: ${props => props.active ? '#18171D' : 'auto'};
 	cursor: pointer;
 `;
 

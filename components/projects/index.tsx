@@ -1,5 +1,5 @@
 import React from 'react';
-import {styled} from 'linaria/react';
+import styled from 'styled-components';
 
 import {Response} from '../../utils/fetcher';
 
@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 	}
 `;
 
-const Element = styled.a`
+const Element = styled.a<ElementProps>`
 	box-shadow: var(--gray) 1em;
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,7 @@ const Element = styled.a`
     align-items: flex-start;
     position: relative;
 	background: rgb(43,45,48);
-	background: linear-gradient(${(props: ElementProps) => props.deg}deg, #2b2d30 0%, #5b5f66 85%);
+	background: linear-gradient(${props => props.deg}deg, #2b2d30 0%, #5b5f66 85%);
     padding: var(--gap-double) 1.75rem;
     border-radius: 20px;
     transition: all var(--transition-slow);

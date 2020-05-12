@@ -1,23 +1,8 @@
-const withPlugins = require('next-compose-plugins');
-const withCSS = require('@zeit/next-css');
 const withFonts = require('next-fonts');
 const withOptimizedImages = require('next-optimized-images');
 const withOffline = require('next-offline');
 
 const nextConfig = {
-	webpack(config) {
-		config.module.rules[0].use = [
-			config.module.rules[0].use,
-			{
-				loader: 'linaria/loader',
-				options: {
-					sourceMap: process.env.NODE_ENV !== 'production'
-				}
-			}
-		];
-
-		return config;
-	},
 	workboxOpts: {
 		swDest: 'static/service-worker.js',
 		runtimeCaching: [
@@ -40,10 +25,9 @@ const nextConfig = {
 	},
 	reactStrictMode: true,
 	experimental: {
-		modern: true,
-		reactMode: 'concurrent',
-		reactRefresh: true
+		modern: true
 	}
 };
 
-module.exports = withPlugins([withCSS, withOptimizedImages, withFonts, withOffline], nextConfig);
+module.exports = withOptimizedImages(withFonts(withOffline(nextConfig)));
+

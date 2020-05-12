@@ -4,6 +4,7 @@
 
 [![Build Status](https://travis-ci.org/xxczaki/site.svg?branch=master)](https://travis-ci.org/xxczaki/site)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
+[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 *The website targets the latest version of Chrome, Safari, and Firefox.
 
@@ -11,7 +12,7 @@
 
 ## Highlights
 
-- Blazing fast (Next.js + SSG)
+- Blazing fast (Next.js + Incremental SSG)
 - Works offline (PWA)
 - 100% Responsive
 - Written in TypeScript
@@ -22,7 +23,7 @@
 
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
-- [Linaria](https://linaria.now.sh/)
+- [Styled Components](https://styled-components.com/)
 
 **Additional:**
 

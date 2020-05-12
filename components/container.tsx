@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import {styled} from 'linaria/react';
+import styled from 'styled-components';
 
 import Logo from './logo';
 import Nav from './nav';

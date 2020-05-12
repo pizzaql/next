@@ -1,5 +1,5 @@
 import React from 'react';
-import {styled} from 'linaria/react';
+import styled from 'styled-components';
 import {SimpleImg} from 'react-simple-img';
 
 import mail from '../public/images/mail.svg';

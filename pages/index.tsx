@@ -13,7 +13,10 @@ interface Props {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const data = await fetcher();
-	return {props: {data}};
+	return {
+		props: {data},
+		unstable_revalidate: 1
+	};
 };
 
 const Index: NextPage<Props> = (props: Readonly<Props>) => {
