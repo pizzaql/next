@@ -6,7 +6,8 @@ const Main = styled.main`
 	margin: 0 auto;
 	line-height: 1.9;
 	max-width: var(--main-content);
-    padding: 0 1rem;
+	padding: 0 1rem;
+	align-items: flex-start;
 `;
 
 export default Main;
