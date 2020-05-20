@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
 		--light-gray: #666;
 		--header: #131415cc;
 		--hover: #2b2d30;
+		--selection: hsl(0deg 0% 100% / 99%);
 		--vibrancy: saturate(180%) blur(20px);
 		--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 		--transition: 0.1s ease-in-out;
@@ -90,6 +91,12 @@ const GlobalStyle = createGlobalStyle`
 		width: 100%;
 		height: 5px;
 		background: transparent;
+	}
+
+	::selection {
+		text-shadow: none;
+		background: var(--selection);
+		color: var(--background);
 	}
 `;
 
