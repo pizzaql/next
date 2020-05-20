@@ -39,15 +39,17 @@ export default class MyDocument extends Document {
 					<meta name="msapplication-TileColor" content="#131415"/>
 					<meta name="apple-mobile-web-app-capable" content="yes"/>
 					<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-					<meta name="twitter:card" content="summary"/>
+					<meta name="twitter:card" content="summary_large_image"/>
+					<meta name="twitter:site" content="@dokwadratu"/>
 					<meta name="twitter:title" content="Antoni Kepinski"/>
 					<meta name="twitter:description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
-					<meta name="og:title" content="Antoni Kepinski"/>
-					<meta name="og:description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
-					<meta name="og:url" content="https://kepinski.me"/>
-					<meta name="og:image" content="https://og.kepinski.me/Antoni%20Kepinski.png?theme=dark&md=0&fontSize=125px&images=https%3A%2F%2Fkepinski.me%2Fimages%2Fflash-outline.svg"/>
-					<meta name="og:site_name" content="Antoni Kepinski"/>
-					<meta name="og:type" content="website"/>
+					<meta name="twitter:image" content="https://og.kepinski.me/Antoni%20Kepinski.png?theme=dark&md=0&fontSize=125px&images=https%3A%2F%2Fkepinski.me%2Fimages%2Fflash-outline.svg"/>
+					<meta property="og:title" content="Antoni Kepinski"/>
+					<meta property="og:site_name" content="Antoni Kepinski"/>
+					<meta property="og:url" content="https://kepinski.me"/>
+					<meta property="og:description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
+					<meta property="og:type" content="website"/>
+					<meta property="og:image" content="https://og.kepinski.me/Antoni%20Kepinski.png?theme=dark&md=0&fontSize=125px&images=https%3A%2F%2Fkepinski.me%2Fimages%2Fflash-outline.svg"/>
 					<link rel="manifest" href="/manifest.json"/>
 					<link rel="icon" href="/favicon.png"/>
 					<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180.png"/>
