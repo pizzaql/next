@@ -45,6 +45,7 @@ export default class MyDocument extends Document {
 					<meta name="og:title" content="Antoni Kepinski"/>
 					<meta name="og:description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
 					<meta name="og:url" content="https://kepinski.me"/>
+					<meta name="og:image" content="https://og.kepinski.me/Antoni%20Kepinski.png?theme=dark&md=0&fontSize=125px&images=https%3A%2F%2Fkepinski.me%2Fimages%2Fflash-outline.svg"/>
 					<meta name="og:site_name" content="Antoni Kepinski"/>
 					<meta name="og:type" content="website"/>
 					<link rel="manifest" href="/manifest.json"/>
