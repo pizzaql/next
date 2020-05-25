@@ -70,7 +70,7 @@
         "eslint-plugin-react": "^7.20.0",
         "eslint-plugin-react-hooks": "^4.0.2",
         "imagemin-mozjpeg": "^8.0.0",
-        "imagemin-svgo": "^7.1.0",
+        "imagemin-svgo": "^8.0.0",
         "json-schema": "^0.2.5",
         "next-fonts": "^1.1.0",
         "next-offline": "^5.0.2",
