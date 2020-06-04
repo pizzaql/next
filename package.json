@@ -78,6 +78,6 @@
         "stylelint": "^13.5.0",
         "stylelint-config-recommended": "^3.0.0",
         "typescript": "^3.9.3",
-        "xo": "^0.30.0"
+        "xo": "^0.32.0"
     }
 }
