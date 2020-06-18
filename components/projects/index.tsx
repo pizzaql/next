@@ -10,7 +10,7 @@ interface Props {
 }
 
 interface ElementProps {
-	deg: number;
+	deg?: number;
 }
 
 interface Project {
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 	grid-template-columns: 1;
 	gap: 2em;
 	padding-top: 2em;
-	max-width: 70em;
+	width: 100%;
 
 	@media (min-width: 320px) and (max-width: 480px) {
 		max-width: 100%;
@@ -101,6 +101,29 @@ const Tag = styled.li`
 
 const Projects = ({stars}: Props): JSX.Element => (
 	<Wrapper>
+		<Element
+			style={{backgroundColor: '#000', boxShadow: 'inset 0 0 5px #FFFF'}}
+			href="https://parsify.app"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="parisfy-app"
+		>
+			<header>
+				<Top>
+					<Header>Parsify Desktop</Header>
+				</Top>
+				<Description>
+					Extendable calculator for the 21st Century.
+				</Description>
+			</header>
+			<footer>
+				<Tags>
+					<Tag>React</Tag>
+					<Tag>Next.js</Tag>
+					<Tag>Electron</Tag>
+				</Tags>
+			</footer>
+		</Element>
 		{data.map((element: Project) => {
 			const starCount = stars?.repositoryOwner.repositories.nodes.filter(data => element.id === data.name).map(element => element.stargazers.totalCount);
 
@@ -117,7 +140,7 @@ const Projects = ({stars}: Props): JSX.Element => (
 						<Top>
 							<Header>{element.name}</Header>
 						</Top>
-						{stars ? <Count>⭐ {starCount}</Count> : ''}
+						{stars ? <Count>★ {starCount}</Count> : ''}
 						<Description>
 							{element.description}
 						</Description>

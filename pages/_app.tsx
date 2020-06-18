@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 		--gap: 1rem;
 		--gap-double: 2rem;
 		--small-gap: 4rem;
-		--main-content: 45rem;
+		--main-content: 50rem;
 		--radius: 8px;
 		--inline-radius: 5px;
 		--background: #131415;
@@ -62,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
 		font-family: var(--font-sans);
 		background-color: var(--background);
 		color: var(--text);
-		font-size: 16px;
+		font-size: 1.125rem;
 		margin-top: -1em;
 		-webkit-font-smoothing: antialiased;
 		text-rendering: optimizeSpeed;
