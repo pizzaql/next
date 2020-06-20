@@ -32,7 +32,7 @@ const Index: NextPage<unknown> = () => {
 			<h1>Hi, my name is Antoni 👋</h1>
 			<p>
 				I&apos;m a {new Date().getFullYear() - 2003} years old developer, currently based near Poznań, Poland.
-				Since late 2019 I&apos;m helping maintain <ExtLink href="https://github.com/node-fetch/node-fetch">node-fetch</ExtLink>, a lightweight library, which brings window.fetch API to Node.js.
+				Since late 2019 I&apos;m helping maintain <ExtLink href="https://github.com/node-fetch/node-fetch">node-fetch</ExtLink>, a lightweight library, which brings Fetch API to Node.js.
 				I also maintain a collection of my own open source projects.
 				When it comes to offline activities, I hugely enjoy travelling, riding a bike and listening to music.
 			</p>
