@@ -45,7 +45,7 @@ const Element = styled.a<ElementProps>`
     align-items: flex-start;
     position: relative;
 	background: rgb(43,45,48);
-	background: linear-gradient(${props => props.deg}deg, #2b2d30 0%, #5b5f66 85%);
+	background-image: linear-gradient(${props => props.deg}deg, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1));
     padding: var(--gap-double) 1.75rem;
     border-radius: 20px;
     transition: all var(--transition-slow);
@@ -133,7 +133,7 @@ const Projects = ({stars}: Props): JSX.Element => (
 					href={element.url}
 					target="_blank"
 					rel="noopener noreferrer"
-					deg={getRandomArbitrary(0, 360)}
+					deg={getRandomArbitrary(180, 360)}
 					aria-label={element.name}
 				>
 					<header>
