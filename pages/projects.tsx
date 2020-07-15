@@ -25,7 +25,8 @@ const Index: NextPage<Props> = (props: Readonly<Props>) => {
 
 	return (
 		<Main>
-			<h1>Portfolio</h1>
+			<h1>Projects</h1>
+			<p>I am passionate about open source software and giving back to others. Here you can find some of my featured projects.</p>
 			<Projects stars={data}/>
 		</Main>
 	);

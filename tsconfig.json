@@ -20,9 +20,8 @@
   },
   "exclude": [
     "node_modules",
-    "renderer/next.config.js",
-    "app",
-    "dist"
+		"dist",
+		"embed.js"
   ],
   "include": [
     "renderer/next-env.d.ts",

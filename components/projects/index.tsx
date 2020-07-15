@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ExtLink from '../extlink';
 import {Response} from '../../utils/fetcher';
-
 import data from './data.json';
 
 interface Props {
@@ -30,6 +30,7 @@ const Wrapper = styled.div`
 	grid-template-columns: 2;
 	gap: 2em;
 	width: 100%;
+	padding-top: var(--gap);
 `;
 
 const Element = styled.a<ElementProps>`
@@ -93,31 +94,13 @@ const Tag = styled.li`
     margin-right: 15px;
 `;
 
+const ExternalLink = styled(ExtLink)`
+	text-align: center;
+	background: none;
+`;
+
 const Projects = ({stars}: Props): JSX.Element => (
 	<Wrapper>
-		<Element
-			style={{backgroundColor: '#000', boxShadow: 'inset 0 0 5px #FFFF'}}
-			href="https://parsify.app"
-			target="_blank"
-			rel="noopener noreferrer"
-			aria-label="parisfy-app"
-		>
-			<header>
-				<Top>
-					<Header>Parsify Desktop</Header>
-				</Top>
-				<Description>
-					Extendable calculator for the 21st Century.
-				</Description>
-			</header>
-			<footer>
-				<Tags>
-					<Tag>React</Tag>
-					<Tag>Next.js</Tag>
-					<Tag>Electron</Tag>
-				</Tags>
-			</footer>
-		</Element>
 		{data.map((element: Project) => {
 			const starCount = stars?.repositoryOwner.repositories.nodes.filter(data => element.id === data.name).map(element => element.stargazers.totalCount);
 
@@ -149,6 +132,9 @@ const Projects = ({stars}: Props): JSX.Element => (
 				</Element>
 			);
 		})}
+		<ExternalLink href="https://github.com/xxczaki" target="_blank" rel="noopener noreferrer">
+			View All Projects on GitHub →
+		</ExternalLink>
 	</Wrapper>
 );
 

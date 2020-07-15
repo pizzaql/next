@@ -7,11 +7,7 @@ import ExtLink from './extlink';
 import getAge from '../utils/get-age';
 
 import placeholder from '../public/images/me-placeholder.svg';
-import imageMedium from '../public/images/me-446.jpg';
-import imageSmall from '../public/images/me-200.jpg';
-import imageBig from '../public/images/me-767.jpg';
-
-const imageSrcSet = `${imageSmall} 200w, ${imageMedium} 446w, ${imageBig} 767w`;
+import me from '../public/images/me.jpg';
 
 const Container = styled.div`
 	display: flex;
@@ -55,9 +51,7 @@ const About = (): JSX.Element => (
 				</p>
 			</Box>
 			<Image
-				sizes="(max-width: 767px) 100vw, 767px"
-				srcSet={imageSrcSet}
-				src={imageBig}
+				src={me}
 				placeholder={placeholder}
 				// @ts-expect-error
 				draggable={false}

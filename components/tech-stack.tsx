@@ -57,14 +57,22 @@ const Block = styled.a<Props>`
 		opacity: 0.8;
     	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
 	}
-
-	h4 {
-		text-align: center;
-	}
 `;
 
 const Image = styled(SimpleImg)`
 	margin-bottom: -0.7em;
+`;
+
+// Here the paragraph imitates the `h4` HTML tag, so that the heading elements are in a sequentially-descending order.
+const Heading = styled.p`
+	display: block;
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 `;
 
 const TechStack = (): JSX.Element => (
@@ -81,7 +89,7 @@ const TechStack = (): JSX.Element => (
 						alt="JavaScript"
 						height="3.5em"
 					/>
-					<h4>JavaScript (ES6+)</h4>
+					<Heading>JavaScript (ES6+)</Heading>
 				</Block>
 				<Block background="#007acc" color="#fff" href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" aria-label="TypeScript">
 					<Image
@@ -92,7 +100,7 @@ const TechStack = (): JSX.Element => (
 						alt="TypeScript"
 						height="3.5em"
 					/>
-					<h4>TypeScript</h4>
+					<Heading>TypeScript</Heading>
 				</Block>
 				<Block background="#61dafb" href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" aria-label="React">
 					<Image
@@ -103,7 +111,7 @@ const TechStack = (): JSX.Element => (
 						alt="React"
 						height="3.5em"
 					/>
-					<h4>React</h4>
+					<Heading>React</Heading>
 				</Block>
 				<Block background="#000" color="#fff" href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Next.js">
 					<Image
@@ -114,7 +122,7 @@ const TechStack = (): JSX.Element => (
 						alt="Next.js"
 						height="3.5em"
 					/>
-					<h4>Next.js</h4>
+					<Heading>Next.js</Heading>
 				</Block>
 				<Block background="#663399" color="#fff" href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Gatsby">
 					<Image
@@ -125,7 +133,7 @@ const TechStack = (): JSX.Element => (
 						alt="Gatsby"
 						height="3.5em"
 					/>
-					<h4>Gatsby</h4>
+					<Heading>Gatsby</Heading>
 				</Block>
 				<Block background="#61dafb" href="https://reactnative.dev/" target="_blank" rel="noopener noreferrer" aria-label="React Native">
 					<Image
@@ -136,7 +144,7 @@ const TechStack = (): JSX.Element => (
 						alt="React Native"
 						height="3.5em"
 					/>
-					<h4>React Native</h4>
+					<Heading>React Native</Heading>
 				</Block>
 				<Block background="#68A063" href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" aria-label="Node.js">
 					<Image
@@ -147,7 +155,7 @@ const TechStack = (): JSX.Element => (
 						alt="Node.js"
 						height="3.5em"
 					/>
-					<h4>Node.js</h4>
+					<Heading>Node.js</Heading>
 				</Block>
 				<Block background="#dea584" href="https://www.rust-lang.org/" target="_blank" rel="noopener noreferrer" aria-label="Rust">
 					<Image
@@ -158,7 +166,7 @@ const TechStack = (): JSX.Element => (
 						alt="Rust"
 						height="3.5em"
 					/>
-					<h4>Rust</h4>
+					<Heading>Rust</Heading>
 				</Block>
 				<Block background="#654ff0" color="#fff" href="https://webassembly.org/" target="_blank" rel="noopener noreferrer" aria-label="WebAssembly">
 					<Image
@@ -169,7 +177,7 @@ const TechStack = (): JSX.Element => (
 						alt="WebAssembly"
 						height="3.5em"
 					/>
-					<h4>WebAssembly</h4>
+					<Heading>WebAssembly</Heading>
 				</Block>
 			</Wrapper>
 		</Section>

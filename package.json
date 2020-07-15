@@ -41,7 +41,7 @@
         "ignores": [
             "babel.config.js",
             "next.config.js",
-            "linaria.config.js"
+            "embed.js"
         ]
     },
     "dependencies": {

@@ -43,13 +43,13 @@ const Container = ({children}: Props): JSX.Element => (
 				</Link>
 				<Nav>
 					<NavLink title="Home" href="/"/>
-					<NavLink title="Work" href="/work"/>
+					<NavLink title="Projects" href="/projects"/>
 				</Nav>
 			</Wrapper>
 		</Header>
 		{children}
 		<Footer>
-			<p>Copyright &copy; 2020 Antoni Kepinski</p>
+			<p>Copyright &copy; {new Date().getFullYear()} Antoni Kepinski</p>
 		</Footer>
 	</>
 );
