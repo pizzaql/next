@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 		--gap: 1rem;
 		--gap-double: 2rem;
 		--small-gap: 4rem;
-		--main-content: 50rem;
+		--main-content: 55rem;
 		--radius: 8px;
 		--inline-radius: 5px;
 		--background: #131415;

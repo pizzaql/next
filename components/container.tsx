@@ -42,8 +42,8 @@ const Container = ({children}: Props): JSX.Element => (
 					<Logo src={flashOutline} draggable={false} alt="Flash"/>
 				</Link>
 				<Nav>
-					<NavLink title="Work" href="/"/>
-					<NavLink title="About" href="/about"/>
+					<NavLink title="Home" href="/"/>
+					<NavLink title="Work" href="/work"/>
 				</Nav>
 			</Wrapper>
 		</Header>

@@ -5,9 +5,9 @@ const Logo = styled.img`
     cursor: pointer;
     transition: background-color var(--transition);
     display: inline-flex;
-    padding: 10px;
-	border-radius: var(--inline-radius);
+	padding: 5px;
 	margin: -10px;
+	border-radius: var(--inline-radius);
 	margin-right: var(--gap-half);
 
     &:hover {

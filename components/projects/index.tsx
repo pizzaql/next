@@ -27,14 +27,9 @@ const getRandomArbitrary = (min: number, max: number) => {
 
 const Wrapper = styled.div`
 	display: grid;
-	grid-template-columns: 1;
+	grid-template-columns: 2;
 	gap: 2em;
-	padding-top: 2em;
 	width: 100%;
-
-	@media (min-width: 320px) and (max-width: 480px) {
-		max-width: 100%;
-	}
 `;
 
 const Element = styled.a<ElementProps>`
@@ -44,8 +39,7 @@ const Element = styled.a<ElementProps>`
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-	background: rgb(43,45,48);
-	background-image: linear-gradient(${props => props.deg}deg, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.1));
+	background: linear-gradient(${props => props.deg}deg, #666, #424242);
     padding: var(--gap-double) 1.75rem;
     border-radius: 20px;
     transition: all var(--transition-slow);
