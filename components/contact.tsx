@@ -136,9 +136,9 @@ const Contact = (): JSX.Element => {
 				<Header>Get in touch</Header>
 				<Form action="https://formspree.io/xbjzppvn" method="POST">
 					<Label>Email</Label>
-					<Input type="email" name="email" aria-label="Your email address" aria-required="true" placeholder="jane@acme.com"/>
+					<Input required type="email" name="email" aria-label="Your email address" aria-required="true" placeholder="jane@acme.com"/>
 					<Label>Message</Label>
-					<TextArea name="message" aria-label="Your message" aria-required="true" placeholder="I would like to talk about..."/>
+					<TextArea required name="message" aria-label="Your message" aria-required="true" placeholder="I would like to talk about..."/>
 					<Button type="submit">Send</Button>
 				</Form>
 			</Wrapper>
