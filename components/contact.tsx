@@ -1,48 +1,124 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
-import {SimpleImg} from 'react-simple-img';
 
 import Header from './header';
-
-import email from '../public/images/email.svg';
-import logoTwitter from '../public/images/logo-twitter.svg';
-import logoGitHub from '../public/images/logo-github.svg';
-import logoInstagram from '../public/images/logo-instagram.svg';
 
 const Container = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	justify-content: space-between;
 	width: 100%;
+	grid-gap: 5em;
+
+	@media (min-width: 320px) and (max-width: 617px) {
+		grid-gap: 2em;
+	}
 `;
 
 const Wrapper = styled.div`
 	display: grid;
-	grid-gap: 1em;
 `;
 
-const Box = styled.a`
+const Label = styled.label`
 	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	width: 9em;
-	height: 2em;
-	cursor: pointer;
-	background-color: var(--gray);
-	transition: background-color var(--transition);
-	padding: 10px;
-	border-radius: var(--inline-radius);
-	text-decoration: none;
-	color: var(--text);
-	user-select: none;
+	height: 2.25rem;
+	width: calc(100% + 20px);
+`;
 
-	&:hover {
-		background-color: var(--hover);
+const Form = styled.form`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 16.5rem;
+	width: 100%;
+`;
+
+const Input = styled.input`
+	outline: none;
+	transition: var(--transition);
+	transition-property: color,box-shadow,background,border-color;
+	box-shadow: 0 0 0 0 rgba(0,93,255,0);
+	background-color: var(--gray);
+	font-family: inherit;
+    font-weight: 500;
+    word-break: break-word;
+    font-size: 1rem;
+    color: var(--text);
+    resize: none;
+    appearance: none;
+    border-style: solid;
+    border-image: initial;
+    border-width: 2px;
+    border-color: var(--light-gray);
+    border-radius: var(--inline-radius);
+    padding: var(--gap-half);
+	cursor: text;
+
+	&:focus {
+		border-color: rgb(0, 93, 255);
+		box-shadow: 0 0 0 3px rgba(0,93,255,0.6);
 	}
 `;
 
-const Image = styled(SimpleImg)`
-	width: 1.6em;
+const TextArea = styled.textarea`
+	outline: none;
+	transition: var(--transition);
+	transition-property: color,box-shadow,background,border-color;
+	box-shadow: 0 0 0 0 rgba(0,93,255,0);
+	background-color: var(--gray);
+	font-family: inherit;
+    font-weight: 500;
+    word-break: break-word;
+    font-size: 1rem;
+	height: 4rem;
+    color: var(--text);
+    resize: none;
+    appearance: none;
+    border-style: solid;
+    border-image: initial;
+    border-width: 2px;
+    border-color: var(--light-gray);
+    border-radius: var(--inline-radius);
+    padding: var(--gap-half);
+	cursor: text;
+
+	&:focus {
+		border-color: rgb(0, 93, 255);
+		box-shadow: 0 0 0 3px rgba(0,93,255,0.6);
+	}
+`;
+
+const Button = styled.button`
+	outline: none;
+	transition: 100ms ease-in-out;
+	transition-property: color,box-shadow,background,border-color,opacity;
+	box-shadow: 0 0 0 0 rgba(0,93,255,0);
+	margin-top: 0.5rem;
+	background-color: var(--gray);
+	color: var(--text);
+	font-size: 1rem;
+	font-family: inherit;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: 500;
+	cursor: pointer;
+	border-width: initial;
+	border-style: none;
+	border-color: initial;
+	border-image: initial;
+	border-radius: 7px;
+	overflow: hidden;
+	appearance: button;
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&:focus {
+    	box-shadow: 0 0 0 3px rgba(0,93,255,0.6);
+	}
 `;
 
 const Contact = (): JSX.Element => {
@@ -57,23 +133,14 @@ const Contact = (): JSX.Element => {
 	return (
 		<Container>
 			<Wrapper>
-				<Header>Don&apos;t be a stranger</Header>
-				<Box href="mailto:a@kepinski.me" target="_blank" rel="noopener noreferrer" aria-label="Email">
-					<Image src={email} width="1.6em" height="1.6em" placeholder="var(--gray)" alt="Email"/>
-					<h4>Email</h4>
-				</Box>
-				<Box href="https://twitter.com/dokwadratu" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-					<Image src={logoTwitter} width="1.6em" height="1.6em" placeholder="var(--gray)" alt="Twitter"/>
-					<h4>Twitter</h4>
-				</Box>
-				<Box href="https://github.com/xxczaki" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-					<Image src={logoGitHub} width="1.6em" height="1.6em" placeholder="var(--gray)" alt="GitHub"/>
-					<h4>GitHub</h4>
-				</Box>
-				<Box href="https://instagram.com/akepinski" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-					<Image src={logoInstagram} width="1.6em" height="1.6em" placeholder="var(--gray)" alt="Instagram"/>
-					<h4>Instagram</h4>
-				</Box>
+				<Header>Get in touch</Header>
+				<Form action="https://formspree.io/xbjzppvn" method="POST">
+					<Label>Email</Label>
+					<Input type="email" name="email" aria-label="Your email address" aria-required="true" placeholder="jane@acme.com"/>
+					<Label>Message</Label>
+					<TextArea name="message" aria-label="Your message" aria-required="true" placeholder="I would like to talk about..."/>
+					<Button type="submit">Send</Button>
+				</Form>
 			</Wrapper>
 			<Wrapper>
 				<Header>Listen to a podcast!</Header>

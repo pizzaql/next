@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
-const Footer = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 40px;
-    align-items: center;
+const Footer = styled.footer`
+	height: 32px;
+	margin: calc(var(--small-gap) + var(--gap)) auto;
+	padding: 0 1rem;
+	max-width: var(--main-content);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
     color: var(--text);
-    font-size: 14px;
+    font-size: 0.85em;
     opacity: 0.5;
-    text-align: center;
 `;
 
 export default Footer;
