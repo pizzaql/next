@@ -27,10 +27,15 @@ const getRandomArbitrary = (min: number, max: number) => {
 
 const Wrapper = styled.div`
 	display: grid;
-	grid-template-columns: 2;
-	gap: 2em;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-gap: 1rem;
 	width: 100%;
 	padding-top: var(--gap);
+	align-items: center;
+
+	@media (min-width: 150px) and (max-width: 480px) {
+		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+	}
 `;
 
 const Element = styled.a<ElementProps>`
@@ -42,7 +47,7 @@ const Element = styled.a<ElementProps>`
     position: relative;
 	background: linear-gradient(${props => props.deg}deg, #666, #424242);
     padding: var(--gap-double) 1.75rem;
-    border-radius: 20px;
+    border-radius: var(--radius);
     transition: all var(--transition-slow);
 	cursor: pointer;
 	color: inherit;
@@ -97,6 +102,8 @@ const Tag = styled.li`
 const ExternalLink = styled(ExtLink)`
 	text-align: center;
 	background: none;
+	padding-top: var(--gap);
+	grid-column: 1 / -1;
 `;
 
 const Projects = ({stars}: Props): JSX.Element => (
