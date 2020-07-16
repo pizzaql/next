@@ -26,3 +26,5 @@ yarn-error.log*
 
 .now
 .linaria-cache
+
+.vercel
