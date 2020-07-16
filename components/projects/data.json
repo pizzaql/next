@@ -2,7 +2,7 @@
 	{
 		"id": "node-fetch",
         "name": "Node Fetch",
-        "description": "A light-weight module that brings window.fetch to Node.js",
+        "description": "A light-weight module that brings Fetch API to Node.js",
         "url": "https://github.com/node-fetch/node-fetch",
         "tags": [
             "Node.js"
