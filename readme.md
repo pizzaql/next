@@ -1,4 +1,6 @@
-# [Site](https://kepinski.me)
+![Screenshot](screenshot.png)
+
+# [kepinski.me](https://kepinski.me)
 
 > Personal website, built with React, Next.js & more 🚀
 
@@ -14,7 +16,7 @@
 
 - Blazing fast (Next.js + Incremental SSG)
 - Works offline (PWA)
-- 100% Responsive
+- 100% Responsive & Accessible
 - Written in TypeScript
 
 ## Built with:
@@ -47,10 +49,12 @@ $ npm test
 
 ## Acknowledgments
 
-This site was inspired by 2 different and truly amazing ones:
+I took some inspiration from the following, truly amazing personal sites:
 
 - [paco.im](https://paco.im)
-- [gabrielvaldivia.com/](https://www.gabrielvaldivia.com/)
+- [gabrielvaldivia.com](https://www.gabrielvaldivia.com/)
+- [robhope.com](https://robhope.com/)
+- [zcole.me](http://zcole.me/)
 
 ### License
 
