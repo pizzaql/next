@@ -55,7 +55,7 @@ const Container = ({children}: Props): JSX.Element => (
 		{children}
 		<Footer>
 			<p>Copyright &copy; {new Date().getFullYear()} Antoni Kepinski</p>
-			<ExtLink href="https://github.com/xxczaki/site" target="_blank" rel="noopener noreferrer">{(process.env.VERCEL_GITHUB_COMMIT_SHA)?.slice(0, 7) ?? 'xxczaki/site'}</ExtLink>
+			<ExtLink href="https://github.com/xxczaki/site" target="_blank" rel="noopener noreferrer">Source Code</ExtLink>
 		</Footer>
 	</>
 );
