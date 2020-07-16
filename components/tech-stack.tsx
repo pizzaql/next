@@ -60,19 +60,12 @@ const Block = styled.a<Props>`
 `;
 
 const Image = styled(SimpleImg)`
-	margin-bottom: -0.7em;
+	margin-bottom: -0.5em;
 `;
 
-// Here the paragraph imitates the `h4` HTML tag, so that the heading elements are in a sequentially-descending order.
-const Heading = styled.p`
-	display: block;
-	font-weight: bold;
+const Heading = styled.h3`
 	font-size: 1em;
 	text-align: center;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 `;
 
 const TechStack = (): JSX.Element => (
