@@ -22,6 +22,10 @@ const Header = styled.header`
     background-color: var(--header);
     backdrop-filter: var(--vibrancy);
 	transition: var(--slow);
+
+	@media (min-width: 150px) and (max-width: 891px) {
+		margin: var(--gap-double) auto var(--gap) auto;
+	}
 `;
 
 const Wrapper = styled.div`
