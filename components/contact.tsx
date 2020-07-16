@@ -48,7 +48,7 @@ const Image = styled(SimpleImg)`
 const Contact = (): JSX.Element => {
 	useEffect(() => {
 		const script = document.createElement('script');
-		script.src = require('../embed.js');
+		script.src = '/embed.js';
 		script.async = true;
 		script.defer = true;
 		document.body.append(script);

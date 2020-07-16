@@ -41,7 +41,7 @@
         "ignores": [
             "babel.config.js",
             "next.config.js",
-            "embed.js"
+            "public/embed.js"
         ]
     },
     "dependencies": {

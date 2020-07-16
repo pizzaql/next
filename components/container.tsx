@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Logo from './logo';
 import Nav from './nav';
 import NavLink from './navlink';
+import ExtLink from './extlink';
 import Footer from './footer';
 
 import flashOutline from '../public/images/flash-outline.svg';
@@ -54,6 +55,7 @@ const Container = ({children}: Props): JSX.Element => (
 		{children}
 		<Footer>
 			<p>Copyright &copy; {new Date().getFullYear()} Antoni Kepinski</p>
+			<ExtLink href="https://github.com/xxczaki/site" target="_blank" rel="noopener noreferrer">{(process.env.VERCEL_GITHUB_COMMIT_SHA)?.slice(0, 7) ?? 'xxczaki/site'}</ExtLink>
 		</Footer>
 	</>
 );
