@@ -26,6 +26,10 @@ const Box = styled.div`
 
 const Image = styled(SimpleImg)`
 	user-select: none;
+
+	@media (min-width: 150px) and (max-width: 891px) {
+		display: none !important;
+	}
 `;
 
 const Divider = styled.hr`
