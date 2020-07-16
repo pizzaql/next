@@ -36,15 +36,9 @@ export default class MyDocument extends Document {
 	}
 
 	render(): JSX.Element {
-		let csp = `default-src 'self'; script-src 'self' sa.kepinski.me; frame-src changelog.com; media-src cdn.changelog.com; img-src 'self' data: ${cspHashOf(
+		const csp = `style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self' sa.kepinski.me; frame-src changelog.com; media-src cdn.changelog.com; img-src 'self' data: ${cspHashOf(
 			NextScript.getInlineScriptSource(this.props)
 		)}`;
-
-		if (process.env.NODE_ENV !== 'production') {
-			csp = `style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self' sa.kepinski.me; frame-src changelog.com; media-src cdn.changelog.com; img-src 'self' data: ${cspHashOf(
-				NextScript.getInlineScriptSource(this.props)
-			)}`;
-		}
 
 		return (
 			<html lang="en">
