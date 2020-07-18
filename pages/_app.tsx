@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
 		font-family: 'Inter';
 		font-style: normal;
 		font-weight: 400;
-		font-display: fallback;
+		font-display: swap;
 		src: local(''),
 			url(${InterRegularWoff2}) format('woff2'),
 			url(${InterRegularWoff}) format('woff');
@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
 		font-family: 'Inter';
 		font-style: normal;
 		font-weight: 800;
-		font-display: fallback;
+		font-display: swap;
 		src: local(''),
 			url(${InterBoldWoff2}) format('woff2'),
 			url(${InterBoldWoff}) format('woff');

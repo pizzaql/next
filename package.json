@@ -72,12 +72,12 @@
         "imagemin-mozjpeg": "^9.0.0",
         "imagemin-svgo": "^8.0.0",
         "json-schema": "^0.2.5",
-        "next-fonts": "^1.2.0",
+        "next-fonts": "^1.4.0",
         "next-offline": "^5.0.2",
         "next-optimized-images": "^2.6.1",
         "stylelint": "^13.6.1",
         "stylelint-config-recommended": "^3.0.0",
-        "typescript": "^3.9.6",
+        "typescript": "^3.9.7",
         "xo": "^0.32.1"
     }
 }
