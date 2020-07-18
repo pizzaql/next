@@ -19,6 +19,10 @@
 						"value": "deny"
 					},
 					{
+						"key": "Content-Security-Policy",
+						"value": "style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self' sa.kepinski.me; frame-src changelog.com; media-src cdn.changelog.com; img-src 'self' data:"
+					},
+					{
 						"key": "X-XSS-Protection",
 						"value": "1"
 					}

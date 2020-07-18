@@ -1,13 +1,6 @@
-import crypto from 'crypto';
 import React from 'react';
 import Document, {Head, Main, NextScript, DocumentContext} from 'next/document';
 import {ServerStyleSheet} from 'styled-components';
-
-const cspHashOf = (text: string) => {
-	const hash = crypto.createHash('sha256');
-	hash.update(text);
-	return `'sha256-${hash.digest('base64')}'`;
-};
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
@@ -36,10 +29,6 @@ export default class MyDocument extends Document {
 	}
 
 	render(): JSX.Element {
-		const csp = `style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self' sa.kepinski.me; frame-src changelog.com; media-src cdn.changelog.com; img-src 'self' data: ${cspHashOf(
-			NextScript.getInlineScriptSource(this.props)
-		)}`;
-
 		return (
 			<html lang="en">
 				<Head>
@@ -61,7 +50,6 @@ export default class MyDocument extends Document {
 					<meta property="og:description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
 					<meta property="og:type" content="website"/>
 					<meta property="og:image" content="https://og.kepinski.me/Antoni%20Kepinski.png?theme=dark&md=0&fontSize=125px&images=https%3A%2F%2Fkepinski.me%2Fimages%2Fflash-outline.svg"/>
-					<meta httpEquiv="Content-Security-Policy" content={csp}/>
 					<link rel="manifest" href="/manifest.json"/>
 					<link rel="icon" href="/favicon.png"/>
 					<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180.png"/>
