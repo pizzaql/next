@@ -139,6 +139,17 @@ const TechStack = (): JSX.Element => (
 					/>
 					<Heading>React Native</Heading>
 				</Block>
+				<Block background="#2b2e3b" color="#fff" href="https://www.electronjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Electron">
+					<Image
+						src={require('../public/images/logo-electron.svg')}
+						placeholder="#2b2e3b"
+						// @ts-expect-error
+						draggable={false}
+						alt="Electron"
+						height="3.5em"
+					/>
+					<Heading>Electron</Heading>
+				</Block>
 				<Block background="#68A063" href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" aria-label="Node.js">
 					<Image
 						src={require('../public/images/logo-nodejs.svg')}
