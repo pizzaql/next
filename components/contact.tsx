@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
+import {useInView} from 'react-intersection-observer';
+import {motion, useReducedMotion} from 'framer-motion';
 
 import Header from './header';
 
@@ -15,7 +17,7 @@ const Container = styled.div`
 	}
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
 	display: grid;
 `;
 
@@ -122,17 +124,25 @@ const Button = styled.button`
 `;
 
 const Contact = (): JSX.Element => {
+	const shouldReduceMotion = useReducedMotion();
+	const [formRef, formInView] = useInView({
+		rootMargin: '-100px 0px'
+	});
+	const [podcastRef, podcastInView] = useInView({
+		rootMargin: '-100px 0px'
+	});
+
 	useEffect(() => {
 		const script = document.createElement('script');
 		script.src = '/embed.js';
 		script.async = true;
 		script.defer = true;
 		document.body.append(script);
-	}, []);
+	}, [podcastInView]);
 
 	return (
 		<Container>
-			<Wrapper>
+			<Wrapper ref={formRef} initial={{opacity: 0, x: shouldReduceMotion ? 0 : -300}} animate={formInView && {opacity: 1, x: 0}} transition={{ease: 'easeIn'}}>
 				<Header>Get in touch</Header>
 				<Form action="https://formspree.io/xbjzppvn" method="POST">
 					<Label>Email</Label>
@@ -142,7 +152,7 @@ const Contact = (): JSX.Element => {
 					<Button type="submit">Send</Button>
 				</Form>
 			</Wrapper>
-			<Wrapper>
+			<Wrapper ref={podcastRef} initial={{opacity: 0, x: shouldReduceMotion ? 0 : 300}} animate={podcastInView && {opacity: 1, x: 0}} transition={{ease: 'easeIn'}}>
 				<Header>Listen to a podcast!</Header>
 				<audio
 					controls

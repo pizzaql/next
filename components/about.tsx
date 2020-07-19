@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Tilt from 'react-parallax-tilt';
 import {SimpleImg} from 'react-simple-img';
 
 import Header from './header';
@@ -54,15 +55,17 @@ const About = (): JSX.Element => (
 					If you need anything else please just drop me a <ExtLink href="https://twitter.com/dokwadratu"><b>Tweet</b></ExtLink> or <ExtLink href="mailto:a@kepinski.me"><b>email</b></ExtLink> &lt;3
 				</p>
 			</Box>
-			<Image
-				src={me}
-				placeholder={placeholder}
-				// @ts-expect-error
-				draggable={false}
-				alt="Me"
-				height="13.5em"
-				imgStyle={{borderRadius: 'var(--inline-radius)'}}
-			/>
+			<Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
+				<Image
+					src={me}
+					placeholder={placeholder}
+					// @ts-expect-error
+					draggable={false}
+					alt="Me"
+					height="13.5em"
+					imgStyle={{borderRadius: 'var(--inline-radius)'}}
+				/>
+			</Tilt>
 		</Container>
 		<Divider/>
 		<Header>About</Header>

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import {SimpleImg} from 'react-simple-img';
+import {motion, useReducedMotion} from 'framer-motion';
 
 import Logo from './logo';
 import Nav from './nav';
@@ -18,7 +19,7 @@ interface Props {
 	children: React.ReactNode;
 }
 
-const Header = styled.header`
+const Header = styled(motion.header)`
 	z-index: 10;
     margin: var(--gap-double) auto var(--small-gap) auto;
     position: sticky;
@@ -67,38 +68,42 @@ const Image = styled(SimpleImg)`
 	width: 2em;
 `;
 
-const Container = ({children}: Props): JSX.Element => (
-	<>
-		<Header>
-			<Wrapper>
-				<Link href="/">
-					<Logo src={flashOutline} draggable={false} alt="Flash"/>
-				</Link>
-				<Nav>
-					<NavLink title="Home" href="/"/>
-					<NavLink title="Projects" href="/projects"/>
-				</Nav>
-			</Wrapper>
-		</Header>
-		{children}
-		<Footer>
-			<p>Antoni Kepinski &copy; {new Date().getFullYear()}</p>
-			<Social>
-				<Box href="mailto:a@kepinski.me" target="_blank" rel="noopener noreferrer" aria-label="Email">
-					<Image src={email} width="2em" height="2em" placeholder="var(--gray)" alt="Email"/>
-				</Box>
-				<Box href="https://twitter.com/dokwadratu" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-					<Image src={logoTwitter} width="2em" height="2em" placeholder="var(--gray)" alt="Twitter"/>
-				</Box>
-				<Box href="https://github.com/xxczaki" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-					<Image src={logoGitHub} width="2em" height="2em" placeholder="var(--gray)" alt="GitHub"/>
-				</Box>
-				<Box href="https://instagram.com/akepinski" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-					<Image src={logoInstagram} width="2em" height="2em" placeholder="var(--gray)" alt="Instagram"/>
-				</Box>
-			</Social>
-		</Footer>
-	</>
-);
+const Container = ({children}: Props): JSX.Element => {
+	const shouldReduceMotion = useReducedMotion();
+
+	return (
+		<>
+			<Header initial={{opacity: 0, y: shouldReduceMotion ? 0 : -50}} animate={{opacity: 1, y: 0}} transition={{ease: 'easeIn', duration: 0.4}}>
+				<Wrapper>
+					<Link href="/">
+						<Logo src={flashOutline} draggable={false} alt="Flash"/>
+					</Link>
+					<Nav>
+						<NavLink title="Home" href="/"/>
+						<NavLink title="Projects" href="/projects"/>
+					</Nav>
+				</Wrapper>
+			</Header>
+			{children}
+			<Footer>
+				<p>Antoni Kepinski &copy; {new Date().getFullYear()}</p>
+				<Social>
+					<Box href="mailto:a@kepinski.me" target="_blank" rel="noopener noreferrer" aria-label="Email">
+						<Image src={email} width="2em" height="2em" placeholder="var(--gray)" alt="Email"/>
+					</Box>
+					<Box href="https://twitter.com/dokwadratu" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+						<Image src={logoTwitter} width="2em" height="2em" placeholder="var(--gray)" alt="Twitter"/>
+					</Box>
+					<Box href="https://github.com/xxczaki" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+						<Image src={logoGitHub} width="2em" height="2em" placeholder="var(--gray)" alt="GitHub"/>
+					</Box>
+					<Box href="https://instagram.com/akepinski" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+						<Image src={logoInstagram} width="2em" height="2em" placeholder="var(--gray)" alt="Instagram"/>
+					</Box>
+				</Social>
+			</Footer>
+		</>
+	);
+};
 
 export default Container;
