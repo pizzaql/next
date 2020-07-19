@@ -46,15 +46,13 @@
     },
     "dependencies": {
         "core-js": "^3.6.5",
-        "framer-motion": "^2.1.0",
         "graphql-request": "^2.0.0",
         "lodash.debounce": "^4.0.8",
         "next": "^9.4.4",
         "nprogress": "^0.2.0",
         "react": "16.13.1",
         "react-dom": "16.13.1",
-        "react-intersection-observer": "^8.26.2",
-        "react-parallax-tilt": "^1.4.58",
+        "react-parallax-tilt": "^1.4.59",
         "react-simple-img": "^2.3.9",
         "styled-components": "^5.1.1",
         "swr": "^0.2.3"
