@@ -75,7 +75,7 @@
 		"json-schema": "^0.2.5",
 		"next-fonts": "^1.4.0",
 		"next-offline": "^5.0.2",
-		"next-optimized-images": "^2.6.1",
+		"next-optimized-images": "^3.0.0-canary.4",
 		"stylelint": "^13.6.1",
 		"stylelint-config-recommended": "^3.0.0",
 		"typescript": "^3.9.7",
