@@ -8,12 +8,6 @@ import nprogress from 'nprogress';
 
 import Container from '../components/container';
 
-// Fonts
-import InterRegularWoff from '../public/fonts/inter-v1-latin-regular.woff';
-import InterRegularWoff2 from '../public/fonts/inter-v1-latin-regular.woff2';
-import InterBoldWoff from '../public/fonts/inter-v1-latin-800.woff';
-import InterBoldWoff2 from '../public/fonts/inter-v1-latin-800.woff2';
-
 const GlobalStyle = createGlobalStyle`
 	:root {
 		--gap-half: 0.5rem;
@@ -42,8 +36,8 @@ const GlobalStyle = createGlobalStyle`
 		font-weight: 400;
 		font-display: swap;
 		src: local(''),
-			url(${InterRegularWoff2}) format('woff2'),
-			url(${InterRegularWoff}) format('woff');
+			url('/fonts/inter-v1-latin-regular.woff2') format('woff2'),
+			url('/fonts/inter-v1-latin-regular.woff') format('woff');
 	}
 
 	@font-face {
@@ -52,8 +46,8 @@ const GlobalStyle = createGlobalStyle`
 		font-weight: 800;
 		font-display: swap;
 		src: local(''),
-			url(${InterBoldWoff2}) format('woff2'),
-			url(${InterBoldWoff}) format('woff');
+			url('../public/fonts/inter-v1-latin-800.woff2') format('woff2'),
+			url('../public/fonts/inter-v1-latin-800.woff') format('woff');
 	}
 
 	body {
