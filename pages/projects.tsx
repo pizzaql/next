@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps = async () => {
 	const data = await fetcher();
 	return {
 		props: {data},
-		unstable_revalidate: 1
+		revalidate: 1
 	};
 };
 

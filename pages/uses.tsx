@@ -51,10 +51,7 @@ const Index: NextPage<unknown> = () => {
 				<summary>
 					Settings
 				</summary>
-				<ul>
-					<li>Font: Operator Mono</li>
-					<li>Font Size: 17</li>
-				</ul>
+				<p>Check out my <ExtLink target="_blank" rel="noopener noreferrer" href="https://github.com/xxczaki/dotfiles">dotfiles repository</ExtLink>.</p>
 			</Details>
 			<Details>
 				<summary>
@@ -73,28 +70,37 @@ const Index: NextPage<unknown> = () => {
 					<li>Auto Close Tag</li>
 					<li>Auto Rename Tag</li>
 					<li>AVA</li>
-					<li>Babel JavaScript</li>
-					<li>Better TOML</li>
+					<li>Better Comments</li>
 					<li>Bracket Pair Colorizer 2</li>
+					<li>Code Spell Checker</li>
 					<li>Color Highlight</li>
 					<li>crates</li>
 					<li>Docker</li>
+					<li>DotENV</li>
 					<li>EditorConfig for VS Code</li>
 					<li>ES7 React/Redux/GraphQL/React-Native snippets</li>
-					<li>gitignore</li>
+					<li>Even Better TOML</li>
+					<li>File Utils</li>
 					<li>GitLens - Git supercharged</li>
 					<li>GraphQL</li>
+					<li>GraphQL for VSCode</li>
 					<li>Highlight Matching Tag</li>
 					<li>Image preview</li>
+					<li>JS Refactor</li>
 					<li>Markdown All in One</li>
-					<li>npm</li>
 					<li>npm Intellisense</li>
-					<li>Path Autocomplete</li>
+					<li>open in browser</li>
 					<li>Path Intellisense</li>
+					<li>Rainbow Brackets</li>
 					<li>Reload</li>
-					<li>Rust (rls)</li>
-					<li>Tech Debt Tracker</li>
+					<li>Rust</li>
+					<li>Scope Info</li>
+					<li>SCSS IntelliSense</li>
+					<li>Text Pastry</li>
+					<li>Toggle Quotes</li>
+					<li>Version Lens</li>
 					<li>Visual Studio IntelliCode</li>
+					<li>vscode-styled-components</li>
 					<li>XO</li>
 					<li>YAML</li>
 				</ul>
