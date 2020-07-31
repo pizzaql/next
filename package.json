@@ -55,7 +55,7 @@
         "react-parallax-tilt": "^1.4.59",
         "react-simple-img": "^2.3.9",
         "styled-components": "^5.1.1",
-        "swr": "^0.2.3"
+        "swr": "^0.3.0"
     },
     "devDependencies": {
         "@babel/core": "^7.10.5",
