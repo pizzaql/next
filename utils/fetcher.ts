@@ -1,9 +1,9 @@
 'use strict';
 
-import {GraphQLClient} from 'graphql-request';
+import {gql, GraphQLClient} from 'graphql-request';
 
 const endpoint = 'https://api.github.com/graphql';
-const query = `{
+const query = gql`{
 	repositoryOwner(login: "xxczaki") {
 		repositories(orderBy: {direction: DESC, field: STARGAZERS}, first: 6) {
 			nodes {
