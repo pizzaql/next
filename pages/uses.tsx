@@ -17,9 +17,9 @@ const Index: NextPage<unknown> = () => {
 							<ul>
 								<li>Intel Core I5-4690K</li>
 								<li>Nvidia GeForce GTX 750 Ti 4GB</li>
-								<li>8GB RAM</li>
+								<li>8GB RAM (DDR3, 1333MHz)</li>
 								<li>1TB HDD + 128GB SSD</li>
-								<li>Linux Mint 19.3</li>
+								<li>Linux Mint 20</li>
 							</ul>
 						</li>
 						<li>Dell Latitude E7440 Notebook</li>
@@ -33,7 +33,7 @@ const Index: NextPage<unknown> = () => {
 					<ul>
 						<li>Visual Studio Code</li>
 						<li>Google Chrome</li>
-						<li>Spotify</li>
+						<li>Tidal</li>
 						<li>1Password</li>
 					</ul>
 				</li>
