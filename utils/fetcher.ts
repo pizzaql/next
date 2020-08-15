@@ -5,7 +5,7 @@ import {gql, GraphQLClient} from 'graphql-request';
 const endpoint = 'https://api.github.com/graphql';
 const query = gql`{
 	repositoryOwner(login: "xxczaki") {
-		repositories(orderBy: {direction: DESC, field: STARGAZERS}, first: 6) {
+		repositories(orderBy: {direction: DESC, field: STARGAZERS}, first: 7) {
 			nodes {
 				name
 				stargazers {
@@ -39,6 +39,7 @@ export interface Response {
 
 export const fetcher = async (): Promise<Response> => {
 	const data: Response = await client.request(query);
+	console.log(data.repositoryOwner.repositories.nodes);
 
 	return data;
 };
