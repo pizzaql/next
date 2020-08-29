@@ -84,10 +84,10 @@ const TechStack = (): JSX.Element => (
 					/>
 					<Heading>JavaScript (ES6+)</Heading>
 				</Block>
-				<Block background="#007acc" color="#fff" href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" aria-label="TypeScript">
+				<Block background="#3178c6" color="#fff" href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" aria-label="TypeScript">
 					<Image
 						src={require('../public/images/logo-typescript.svg')}
-						placeholder="#007acc"
+						placeholder="#3178c6"
 						// @ts-expect-error
 						draggable={false}
 						alt="TypeScript"
