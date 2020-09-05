@@ -1,5 +1,5 @@
 import React from 'react';
-import Document, {Head, Main, NextScript, DocumentContext} from 'next/document';
+import Document, {Html, Head, Main, NextScript, DocumentContext} from 'next/document';
 import {ServerStyleSheet} from 'styled-components';
 
 export default class MyDocument extends Document {
@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
 
 	render(): JSX.Element {
 		return (
-			<html lang="en">
+			<Html lang="en">
 				<Head>
 					<meta charSet="utf-8"/>
 					<meta name="description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
@@ -145,7 +145,7 @@ export default class MyDocument extends Document {
 					<script async defer src="https://sa.kepinski.me/app.js"/>
 					<noscript><img src="https://sa.kepinski.me/image.gif" alt=""/></noscript>
 				</body>
-			</html>
+			</Html>
 		);
 	}
 }
