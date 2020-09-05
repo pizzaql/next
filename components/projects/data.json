@@ -31,20 +31,20 @@
 		]
 	},
 	{
-		"id": "cashify",
-		"name": "Cashify",
-		"description": "Lightweight currency conversion library, successor of money.js",
-		"url": "https://github.com/xxczaki/cashify",
+		"id": "light-date",
+		"name": "Light Date",
+		"description": "Blazing fast & lightweight (157 bytes) date formatting for Node.js and the browser",
+		"url": "https://github.com/xxczaki/light-date/",
 		"tags": [
 			"Node.js",
 			"TypeScript"
 		]
 	},
 	{
-		"id": "light-date",
-		"name": "Light Date",
-		"description": "Blazing fast & lightweight (157 bytes) date formatting for Node.js and the browser",
-		"url": "https://github.com/xxczaki/light-date/",
+		"id": "cashify",
+		"name": "Cashify",
+		"description": "Lightweight currency conversion library, successor of money.js",
+		"url": "https://github.com/xxczaki/cashify",
 		"tags": [
 			"Node.js",
 			"TypeScript"
