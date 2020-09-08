@@ -39,7 +39,6 @@ export interface Response {
 
 export const fetcher = async (): Promise<Response> => {
 	const data: Response = await client.request(query);
-	console.log(data.repositoryOwner.repositories.nodes);
 
 	return data;
 };
