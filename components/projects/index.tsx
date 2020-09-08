@@ -39,13 +39,13 @@ const Wrapper = styled.div`
 `;
 
 const Element = styled.a<ElementProps>`
-	box-shadow: var(--gray) 1em;
+	box-shadow: var(--accent) 1em;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-	background: linear-gradient(${props => props.deg}deg, #666, #424242);
+	background: linear-gradient(${props => props.deg}deg, var(--accent), var(--light-accent));
     padding: var(--gap-double) 1.75rem;
     border-radius: var(--radius);
     transition: all var(--transition-slow);
@@ -117,7 +117,7 @@ const Projects = ({stars}: Props): JSX.Element => (
 					href={element.url}
 					target="_blank"
 					rel="noopener noreferrer"
-					deg={getRandomArbitrary(180, 360)}
+					deg={getRandomArbitrary(0, 360)}
 					aria-label={element.name}
 				>
 					<header>
