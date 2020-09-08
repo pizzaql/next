@@ -40,7 +40,7 @@ const Divider = styled.hr`
 
 	&::after {
 		content: "• • •";
-		color: var(--light-gray);
+		color: var(--light-accent);
 		font-size: 24px;
 		letter-spacing: 12px;
 	}

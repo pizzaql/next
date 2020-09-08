@@ -38,7 +38,7 @@ const Input = styled.input`
 	transition: var(--transition);
 	transition-property: color,box-shadow,background,border-color;
 	box-shadow: 0 0 0 0 rgba(0,93,255,0);
-	background-color: var(--gray);
+	background-color: var(--accent);
 	font-family: inherit;
     font-weight: 500;
     word-break: break-word;
@@ -49,7 +49,7 @@ const Input = styled.input`
     border-style: solid;
     border-image: initial;
     border-width: 2px;
-    border-color: var(--light-gray);
+    border-color: var(--light-accent);
     border-radius: var(--inline-radius);
     padding: var(--gap-half);
 	cursor: text;
@@ -65,7 +65,7 @@ const TextArea = styled.textarea`
 	transition: var(--transition);
 	transition-property: color,box-shadow,background,border-color;
 	box-shadow: 0 0 0 0 rgba(0,93,255,0);
-	background-color: var(--gray);
+	background-color: var(--accent);
 	font-family: inherit;
     font-weight: 500;
     word-break: break-word;
@@ -77,7 +77,7 @@ const TextArea = styled.textarea`
     border-style: solid;
     border-image: initial;
     border-width: 2px;
-    border-color: var(--light-gray);
+    border-color: var(--light-accent);
     border-radius: var(--inline-radius);
     padding: var(--gap-half);
 	cursor: text;
@@ -94,7 +94,7 @@ const Button = styled.button`
 	transition-property: color,box-shadow,background,border-color,opacity;
 	box-shadow: 0 0 0 0 rgba(0,93,255,0);
 	margin-top: 0.5rem;
-	background-color: var(--gray);
+	background-color: var(--accent);
 	color: var(--text);
 	font-size: 1rem;
 	font-family: inherit;

@@ -8,7 +8,7 @@ const Quote = styled.blockquote`
 	font-style: italic;
     margin: 0;
     padding-left: 1rem;
-    border-left: 3px solid var(--light-gray);
+    border-left: 3px solid var(--light-accent);
     transition: border-color var(--transition);
 `;
 
