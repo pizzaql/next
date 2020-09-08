@@ -26,6 +26,7 @@
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
 - [Styled Components](https://styled-components.com/)
+- [Recoil](https://recoiljs.org/)
 
 **Additional:**
 
@@ -55,6 +56,7 @@ I took some inspiration from the following, truly amazing personal sites:
 - [gabrielvaldivia.com](https://www.gabrielvaldivia.com/)
 - [robhope.com](https://robhope.com/)
 - [zcole.me](http://zcole.me/)
+- [mxb.dev](https://mxb.dev)
 
 ### License
 
