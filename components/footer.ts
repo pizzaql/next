@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Footer = styled.footer`
 	height: 32px;
 	margin: calc(var(--small-gap) + var(--gap)) auto;
-	padding: 0 1rem;
+	padding: 0 1.5rem;
 	max-width: var(--main-content);
 	display: flex;
 	align-items: center;
