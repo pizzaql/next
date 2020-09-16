@@ -56,7 +56,6 @@ const GlobalStyle = createGlobalStyle<{theme: Theme}>`
 		overflow-x: hidden;
 		margin: 0;
 		padding: 0;
-		transition: background-color var(--transition-slow);
 	}
 
 	#nprogress {
