@@ -28,7 +28,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 	useEffect(() => {
 		const previous = localStorage.getItem('theme');
 
-		if (previous) {
+		if (previous && /dark|light/.exec(previous)) {
 			setTheme(previous as 'dark' | 'light');
 		} else {
 			localStorage.setItem('theme', 'dark');
