@@ -1,65 +1,38 @@
-![Screenshot](screenshot.png)
+<div style="display: flex; flex-direction: column; align-items: center;">
+	<img src="public/images/pizzaql.svg" alt="Logo"/>
+	<br/>
+	<b>Modern order placement and management system.</b>
+</div>
 
-# [kepinski.me](https://kepinski.me)
+## Information
 
-> Personal website, built with React, Next.js & more 🚀
+This is a rewritten version of the [original PizzaQL](https://github.com/pizzaql/pizzaql/). Once done, it will be moved to the original repository. Changes include a completely new design, different backend, ability to order multiple items at once, extended configuration options and much more. More details can be found in our roadmap below.
 
-[![Build Status](https://travis-ci.org/xxczaki/site.svg?branch=master)](https://travis-ci.org/xxczaki/site)
-[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
-[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
+## Roadmap
 
-*The website targets the latest version of Chrome, Safari, and Firefox.
+- [ ] Order Placement
+  - [x] Fully functional cart
+  - [ ] Stripe payments
+  - [ ] Delivery hours calculation
+  - [ ] Connection with backend
+  - [ ] Performance optimizations
 
----
-
-## Highlights
-
-- Blazing fast (Next.js + Incremental SSG)
-- Works offline (PWA)
-- 100% Responsive & Accessible
-- Written in TypeScript
-
-## Built with:
-
-**Main:**
+## Technology Stack
 
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
-- [Styled Components](https://styled-components.com/)
+- [Chakra UI](https://next.chakra-ui.com/)
+- [Emotion](https://emotion.sh/)
 - [Recoil](https://recoiljs.org/)
+- [Apollo Client](https://www.apollographql.com/docs/react/)
+- [Hasura](https://hasura.io/)
 
-**Additional:**
+Frontend is hosted on [Vercel](https://vercel.com/) and backend (Hasura server) - on [Digital Ocean](https://www.digitalocean.com/).
 
-- [React Simple Image](https://react-simple-img.now.sh) - image lazy loading
-- [NProgress](https://ricostacruz.com/nprogress/) - progress bar
+## Sponsors
 
-## Development
+Special thanks to [Digital Ocean](https://www.digitalocean.com/) and [Sauce Labs](https://saucelabs.com/) for supporting this project!
 
-> Hosted with [Vercel ▲](https://vercel.com)
-
-```bash
-# Run in development mode
-$ npm run dev
-
-# Build for production
-$ npm run build
-
-# Lint
-$ npm test
-```
-
-## Acknowledgments
-
-I took some inspiration from the following, truly amazing personal sites:
-
-- [paco.im](https://paco.im)
-- [gabrielvaldivia.com](https://www.gabrielvaldivia.com/)
-- [robhope.com](https://robhope.com/)
-- [zcole.me](http://zcole.me/)
-- [mxb.dev](https://mxb.dev)
-
-### License
+## License
 
 MIT
-
-<a href="https://www.browserstack.com/"><img src="https://imgur.com/l3iy9C6.png" width="512" alt="Sponsored by BrowserStack"></a>
