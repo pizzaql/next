@@ -1,21 +1,21 @@
 {
-    "name": "Antoni Kepinski",
-    "short_name": "kepinski.me",
-    "icons": [
-      {
-        "src": "/favicon-small.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "/favicon.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ],
-    "start_url": "/",
-    "display": "standalone",
-    "orientation": "portrait",
-    "background_color": "#131415",
-    "theme_color": "#131415"
-  }
+	"name": "Smart Pizza",
+	"short_name": "Smart Pizza",
+	"icons": [
+		{
+			"src": "/favicon-small.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/favicon.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "portrait",
+	"background_color": "#fff",
+	"theme_color": "#fff"
+}
