@@ -84,7 +84,7 @@ const Index: NextPage<unknown> = () => {
 				>
 					<Stack spacing={5}>
 						<Stack alignItems="center" spacing={3}>
-							<Avatar name="Smart Pizza" src="images/pizza.jpg" size="2xl">
+							<Avatar name="Smart Pizza" src="images/pizza.jpg" size="2xl" draggable={false} loading="lazy" decoding="async">
 								<Tooltip hasArrow label="We are now open!" aria-label="A tooltip" placement="right">
 									<AvatarBadge boxSize="2.8rem" bg="green.500"/>
 								</Tooltip>
@@ -348,13 +348,11 @@ const Index: NextPage<unknown> = () => {
 				onClick={onOpen}
 			/>
 			<Drawer
-				isFullHeight
 				isOpen={isOpen}
 				placement="right"
 				// @ts-expect-error
 				finalFocusRef={btnRef}
 				scrollBehavior="inside"
-				blockScrollOnMount={false}
 				onClose={onClose}
 			>
 				<DrawerOverlay>
@@ -424,7 +422,7 @@ const Index: NextPage<unknown> = () => {
 							)}
 						</DrawerBody>
 
-						<DrawerFooter>
+						<DrawerFooter mb={10}>
 							<Button variant="outline" mr={3} onClick={onClose}>
 								Cancel
 							</Button>
