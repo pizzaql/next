@@ -86,7 +86,7 @@ const Index: NextPage<unknown> = () => {
 						<Stack alignItems="center" spacing={3}>
 							<Avatar name="Smart Pizza" src="images/pizza.jpg" size="2xl">
 								<Tooltip hasArrow label="We are now open!" aria-label="A tooltip" placement="right">
-									<AvatarBadge boxSize="2.8rem" bg="green.500" />
+									<AvatarBadge boxSize="2.8rem" bg="green.500"/>
 								</Tooltip>
 							</Avatar>
 							<Heading>{info.name ?? 'Restaurant Name'}</Heading>
@@ -98,21 +98,21 @@ const Index: NextPage<unknown> = () => {
 									<Box flex="1" textAlign="left">
 										Menu
 									</Box>
-									<AccordionIcon />
+									<AccordionIcon/>
 								</AccordionButton>
 								<AccordionPanel>
 									<SimpleGrid minChildWidth="15rem" spacing={3} justifyContent="center" alignItems="center">
 										{menu.map(item => (
 											<Box key={item.name} borderWidth="1px" borderRadius="lg" padding="1rem">
 												<Stack spacing={3}>
-													<Image src={item.image} alt={`Photo of ${item.name}`} draggable={false} loading="lazy" decoding="async" width="100%" height="10rem" objectFit="cover" borderRadius="md" />
+													<Image src={item.image} alt={`Photo of ${item.name}`} draggable={false} loading="lazy" decoding="async" width="100%" height="10rem" objectFit="cover" borderRadius="md"/>
 													<Heading size="md">{item.name}</Heading>
 													<Text as="i" color="gray.600" fontSize=".8rem">{truncate(item.ingredients.join(', '), 30)}</Text>
 													<ButtonGroup isAttached>
 														{item.variants.map(element => (
 															<Button
 																key={element.type}
-																leftIcon={<IoMdAdd />}
+																leftIcon={<IoMdAdd/>}
 																colorScheme="blue"
 																width="100%"
 																onClick={() => {
@@ -148,7 +148,7 @@ const Index: NextPage<unknown> = () => {
 									<Box flex="1" textAlign="left">
 										Contact
 									</Box>
-									<AccordionIcon />
+									<AccordionIcon/>
 								</AccordionButton>
 								<AccordionPanel>
 									<SimpleGrid minChildWidth="18rem" spacing={5}>
@@ -171,7 +171,10 @@ const Index: NextPage<unknown> = () => {
 										<FormControl isRequired id="phone">
 											<FormLabel>Phone number</FormLabel>
 											<InputGroup>
-												<InputLeftAddon children={info.callingCode} />
+												<InputLeftAddon
+													// eslint-disable-next-line react/no-children-prop
+													children={info.callingCode}
+												/>
 												<Input
 													isRequired
 													type="phone"
@@ -194,7 +197,7 @@ const Index: NextPage<unknown> = () => {
 									<Box flex="1" textAlign="left">
 										Delivery
 									</Box>
-									<AccordionIcon />
+									<AccordionIcon/>
 								</AccordionButton>
 								<AccordionPanel>
 									<SimpleGrid minChildWidth="18rem" spacing={5}>
@@ -237,7 +240,7 @@ const Index: NextPage<unknown> = () => {
 									<Box flex="1" textAlign="left">
 										Time
 									</Box>
-									<AccordionIcon />
+									<AccordionIcon/>
 								</AccordionButton>
 								<AccordionPanel>
 									<SimpleGrid minChildWidth="18rem" spacing={5}>
@@ -252,7 +255,7 @@ const Index: NextPage<unknown> = () => {
 										</FormControl>
 										<FormControl id="notes">
 											<FormLabel>Notes</FormLabel>
-											<Textarea resize="vertical" placeholder="Please don't use a bell - baby is sleeping." />
+											<Textarea resize="vertical" placeholder="Please don't use a bell - baby is sleeping."/>
 										</FormControl>
 									</SimpleGrid>
 								</AccordionPanel>
@@ -262,7 +265,7 @@ const Index: NextPage<unknown> = () => {
 									<Box flex="1" textAlign="left">
 										Payment
 									</Box>
-									<AccordionIcon />
+									<AccordionIcon/>
 								</AccordionButton>
 								<AccordionPanel>
 									<SimpleGrid minChildWidth="18rem" spacing={5}>
@@ -290,7 +293,7 @@ const Index: NextPage<unknown> = () => {
 									<Box flex="1" textAlign="left">
 										Summary
 									</Box>
-									<AccordionIcon />
+									<AccordionIcon/>
 								</AccordionButton>
 								<AccordionPanel>
 									<Stack spacing={5} minWidth="18rem">
@@ -304,10 +307,10 @@ const Index: NextPage<unknown> = () => {
 							<Text as="b" color="gray.600">Powered by</Text>
 							<Stack direction="row" spacing={5}>
 								<Link isExternal href="https://github.com/pizzaql">
-									<Image src="images/pizzaql.svg" alt="PizzaQL" draggable={false} loading="lazy" decoding="async" width="6rem" />
+									<Image src="images/pizzaql.svg" alt="PizzaQL" draggable={false} loading="lazy" decoding="async" width="6rem"/>
 								</Link>
 								<Link isExternal href="https://www.digitalocean.com/">
-									<Image src="images/do.svg" alt="Digital Ocean" draggable={false} loading="lazy" decoding="async" width="8rem" />
+									<Image src="images/do.svg" alt="Digital Ocean" draggable={false} loading="lazy" decoding="async" width="8rem"/>
 								</Link>
 							</Stack>
 						</Stack>
@@ -321,7 +324,7 @@ const Index: NextPage<unknown> = () => {
 				size="lg"
 				icon={
 					<Stack direction="row" spacing={3}>
-						<IoMdCart />
+						<IoMdCart/>
 						<Text>Cart</Text>
 						{cart.items.length > 0 && (
 							<Tag
@@ -347,12 +350,13 @@ const Index: NextPage<unknown> = () => {
 			<Drawer
 				isOpen={isOpen}
 				placement="right"
+				// @ts-expect-error
 				finalFocusRef={btnRef}
 				onClose={onClose}
 			>
 				<DrawerOverlay>
 					<DrawerContent>
-						<DrawerCloseButton />
+						<DrawerCloseButton/>
 						<DrawerHeader>Cart</DrawerHeader>
 
 						<DrawerBody>
@@ -362,12 +366,12 @@ const Index: NextPage<unknown> = () => {
 										<Stack key={item.name} direction="row" alignItems="center" justifyContent="space-between">
 											<Text as="b">{item.quantity}x {item.name}</Text>
 											<Text as="i">{item.type}</Text>
-											<Divider width="1rem" ortientation="vertical" />
+											<Divider width="1rem"/>
 											<ButtonGroup isAttached>
 												<IconButton
 													size="md"
 													aria-label="Remove one"
-													icon={<IoMdRemove />}
+													icon={<IoMdRemove/>}
 													onClick={() => {
 														if (item.quantity === 1) {
 															setCart({
@@ -388,7 +392,7 @@ const Index: NextPage<unknown> = () => {
 												<IconButton
 													size="md"
 													aria-label="Add one"
-													icon={<IoMdAdd />}
+													icon={<IoMdAdd/>}
 													onClick={() => {
 														setCart({
 															items: [
@@ -402,7 +406,7 @@ const Index: NextPage<unknown> = () => {
 											</ButtonGroup>
 										</Stack>
 									))}
-									<Divider />
+									<Divider/>
 									<Stat textAlign="right">
 										<StatLabel>Grand total</StatLabel>
 										<StatNumber>{cart.total} {info.currency}</StatNumber>
@@ -410,11 +414,11 @@ const Index: NextPage<unknown> = () => {
 									</Stat>
 								</Stack>
 							) : (
-									<Stack textAlign="center" marginTop="5rem">
-										<Heading size="md">Cart is empty</Heading>
-										<Text>Go ahead and add something tasty!</Text>
-									</Stack>
-								)}
+								<Stack textAlign="center" marginTop="5rem">
+									<Heading size="md">Cart is empty</Heading>
+									<Text>Go ahead and add something tasty!</Text>
+								</Stack>
+							)}
 						</DrawerBody>
 
 						<DrawerFooter>
@@ -423,7 +427,7 @@ const Index: NextPage<unknown> = () => {
 							</Button>
 							<Button
 								colorScheme="red"
-								leftIcon={<IoMdTrash />}
+								leftIcon={<IoMdTrash/>}
 								disabled={!cart.items.length}
 								onClick={onAlertOpen}
 							>
@@ -431,6 +435,7 @@ const Index: NextPage<unknown> = () => {
 							</Button>
 							<AlertDialog
 								isOpen={isAlertOpen}
+								// @ts-expect-error
 								leastDestructiveRef={cancelRef}
 								onClose={onAlertClose}
 							>
@@ -445,7 +450,11 @@ const Index: NextPage<unknown> = () => {
 										</AlertDialogBody>
 
 										<AlertDialogFooter>
-											<Button ref={cancelRef} onClick={onAlertClose}>
+											<Button
+												// @ts-expect-error
+												ref={cancelRef}
+												onClick={onAlertClose}
+											>
 												Cancel
 											</Button>
 											<Button
