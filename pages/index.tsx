@@ -84,7 +84,7 @@ const Index: NextPage<unknown> = () => {
 				>
 					<Stack spacing={5}>
 						<Stack alignItems="center" spacing={3}>
-							<Avatar name="Smart Pizza" src="images/pizza.jpg" size="2xl" draggable={false} loading="lazy" decoding="async">
+							<Avatar name="Smart Pizza" src="images/pizza.jpg" size="2xl" draggable={false}>
 								<Tooltip hasArrow label="We are now open!" aria-label="A tooltip" placement="right">
 									<AvatarBadge boxSize="2.8rem" bg="green.500"/>
 								</Tooltip>
