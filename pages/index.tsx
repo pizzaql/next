@@ -353,9 +353,9 @@ const Index: NextPage<unknown> = () => {
 				placement="right"
 				// @ts-expect-error
 				finalFocusRef={btnRef}
-				onClose={onClose}
 				scrollBehavior="inside"
 				blockScrollOnMount={false}
+				onClose={onClose}
 			>
 				<DrawerOverlay>
 					<DrawerContent>
