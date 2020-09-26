@@ -120,14 +120,6 @@ const Index: NextPage<unknown> = () => {
 																		items: merge(cart.items, {name: item.name, type: element.type, price: element.price, quantity: 1}),
 																		total: cart.total + element.price
 																	});
-
-																	toast({
-																		title: 'Cart updated',
-																		description: `Total: ${cart.total + element.price} ${info.currency}`,
-																		status: 'success',
-																		duration: 3000,
-																		isClosable: true
-																	});
 																}}
 															>
 																<Stack spacing={0}>
