@@ -1,5 +1,6 @@
-<div style="display: flex; flex-direction: column; align-items: center;">
+<p align="center">
 	<img src="public/images/pizzaql.svg" alt="Logo"/>
+	<br/>
 	<br/>
 	<b>Modern order placement and management system.</b>
 </div>
