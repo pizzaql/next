@@ -383,7 +383,7 @@ const Index: NextPage<unknown> = () => {
 															setCart({
 																items: [
 																	{name: item.name, type: item.type, price: item.price, quantity: item.quantity - 1},
-																	...cart.items.filter(element => (element.name !== item.name) && (element.type !== item.type))
+																	...cart.items.filter(element => (element.name !== item.name) || (element.type !== item.type))
 																],
 																total: cart.total - item.price
 															});
@@ -398,7 +398,7 @@ const Index: NextPage<unknown> = () => {
 														setCart({
 															items: [
 																{name: item.name, type: item.type, price: item.price, quantity: item.quantity + 1},
-																...cart.items.filter(element => (element.name !== item.name) && (element.type !== item.type))
+																...cart.items.filter(element => (element.name !== item.name) || (element.type !== item.type))
 															],
 															total: cart.total + item.price
 														});
