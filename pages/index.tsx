@@ -348,6 +348,7 @@ const Index: NextPage<unknown> = () => {
 				onClick={onOpen}
 			/>
 			<Drawer
+				isFullHeight
 				isOpen={isOpen}
 				placement="right"
 				// @ts-expect-error
