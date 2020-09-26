@@ -11,6 +11,7 @@ import nprogress from 'nprogress';
 
 import {_cart, CartState} from '../lib/recoil-atoms';
 import StateSaver from '../components/state-saver';
+import info from '../lib/info';
 
 // Only show nprogress after 500ms (slow loading)
 const start = debounce(nprogress.start, 500);
@@ -76,7 +77,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
       				`}
 				/>
 				<Head>
-					<title>Smart Pizza</title>
+					<title>{info.name}</title>
 				</Head>
 				{cart && (
 					<RecoilRoot
