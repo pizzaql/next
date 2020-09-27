@@ -8,11 +8,6 @@ import {
 	AvatarBadge,
 	Tooltip,
 	Heading,
-	Accordion,
-	AccordionItem,
-	AccordionButton,
-	AccordionIcon,
-	AccordionPanel,
 	SimpleGrid,
 	ButtonGroup,
 	Button,
@@ -51,6 +46,7 @@ import {
 	AlertDialogOverlay
 } from '@chakra-ui/core';
 import {useRecoilState} from 'recoil';
+import {useForm} from 'react-hook-form';
 import {IoMdAdd, IoMdCart, IoMdTrash, IoMdRemove} from 'react-icons/io';
 import truncate from 'cli-truncate';
 
@@ -58,9 +54,26 @@ import info from '../lib/info';
 import menu from '../lib/menu';
 import {_cart} from '../lib/recoil-atoms';
 import {merge} from '../utils/merge';
+import {getDeliveryHours} from '../utils/get-delivery-hours';
+
+type FormState = {
+	name: string;
+	email: string;
+	phone: string;
+	company?: string;
+	address: string;
+	postal: string;
+	city: string;
+	floor?: string;
+	time: string;
+	notes?: string;
+	payment: 'cash' | 'stripe';
+	tip?: string;
+};
 
 const Index: NextPage<unknown> = () => {
 	const [cart, setCart] = useRecoilState(_cart);
+	const {register, handleSubmit, watch} = useForm<FormState>();
 	const toast = useToast();
 	const {isOpen, onOpen, onClose} = useDisclosure();
 	const btnRef = useRef();
@@ -68,6 +81,9 @@ const Index: NextPage<unknown> = () => {
 	const cancelRef = React.useRef();
 
 	const items = cart.items.map(x => x.quantity).reduce((a, b) => a + b, 0);
+	const deliveryHours = getDeliveryHours(new Date());
+
+	const onSubmit = (data: FormData) => console.log(data);
 
 	return (
 		<>
@@ -85,217 +101,188 @@ const Index: NextPage<unknown> = () => {
 					<Stack spacing={5}>
 						<Stack alignItems="center" spacing={3}>
 							<Avatar name="Smart Pizza" src="images/pizza.jpg" size="2xl" draggable={false}>
-								<Tooltip hasArrow label="We are now open!" aria-label="A tooltip" placement="right">
-									<AvatarBadge boxSize="2.8rem" bg="green.500"/>
+								<Tooltip hasArrow label={deliveryHours && deliveryHours.length > 0 ? 'We are now open!' : 'We are now closed.'} aria-label="A tooltip" placement="right">
+									<AvatarBadge boxSize="2.8rem" bg={deliveryHours && deliveryHours.length > 0 ? 'green.500' : 'red.500'}/>
 								</Tooltip>
 							</Avatar>
 							<Heading>{info.name ?? 'Restaurant Name'}</Heading>
 							<Text color="gray.500">{info.description ?? 'Restaurant description.'}</Text>
 						</Stack>
-						<Accordion defaultIndex={0}>
-							<AccordionItem>
-								<AccordionButton>
-									<Box flex="1" textAlign="left">
-										Menu
-									</Box>
-									<AccordionIcon/>
-								</AccordionButton>
-								<AccordionPanel>
-									<SimpleGrid minChildWidth="15rem" spacing={3} justifyContent="center" alignItems="center">
-										{menu.map(item => (
-											<Box key={item.name} borderWidth="1px" borderRadius="lg" padding="1rem">
-												<Stack spacing={3}>
-													<Image src={item.image} alt={`Photo of ${item.name}`} draggable={false} loading="lazy" decoding="async" width="100%" height="10rem" objectFit="cover" borderRadius="md"/>
-													<Heading size="md">{item.name}</Heading>
-													<Text as="i" color="gray.600" fontSize=".8rem">{truncate(item.ingredients.join(', '), 30)}</Text>
-													<ButtonGroup isAttached>
-														{item.variants.map(element => (
-															<Button
-																key={element.type}
-																leftIcon={<IoMdAdd/>}
-																colorScheme="blue"
-																width="100%"
-																onClick={() => {
-																	setCart({
-																		items: merge(cart.items, {name: item.name, type: element.type, price: element.price, quantity: 1}),
-																		total: cart.total + element.price
-																	});
-																}}
-															>
-																<Stack spacing={0}>
-																	<Text>{element.type}</Text>
-																	<Text opacity=".8" fontSize=".75rem">{element.price} {info.currency ?? 'USD'}</Text>
-																</Stack>
-															</Button>
-														))}
-													</ButtonGroup>
-												</Stack>
-											</Box>
-										))}
-									</SimpleGrid>
-								</AccordionPanel>
-							</AccordionItem>
-							<AccordionItem>
-								<AccordionButton>
-									<Box flex="1" textAlign="left">
-										Contact
-									</Box>
-									<AccordionIcon/>
-								</AccordionButton>
-								<AccordionPanel>
-									<SimpleGrid minChildWidth="18rem" spacing={5}>
-										<FormControl isRequired id="name">
-											<FormLabel>Name</FormLabel>
-											<Input
-												isRequired
-												type="text"
-												placeholder="John"
-											/>
-										</FormControl>
-										<FormControl isRequired id="email">
-											<FormLabel>E-mail</FormLabel>
-											<Input
-												isRequired
-												type="email"
-												placeholder="johndoe@example.com"
-											/>
-										</FormControl>
-										<FormControl isRequired id="phone">
-											<FormLabel>Phone number</FormLabel>
-											<InputGroup>
-												<InputLeftAddon
-													// eslint-disable-next-line react/no-children-prop
-													children={info.callingCode}
-												/>
-												<Input
-													isRequired
-													type="phone"
-													placeholder="111 222 333"
-												/>
-											</InputGroup>
-										</FormControl>
-										<FormControl id="company">
-											<FormLabel>Company name</FormLabel>
-											<Input
-												type="text"
-												placeholder="Doe Inc."
-											/>
-										</FormControl>
-									</SimpleGrid>
-								</AccordionPanel>
-							</AccordionItem>
-							<AccordionItem>
-								<AccordionButton>
-									<Box flex="1" textAlign="left">
-										Delivery
-									</Box>
-									<AccordionIcon/>
-								</AccordionButton>
-								<AccordionPanel>
-									<SimpleGrid minChildWidth="18rem" spacing={5}>
-										<FormControl isRequired id="address">
-											<FormLabel>Address</FormLabel>
-											<Input
-												isRequired
-												type="text"
-												placeholder="13a Twain Ave"
-											/>
-										</FormControl>
-										<FormControl isRequired id="postal">
-											<FormLabel>Postal code</FormLabel>
-											<Input
-												isRequired
-												type="text"
-												placeholder="12-345"
-											/>
-										</FormControl>
-										<FormControl isRequired id="city">
-											<FormLabel>City</FormLabel>
-											<Input
-												isRequired
-												type="text"
-												placeholder="Hot Rocks"
-											/>
-										</FormControl>
-										<FormControl id="floor">
-											<FormLabel>Floor</FormLabel>
-											<Input
-												type="text"
-												placeholder="2nd"
-											/>
-										</FormControl>
-									</SimpleGrid>
-								</AccordionPanel>
-							</AccordionItem>
-							<AccordionItem>
-								<AccordionButton>
-									<Box flex="1" textAlign="left">
-										Time
-									</Box>
-									<AccordionIcon/>
-								</AccordionButton>
-								<AccordionPanel>
-									<SimpleGrid minChildWidth="18rem" spacing={5}>
-										<FormControl isRequired id="time">
-											<FormLabel>Delivery time</FormLabel>
-											<Select isRequired placeholder="Select...">
-												<option value="asap">As soon as possible</option>
-												<option value="option1">5:00</option>
-												<option value="option2">5:30</option>
-												<option value="option3">6:00</option>
-											</Select>
-										</FormControl>
-										<FormControl id="notes">
-											<FormLabel>Notes</FormLabel>
-											<Textarea resize="vertical" placeholder="Please don't use a bell - baby is sleeping."/>
-										</FormControl>
-									</SimpleGrid>
-								</AccordionPanel>
-							</AccordionItem>
-							<AccordionItem>
-								<AccordionButton>
-									<Box flex="1" textAlign="left">
-										Payment
-									</Box>
-									<AccordionIcon/>
-								</AccordionButton>
-								<AccordionPanel>
-									<SimpleGrid minChildWidth="18rem" spacing={5}>
-										<FormControl isRequired id="payment">
-											<FormLabel>Payment method</FormLabel>
-											<Select isRequired placeholder="Select...">
-												<option value="cash">Cash</option>
-												<option value="stripe">Stripe</option>
-											</Select>
-										</FormControl>
-										<FormControl id="tip">
-											<FormLabel>Tip</FormLabel>
-											<Select isRequired>
-												<option value="cash">None</option>
-												<option value="stripe">5% (1 PLN)</option>
-												<option value="stripe">10% (3 PLN)</option>
-												<option value="stripe">15% (5 PLN)</option>
-											</Select>
-										</FormControl>
-									</SimpleGrid>
-								</AccordionPanel>
-							</AccordionItem>
-							<AccordionItem>
-								<AccordionButton>
-									<Box flex="1" textAlign="left">
-										Summary
-									</Box>
-									<AccordionIcon/>
-								</AccordionButton>
-								<AccordionPanel>
-									<Stack spacing={5} minWidth="18rem">
-										<Checkbox>I agree with <Link color="teal.500" href="#">terms of service</Link> and <Link color="teal.500" href="#">privacy policy</Link>.</Checkbox>
-										<Button type="submit" colorScheme="blue">Place an order</Button>
+						<SimpleGrid minChildWidth="15rem" spacing={3} justifyContent="center" alignItems="center" pt="1rem">
+							{menu.map(item => (
+								<Box key={item.name} borderWidth="1px" borderRadius="lg" padding="1rem">
+									<Stack spacing={3}>
+										<Image src={item.image} alt={`Photo of ${item.name}`} draggable={false} loading="lazy" decoding="async" width="100%" height="10rem" objectFit="cover" borderRadius="md"/>
+										<Heading size="md">{item.name}</Heading>
+										<Text as="i" color="gray.600" fontSize=".8rem">{truncate(item.ingredients.join(', '), 30)}</Text>
+										<ButtonGroup isAttached>
+											{item.variants.map(element => (
+												<Button
+													key={element.type}
+													leftIcon={<IoMdAdd/>}
+													colorScheme="blue"
+													width="100%"
+													isDisabled={!deliveryHours || deliveryHours.length === 0}
+													onClick={() => {
+														setCart(previous => ({
+															items: merge(previous.items, {name: item.name, type: element.type, price: element.price, quantity: 1}),
+															total: previous.total + element.price
+														}));
+													}}
+												>
+													<Stack spacing={0}>
+														<Text>{element.type}</Text>
+														<Text opacity=".8" fontSize=".75rem">{element.price} {info.currency ?? 'USD'}</Text>
+													</Stack>
+												</Button>
+											))}
+										</ButtonGroup>
 									</Stack>
-								</AccordionPanel>
-							</AccordionItem>
-						</Accordion>
-						<Stack alignItems="center" spacing={3}>
+								</Box>
+							))}
+						</SimpleGrid>
+						<Divider/>
+						<form onSubmit={handleSubmit(onSubmit)}>
+							<Stack spacing={5}>
+								<Heading size="md">Contact</Heading>
+								<SimpleGrid minChildWidth="18rem" spacing={5}>
+									<FormControl isRequired id="name">
+										<FormLabel>Name</FormLabel>
+										<Input
+											ref={register({required: true})}
+											isRequired
+											name="name"
+											type="text"
+											placeholder="John"
+										/>
+									</FormControl>
+									<FormControl isRequired id="email">
+										<FormLabel>E-mail</FormLabel>
+										<Input
+											ref={register({required: true})}
+											isRequired
+											name="email"
+											type="email"
+											placeholder="johndoe@example.com"
+										/>
+									</FormControl>
+									<FormControl isRequired id="phone">
+										<FormLabel>Phone number</FormLabel>
+										<InputGroup>
+											<InputLeftAddon
+												// eslint-disable-next-line react/no-children-prop
+												children={info.callingCode}
+											/>
+											<Input
+												ref={register({required: true})}
+												isRequired
+												name="phone"
+												type="phone"
+												placeholder="111 222 333"
+											/>
+										</InputGroup>
+									</FormControl>
+									<FormControl id="company">
+										<FormLabel>Company name</FormLabel>
+										<Input
+											ref={register}
+											name="company"
+											type="text"
+											placeholder="Doe Inc."
+										/>
+									</FormControl>
+								</SimpleGrid>
+								<Heading size="md">Delivery</Heading>
+								<SimpleGrid minChildWidth="18rem" spacing={5}>
+									<FormControl isRequired id="address">
+										<FormLabel>Address</FormLabel>
+										<Input
+											ref={register({required: true})}
+											isRequired
+											name="address"
+											type="text"
+											placeholder="13a Twain Ave"
+										/>
+									</FormControl>
+									<FormControl isRequired id="postal">
+										<FormLabel>Postal code</FormLabel>
+										<Input
+											ref={register({required: true})}
+											isRequired
+											name="postal"
+											type="text"
+											placeholder="12-345"
+										/>
+									</FormControl>
+									<FormControl isRequired id="city">
+										<FormLabel>City</FormLabel>
+										<Input
+											ref={register({required: true})}
+											isRequired
+											name="city"
+											type="text"
+											placeholder="Hot Rocks"
+										/>
+									</FormControl>
+									<FormControl id="floor">
+										<FormLabel>Floor</FormLabel>
+										<Input
+											ref={register}
+											name="floor"
+											type="text"
+											placeholder="2nd"
+										/>
+									</FormControl>
+								</SimpleGrid>
+								<Heading size="md">Time</Heading>
+								<SimpleGrid minChildWidth="18rem" spacing={5}>
+									<FormControl isRequired id="time">
+										<FormLabel>Delivery time</FormLabel>
+										<Select ref={register({required: true})} isRequired name="time" placeholder="Select...">
+											{deliveryHours && deliveryHours.length > 0 && <option value="asap">As soon as possible</option>}
+											{deliveryHours?.map(date => (
+												<option key={date} value={date}>{date}</option>
+											))}
+										</Select>
+									</FormControl>
+									<FormControl id="notes">
+										<FormLabel>Notes</FormLabel>
+										<Textarea ref={register} name="notes" resize="vertical" placeholder="Please don't use a bell - baby is sleeping."/>
+									</FormControl>
+								</SimpleGrid>
+								<Heading size="md">Payment</Heading>
+								<SimpleGrid minChildWidth="18rem" spacing={5}>
+									<FormControl isRequired id="payment">
+										<FormLabel>Payment method</FormLabel>
+										<Select ref={register({required: true})} isRequired name="payment" placeholder="Select...">
+											<option value="cash">Cash</option>
+											<option value="stripe">Stripe</option>
+										</Select>
+									</FormControl>
+									<FormControl id="tip">
+										<FormLabel>Tip</FormLabel>
+										<Select ref={register} name="tip" defaultValue="none">
+											<option value="none">None</option>
+											<option value="1 PLN">5% (1 PLN)</option>
+											<option value="3 PLN">10% (3 PLN)</option>
+											<option value="5 PLN">15% (5 PLN)</option>
+										</Select>
+									</FormControl>
+								</SimpleGrid>
+								<Divider/>
+								<Stack spacing={10} minWidth="18rem" pt="1rem">
+									<Checkbox isRequired>I agree with <Link color="teal.500" href="#">terms of service</Link> and <Link color="teal.500" href="#">privacy policy</Link>.</Checkbox>
+									<Button
+										type="submit"
+										colorScheme="blue"
+										isDisabled={!deliveryHours || deliveryHours.length === 0}
+									>
+										{watch('payment') === 'stripe' ? 'Place an order & pay' : 'Place an order'}
+									</Button>
+								</Stack>
+							</Stack>
+						</form>
+						<Stack alignItems="center" spacing={3} pt="2rem">
 							<Text as="b" color="gray.600">Powered by</Text>
 							<Stack direction="row" spacing={5}>
 								<Link isExternal href="https://github.com/pizzaql">
@@ -356,7 +343,7 @@ const Index: NextPage<unknown> = () => {
 							{cart.items.length > 0 ? (
 								<Stack spacing={3}>
 									{cart.items.map(item => (
-										<Stack key={item.name} direction="row" alignItems="center" justifyContent="space-between">
+										<Stack key={`${item.name}-${item.type}`} direction="row" alignItems="center" justifyContent="space-between">
 											<Text as="b">{item.quantity}x {item.name}</Text>
 											<Text as="i">{item.type}</Text>
 											<Divider width="1rem"/>
@@ -367,18 +354,23 @@ const Index: NextPage<unknown> = () => {
 													icon={<IoMdRemove/>}
 													onClick={() => {
 														if (item.quantity === 1) {
-															setCart({
-																items: cart.items.filter(element => (element.name !== item.name) || (element.type !== item.type)),
-																total: cart.total - item.price
-															});
+															setCart(previous => ({
+																items: previous.items.filter(element => (element.name !== item.name) || (element.type !== item.type)),
+																total: previous.total - item.price
+															}));
 														} else {
-															setCart({
+															setCart(previous => ({
 																items: [
-																	{name: item.name, type: item.type, price: item.price, quantity: item.quantity - 1},
-																	...cart.items.filter(element => (element.name !== item.name) || (element.type !== item.type))
+																	...previous.items.filter(element => (element.name !== item.name) || (element.type !== item.type)),
+																	{
+																		name: item.name,
+																		type: item.type,
+																		price: item.price,
+																		quantity: item.quantity - 1
+																	}
 																],
-																total: cart.total - item.price
-															});
+																total: previous.total - item.price
+															}));
 														}
 													}}
 												/>
@@ -387,13 +379,18 @@ const Index: NextPage<unknown> = () => {
 													aria-label="Add one"
 													icon={<IoMdAdd/>}
 													onClick={() => {
-														setCart({
+														setCart(previous => ({
 															items: [
-																{name: item.name, type: item.type, price: item.price, quantity: item.quantity + 1},
-																...cart.items.filter(element => (element.name !== item.name) || (element.type !== item.type))
+																...previous.items.filter(element => (element.name !== item.name) || (element.type !== item.type)),
+																{
+																	name: item.name,
+																	type: item.type,
+																	price: item.price,
+																	quantity: item.quantity + 1
+																}
 															],
-															total: cart.total + item.price
-														});
+															total: previous.total + item.price
+														}));
 													}}
 												/>
 											</ButtonGroup>
