@@ -45,7 +45,9 @@ const info = {
 	// Days, in which the system will not accept any orders. dd/MM format.
 	holidays: [
 		'28/09'
-	]
+	],
+	// Whether the development mode should be enabled.
+	isDevelopment: true
 };
 
 export default info;

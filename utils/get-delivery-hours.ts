@@ -18,7 +18,7 @@ type Schedule = {
 	};
 };
 
-const {schedule, averageDelivery, holidays} = info;
+const {schedule, averageDelivery, holidays, isDevelopment} = info;
 
 export const getDeliveryHours = (date: Date): string[] | undefined => {
 	const dayOfTheWeek = date.getDay();
@@ -41,7 +41,7 @@ export const getDeliveryHours = (date: Date): string[] | undefined => {
 	}
 
 	// Do not allow orders if the current date is not in the restaurant schedule.
-	if (!isWithinInterval(date, {start: opens, end: closes}) || isHoliday || times.opens === '0') {
+	if ((!isWithinInterval(date, {start: opens, end: closes}) || isHoliday || times.opens === '0') && !isDevelopment) {
 		return undefined;
 	}
 
@@ -49,7 +49,7 @@ export const getDeliveryHours = (date: Date): string[] | undefined => {
 
 	// Display suggestions every hour.
 	// TODO: make is every 30 minutes.
-	for (let t = averageDelivery; t <= differenceInHours(closes, date); t++) {
+	for (let t = averageDelivery; t <= (isDevelopment ? 12 : differenceInHours(closes, date)); t++) {
 		suggestions.push(lightFormat(addHours(date, t), 'HH:mm'));
 	}
 
