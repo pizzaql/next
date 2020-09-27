@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
 					<meta name="apple-mobile-web-app-capable" content="yes"/>
 				</Head>
 				<body>
-					<ColorModeScript defaultColorMode="light"/>
+					<ColorModeScript initialColorMode="system"/>
 					<Main/>
 					<NextScript/>
 				</body>
