@@ -26,9 +26,9 @@ This is a rewritten version of the [original PizzaQL](https://github.com/pizzaql
 - [Emotion](https://emotion.sh/)
 - [Recoil](https://recoiljs.org/)
 - [Apollo Client](https://www.apollographql.com/docs/react/)
-- [Hasura](https://hasura.io/)
+- [Prisma](https://prisma.io/)
 
-Frontend is hosted on [Vercel](https://vercel.com/) and backend (Hasura server) - on [Digital Ocean](https://www.digitalocean.com/).
+Frontend and GraphQL server are hosted on [Vercel](https://vercel.com/) and the PostgreSQL database - on [Digital Ocean](https://www.digitalocean.com/).
 
 ## Sponsors
 
