@@ -1,88 +1,90 @@
 {
-	"name": "pizzaql",
-	"version": "1.0.0",
-	"description": "Modern order placement and management system.",
-	"private": true,
-	"scripts": {
-		"build": "next build",
-		"dev": "next dev",
-		"start": "next start",
-		"test": "xo && stylelint './**/*.ts'"
-	},
-	"engines": {
-		"node": "12.x"
-	},
-	"xo": {
-		"envs": [
-			"node",
-			"browser"
-		],
-		"extends": [
-			"xo-typescript",
-			"xo-react"
-		],
-		"rules": {
-			"import/no-unassigned-import": "off",
-			"import/extensions": "off",
-			"unicorn/string-content": "off",
-			"unicorn/no-reduce": "off",
-			"no-mixed-operators": "off",
-			"node/no-unsupported-features/es-syntax": "off",
-			"@typescript-eslint/prefer-readonly-parameter-types": "off",
-			"@typescript-eslint/restrict-template-expressions": "off"
-		},
-		"settings": {
-			"react": {
-				"version": "16.13"
-			}
-		},
-		"extensions": [
-			"tsx",
-			"ts"
-		],
-		"ignores": [
-			"babel.config.js",
-			"next.config.js",
-			"public/embed.js"
-		]
-	},
-	"dependencies": {
-		"@apollo/client": "^3.2.1",
-		"@chakra-ui/core": "^1.0.0-rc.5",
-		"@emotion/core": "^10.0.35",
-		"cli-truncate": "^2.1.0",
-		"core-js": "^3.6.5",
-		"date-fns": "^2.16.1",
-		"graphql": "^15.3.0",
-		"lodash.debounce": "^4.0.8",
-		"next": "^9.5.3",
-		"nprogress": "^0.2.0",
-		"react": "16.13.1",
-		"react-dom": "16.13.1",
-		"react-hook-form": "^6.8.6",
-		"react-icons": "^3.11.0",
-		"recoil": "0.0.13"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.11.6",
-		"@types/lodash.debounce": "^4.0.6",
-		"@types/nprogress": "^0.2.0",
-		"@types/react": "^16.9.49",
-		"@types/styled-components": "^5.1.3",
-		"@typescript-eslint/eslint-plugin": "^4.2.0",
-		"@typescript-eslint/parser": "^4.2.0",
-		"babel-plugin-styled-components": "^1.11.1",
-		"eslint-config-xo-react": "^0.23.0",
-		"eslint-config-xo-typescript": "^0.33.0",
-		"eslint-plugin-react": "^7.21.2",
-		"eslint-plugin-react-hooks": "^4.1.2",
-		"imagemin-mozjpeg": "^9.0.0",
-		"imagemin-svgo": "^8.0.0",
-		"next-offline": "^5.0.2",
-		"next-optimized-images": "^2.6.2",
-		"stylelint": "^13.7.2",
-		"stylelint-config-recommended": "^3.0.0",
-		"typescript": "^4.0.3",
-		"xo": "^0.33.1"
-	}
+    "name": "pizzaql",
+    "version": "1.0.0",
+    "description": "Modern order placement and management system.",
+    "private": true,
+    "scripts": {
+        "build": "next build",
+        "dev": "next dev",
+        "start": "next start",
+        "test": "xo && stylelint './**/*.ts'"
+    },
+    "engines": {
+        "node": "12.x"
+    },
+    "xo": {
+        "envs": [
+            "node",
+            "browser"
+        ],
+        "extends": [
+            "xo-typescript",
+            "xo-react"
+        ],
+        "rules": {
+            "import/no-unassigned-import": "off",
+            "import/extensions": "off",
+            "unicorn/string-content": "off",
+            "unicorn/no-reduce": "off",
+            "no-mixed-operators": "off",
+            "node/no-unsupported-features/es-syntax": "off",
+            "@typescript-eslint/prefer-readonly-parameter-types": "off",
+            "@typescript-eslint/restrict-template-expressions": "off"
+        },
+        "settings": {
+            "react": {
+                "version": "16.13"
+            }
+        },
+        "extensions": [
+            "tsx",
+            "ts"
+        ],
+        "ignores": [
+            "babel.config.js",
+            "next.config.js",
+            "public/embed.js"
+        ]
+    },
+    "dependencies": {
+        "@apollo/client": "^3.3.6",
+        "@chakra-ui/react": "^1.1.2",
+        "@emotion/react": "^11.1.4",
+        "@emotion/styled": "^11.0.0",
+        "cli-truncate": "^2.1.0",
+        "core-js": "^3.8.2",
+        "date-fns": "^2.16.1",
+        "framer-motion": "^3.2.0",
+        "graphql": "^15.4.0",
+        "lodash.debounce": "^4.0.8",
+        "next": "^10.0.5",
+        "next-translate": "^1.0.1",
+        "nprogress": "^0.2.0",
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "react-hook-form": "^6.14.1",
+        "react-icons": "^4.1.0",
+        "recoil": "0.1.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@emotion/babel-plugin": "^11.1.2",
+        "@types/lodash.debounce": "^4.0.6",
+        "@types/nprogress": "^0.2.0",
+        "@types/react": "^17.0.0",
+        "@typescript-eslint/eslint-plugin": "^4.12.0",
+        "@typescript-eslint/parser": "^4.12.0",
+        "eslint-config-xo-react": "^0.23.0",
+        "eslint-config-xo-typescript": "^0.37.0",
+        "eslint-plugin-react": "^7.22.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "imagemin-mozjpeg": "^9.0.0",
+        "imagemin-svgo": "^8.0.0",
+        "next-offline": "^5.0.3",
+        "next-optimized-images": "^2.6.2",
+        "stylelint": "^13.8.0",
+        "stylelint-config-recommended": "^3.0.0",
+        "typescript": "^4.1.3",
+        "xo": "^0.37.1"
+    }
 }
