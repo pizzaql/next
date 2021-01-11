@@ -8,7 +8,7 @@ const info = {
 
 		0 - sunday, 1 - monday and so on...
 
-		The hour format should be HH:mm. If you want your restaurant to be completely closed on that specific day, put 0 instead of the hour.
+		The hour format should be HH:mm. If you want your restaurant to be completely closed on that specific day, put '0' instead of the hour.
 	*/
 	schedule: {
 		0: {
