@@ -20,7 +20,8 @@
   },
   "exclude": [
     "node_modules",
-		"dist"
+	"dist",
+	"server"
   ],
   "include": [
     "renderer/next-env.d.ts",
