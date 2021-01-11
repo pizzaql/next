@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import {NextPage} from 'next';
+import NextImage from 'next/image';
 import {
 	Center,
 	Box,
@@ -44,10 +45,12 @@ import {
 	AlertDialogFooter,
 	AlertDialogHeader,
 	AlertDialogContent,
-	AlertDialogOverlay
-} from '@chakra-ui/core';
+	AlertDialogOverlay,
+	chakra
+} from '@chakra-ui/react';
 import {useRecoilState} from 'recoil';
 import {useForm} from 'react-hook-form';
+import useTranslation from 'next-translate/useTranslation';
 import {IoMdAdd, IoMdCart, IoMdTrash, IoMdRemove} from 'react-icons/io';
 import truncate from 'cli-truncate';
 
@@ -72,6 +75,10 @@ type FormState = {
 	tip?: string;
 };
 
+const ProductImage = chakra(NextImage, {
+	shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+});
+
 const Index: NextPage<unknown> = () => {
 	const [cart, setCart] = useRecoilState(_cart);
 	const {register, handleSubmit, watch} = useForm<FormState>();
@@ -80,12 +87,15 @@ const Index: NextPage<unknown> = () => {
 	const {isOpen, onOpen, onClose} = useDisclosure();
 	const btnRef = useRef();
 	const {isOpen: isAlertOpen, onOpen: onAlertOpen, onClose: onAlertClose} = useDisclosure();
-	const cancelRef = React.useRef();
+	const cancelRef = useRef();
+	const {t} = useTranslation('home');
 
 	const items = cart.items.map(x => x.quantity).reduce((a, b) => a + b, 0);
 	const deliveryHours = getDeliveryHours(new Date());
 
-	const onSubmit = (data: FormData) => console.log(data);
+	const onSubmit = (data: FormData) => {
+		console.log(data);
+	};
 
 	return (
 		<>
@@ -107,24 +117,34 @@ const Index: NextPage<unknown> = () => {
 							variant="solid"
 							mb="1rem"
 						>
-							Development
+							{t('development')}
 						</Tag>
 					)}
 					<Stack spacing={5}>
 						<Stack alignItems="center" spacing={3}>
 							<Avatar name="Smart Pizza" src="images/pizza.jpg" size="2xl" draggable={false}>
-								<Tooltip hasArrow label={deliveryHours && deliveryHours.length > 0 ? 'We are now open!' : 'We are now closed.'} aria-label="A tooltip" placement="right">
+								<Tooltip hasArrow label={deliveryHours && deliveryHours.length > 0 ? t('open') : t('closed')} aria-label={t('tooltip')} placement="right">
 									<AvatarBadge boxSize="2.8rem" bg={deliveryHours && deliveryHours.length > 0 ? 'green.500' : 'red.500'}/>
 								</Tooltip>
 							</Avatar>
-							<Heading>{info.name ?? 'Restaurant Name'}</Heading>
-							<Text color="gray.500">{info.description ?? 'Restaurant description.'}</Text>
+							<Heading>{info.name ?? t('restaurantName')}</Heading>
+							<Text color="gray.500">{info.description ?? t('restaurantDescription')}</Text>
 						</Stack>
 						<SimpleGrid minChildWidth="15rem" spacing={3} justifyContent="center" alignItems="center" pt="1rem">
 							{menu.map(item => (
 								<Box key={item.name} borderWidth="1px" borderRadius="lg" padding="1rem">
 									<Stack spacing={3}>
-										<Image src={item.image} alt={`Photo of ${item.name}`} draggable={false} loading="lazy" decoding="async" width="100%" height="10rem" objectFit="cover" borderRadius="md"/>
+										<ProductImage
+											src={`/${item.image}`}
+											alt={`${t('photoOf')} ${item.name}`}
+											draggable={false}
+											loading="lazy"
+											decoding="async"
+											width="100%"
+											height={150}
+											objectFit="cover"
+											borderRadius="md"
+										/>
 										<Heading size="md">{item.name}</Heading>
 										<Text as="i" color="gray.600" fontSize=".8rem">{truncate(item.ingredients.join(', '), 30)}</Text>
 										<ButtonGroup isAttached>
@@ -156,10 +176,10 @@ const Index: NextPage<unknown> = () => {
 						<Divider/>
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<Stack spacing={5}>
-								<Heading size="md">Contact</Heading>
+								<Heading size="md">{t('contact')}</Heading>
 								<SimpleGrid minChildWidth="18rem" spacing={5}>
 									<FormControl isRequired id="name">
-										<FormLabel>Name</FormLabel>
+										<FormLabel>{t('name')}</FormLabel>
 										<Input
 											ref={register({required: true})}
 											isRequired
@@ -169,7 +189,7 @@ const Index: NextPage<unknown> = () => {
 										/>
 									</FormControl>
 									<FormControl isRequired id="email">
-										<FormLabel>E-mail</FormLabel>
+										<FormLabel>{t('email')}</FormLabel>
 										<Input
 											ref={register({required: true})}
 											isRequired
@@ -179,7 +199,7 @@ const Index: NextPage<unknown> = () => {
 										/>
 									</FormControl>
 									<FormControl isRequired id="phone">
-										<FormLabel>Phone number</FormLabel>
+										<FormLabel>{t('phone')}</FormLabel>
 										<InputGroup>
 											<InputLeftAddon
 												// eslint-disable-next-line react/no-children-prop
@@ -195,7 +215,7 @@ const Index: NextPage<unknown> = () => {
 										</InputGroup>
 									</FormControl>
 									<FormControl id="company">
-										<FormLabel>Company name</FormLabel>
+										<FormLabel>{t('company')}</FormLabel>
 										<Input
 											ref={register}
 											name="company"
@@ -204,10 +224,10 @@ const Index: NextPage<unknown> = () => {
 										/>
 									</FormControl>
 								</SimpleGrid>
-								<Heading size="md">Delivery</Heading>
+								<Heading size="md">{t('delivery')}</Heading>
 								<SimpleGrid minChildWidth="18rem" spacing={5}>
 									<FormControl isRequired id="address">
-										<FormLabel>Address</FormLabel>
+										<FormLabel>{t('address')}</FormLabel>
 										<Input
 											ref={register({required: true})}
 											isRequired
@@ -217,7 +237,7 @@ const Index: NextPage<unknown> = () => {
 										/>
 									</FormControl>
 									<FormControl isRequired id="postal">
-										<FormLabel>Postal code</FormLabel>
+										<FormLabel>{t('postal')}</FormLabel>
 										<Input
 											ref={register({required: true})}
 											isRequired
@@ -227,7 +247,7 @@ const Index: NextPage<unknown> = () => {
 										/>
 									</FormControl>
 									<FormControl isRequired id="city">
-										<FormLabel>City</FormLabel>
+										<FormLabel>{t('city')}</FormLabel>
 										<Input
 											ref={register({required: true})}
 											isRequired
@@ -237,7 +257,7 @@ const Index: NextPage<unknown> = () => {
 										/>
 									</FormControl>
 									<FormControl id="floor">
-										<FormLabel>Floor</FormLabel>
+										<FormLabel>{t('floor')}</FormLabel>
 										<Input
 											ref={register}
 											name="floor"
@@ -246,56 +266,66 @@ const Index: NextPage<unknown> = () => {
 										/>
 									</FormControl>
 								</SimpleGrid>
-								<Heading size="md">Time</Heading>
+								<Heading size="md">{t('time')}</Heading>
 								<SimpleGrid minChildWidth="18rem" spacing={5}>
 									<FormControl isRequired id="time">
-										<FormLabel>Delivery time</FormLabel>
+										<FormLabel>{t('deliveryTime')}</FormLabel>
 										<Select ref={register({required: true})} isRequired name="time" placeholder="Select...">
-											{deliveryHours && deliveryHours.length > 0 && <option value="asap">As soon as possible</option>}
+											{deliveryHours && deliveryHours.length > 0 && <option value="asap">{t('asap')}</option>}
 											{deliveryHours?.map(date => (
 												<option key={date} value={date}>{date}</option>
 											))}
 										</Select>
 									</FormControl>
 									<FormControl id="notes">
-										<FormLabel>Notes</FormLabel>
-										<Textarea ref={register} name="notes" resize="vertical" placeholder="Please don't use a bell - baby is sleeping."/>
+										<FormLabel>{t('notes')}</FormLabel>
+										<Textarea
+											ref={register}
+											name="notes"
+											resize="vertical"
+											placeholder={t('deliveryPlaceholder')}
+										/>
 									</FormControl>
 								</SimpleGrid>
-								<Heading size="md">Payment</Heading>
+								<Heading size="md">{t('payment')}</Heading>
 								<SimpleGrid minChildWidth="18rem" spacing={5}>
 									<FormControl isRequired id="payment">
-										<FormLabel>Payment method</FormLabel>
-										<Select ref={register({required: true})} isRequired name="payment" placeholder="Select...">
-											<option value="cash">Cash</option>
+										<FormLabel>{t('paymentMethod')}</FormLabel>
+										<Select
+											ref={register({required: true})}
+											isRequired
+											name="payment"
+											placeholder={t('select')}
+										>
+											<option value="cash">{t('cash')}</option>
 											<option value="stripe">Stripe</option>
 										</Select>
 									</FormControl>
 									<FormControl id="tip">
-										<FormLabel>Tip</FormLabel>
+										<FormLabel>{t('tip')}</FormLabel>
 										<Select ref={register} name="tip" defaultValue="none">
-											<option value="none">None</option>
-											<option value="1 PLN">5% (1 PLN)</option>
-											<option value="3 PLN">10% (3 PLN)</option>
-											<option value="5 PLN">15% (5 PLN)</option>
+											<option value="none">{t('tipNone')}</option>
+											<option value={`${Math.round((((cart.total / 100) * 5) + Number.EPSILON) * 100) / 100} ${info.currency}`}>5% ({Math.round(((cart.total / 100) * 5 + Number.EPSILON) * 100) / 100} {info.currency})</option>
+											<option value={`${Math.round((((cart.total / 100) * 10) + Number.EPSILON) * 100) / 100} ${info.currency}`}>10% ({Math.round((((cart.total / 100) * 10) + Number.EPSILON) * 100) / 100} {info.currency})</option>
+											<option value={`${Math.round((((cart.total / 100) * 15) + Number.EPSILON) * 100) / 100} ${info.currency}`}>15% ({Math.round((((cart.total / 100) * 15) + Number.EPSILON) * 100) / 100} {info.currency})</option>
 										</Select>
 									</FormControl>
 								</SimpleGrid>
 								<Divider/>
 								<Stack spacing={10} minWidth="18rem" pt="1rem">
-									<Checkbox isRequired>I agree with <Link color="teal.500" href="#">terms of service</Link> and <Link color="teal.500" href="#">privacy policy</Link>.</Checkbox>
+									<Checkbox isRequired>{t('iAgree')} <Link color="teal.500" href="#">{t('terms')}</Link> {t('and')} <Link color="teal.500" href="#">{t('privacy')}</Link>.</Checkbox>
 									<Button
 										type="submit"
 										colorScheme="blue"
 										isDisabled={!deliveryHours || deliveryHours.length === 0}
 									>
-										{watch('payment') === 'stripe' ? 'Place an order & pay' : 'Place an order'}
+										{watch('payment') === 'stripe' ? t('placeAndPay') : t('pay')}
 									</Button>
 								</Stack>
 							</Stack>
 						</form>
 						<Stack alignItems="center" spacing={3} pt="2rem">
-							<Text as="b" color="gray.600">Powered by</Text>
+							<Text as="b" color="gray.600">{t('powered')}</Text>
 							<Stack direction="row" spacing={5}>
 								<Link isExternal href="https://github.com/pizzaql">
 									<Image src="images/pizzaql.svg" alt="PizzaQL" draggable={false} loading="lazy" decoding="async" width="6rem"/>
@@ -311,12 +341,12 @@ const Index: NextPage<unknown> = () => {
 			<IconButton
 				isRound
 				colorScheme="blue"
-				aria-label="Open Cart"
+				aria-label={t('openCart')}
 				size="lg"
 				icon={
 					<Stack direction="row" spacing={3}>
 						<IoMdCart/>
-						<Text>Cart</Text>
+						<Text>{t('cart')}</Text>
 						{cart.items.length > 0 && (
 							<Tag
 								borderRadius="full"
@@ -349,7 +379,7 @@ const Index: NextPage<unknown> = () => {
 				<DrawerOverlay>
 					<DrawerContent>
 						<DrawerCloseButton/>
-						<DrawerHeader>Cart</DrawerHeader>
+						<DrawerHeader>{t('cart')}</DrawerHeader>
 
 						<DrawerBody>
 							{cart.items.length > 0 ? (
@@ -362,7 +392,7 @@ const Index: NextPage<unknown> = () => {
 											<ButtonGroup isAttached>
 												<IconButton
 													size="md"
-													aria-label="Remove one"
+													aria-label={t('remove')}
 													icon={<IoMdRemove/>}
 													onClick={() => {
 														if (item.quantity === 1) {
@@ -388,7 +418,7 @@ const Index: NextPage<unknown> = () => {
 												/>
 												<IconButton
 													size="md"
-													aria-label="Add one"
+													aria-label={t('add')}
 													icon={<IoMdAdd/>}
 													onClick={() => {
 														setCart(previous => ({
@@ -410,30 +440,30 @@ const Index: NextPage<unknown> = () => {
 									))}
 									<Divider/>
 									<Stat textAlign="right">
-										<StatLabel>Grand total</StatLabel>
+										<StatLabel>{t('grandTotal')}</StatLabel>
 										<StatNumber>{cart.total} {info.currency}</StatNumber>
-										<StatHelpText>Includes free delivery</StatHelpText>
+										<StatHelpText>{t('includesFreeDelivery')}</StatHelpText>
 									</Stat>
 								</Stack>
 							) : (
 								<Stack textAlign="center" marginTop="5rem">
-									<Heading size="md">Cart is empty</Heading>
-									<Text>Go ahead and add something tasty!</Text>
+									<Heading size="md">{t('emptyCart')}</Heading>
+									<Text>{t('emptyCartMessage')}</Text>
 								</Stack>
 							)}
 						</DrawerBody>
 
 						<DrawerFooter mb={10}>
 							<Button variant="outline" mr={3} onClick={onClose}>
-								Cancel
+								{t('close')}
 							</Button>
 							<Button
 								colorScheme="red"
 								leftIcon={<IoMdTrash/>}
-								disabled={!cart.items.length}
+								disabled={cart.items.length === 0}
 								onClick={onAlertOpen}
 							>
-								Purge
+								{t('purge')}
 							</Button>
 							<AlertDialog
 								isOpen={isAlertOpen}
@@ -444,11 +474,11 @@ const Index: NextPage<unknown> = () => {
 								<AlertDialogOverlay>
 									<AlertDialogContent>
 										<AlertDialogHeader fontSize="lg" fontWeight="bold">
-											Purge cart
+											{t('purgeCart')}
 										</AlertDialogHeader>
 
 										<AlertDialogBody>
-											This action cannot be undone.
+											{t('purgeCartMessage')}
 										</AlertDialogBody>
 
 										<AlertDialogFooter>
@@ -457,7 +487,7 @@ const Index: NextPage<unknown> = () => {
 												ref={cancelRef}
 												onClick={onAlertClose}
 											>
-												Cancel
+												{t('cancel')}
 											</Button>
 											<Button
 												colorScheme="red"
@@ -467,14 +497,14 @@ const Index: NextPage<unknown> = () => {
 													onAlertClose();
 
 													toast({
-														title: 'Cart purged',
+														title: t('cartPurged'),
 														status: 'success',
 														duration: 3000,
 														isClosable: true
 													});
 												}}
 											>
-												Confirm
+												{t('confirm')}
 											</Button>
 										</AlertDialogFooter>
 									</AlertDialogContent>
