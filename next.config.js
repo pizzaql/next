@@ -1,3 +1,4 @@
+const withTranslate = require('next-translate')
 const withOptimizedImages = require('next-optimized-images');
 const withOffline = require('next-offline');
 
@@ -23,10 +24,11 @@ const nextConfig = {
 		]
 	},
 	reactStrictMode: true,
-	experimental: {
-		modern: true
+	i18n: {
+    	locales: ['en', 'pl'],
+    	defaultLocale: 'en',
 	}
 };
 
-module.exports = withOptimizedImages(withOffline(nextConfig));
+module.exports = withTranslate(withOptimizedImages(withOffline(nextConfig)));
 
