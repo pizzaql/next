@@ -28,3 +28,6 @@ yarn-error.log*
 .linaria-cache
 
 .vercel
+
+server/src/generated
+server/node_modules
