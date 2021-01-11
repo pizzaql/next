@@ -31,3 +31,4 @@ yarn-error.log*
 
 server/src/generated
 server/node_modules
+server/prisma/migrations
