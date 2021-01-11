@@ -1,6 +1,6 @@
 import React from 'react';
 import Document, {Html, Head, Main, NextScript, DocumentContext} from 'next/document';
-import {ColorModeScript} from '@chakra-ui/core';
+import {ColorModeScript} from '@chakra-ui/react';
 
 import info from '../lib/info';
 
@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
 
 	render(): JSX.Element {
 		return (
-			<Html lang="en">
+			<Html>
 				<Head>
 					<meta charSet="utf-8"/>
 					<meta name="description" content={info.description}/>
