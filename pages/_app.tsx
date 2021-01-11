@@ -4,8 +4,8 @@ import Head from 'next/head';
 import Router from 'next/router';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 import {RecoilRoot} from 'recoil';
-import {Global, css} from '@emotion/core';
-import {ChakraProvider} from '@chakra-ui/core';
+import {Global, css} from '@emotion/react';
+import {ChakraProvider} from '@chakra-ui/react';
 import debounce from 'lodash.debounce';
 import nprogress from 'nprogress';
 
@@ -27,14 +27,11 @@ Router.events.on('routeChangeError', () => {
 });
 
 const client = new ApolloClient({
-	uri: process.env.HASURA_ENDPOINT,
-	cache: new InMemoryCache(),
-	headers: {
-		'x-hasura-admin-secret': process.env.HASURA_SECRET ?? ''
-	}
+	uri: process.env.SERVER_URL,
+	cache: new InMemoryCache()
 });
 
-const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
+const App = ({Component, pageProps}: AppProps): JSX.Element => {
 	const [cart, setCart] = useState<CartState | undefined>(undefined);
 
 	useEffect(() => {
@@ -54,7 +51,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 
 	return (
 		<ApolloProvider client={client}>
-			<ChakraProvider resetCSS>
+			<ChakraProvider>
 				<Global
 					styles={css`
 						body {
