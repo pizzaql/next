@@ -11,12 +11,10 @@ import {
 
 import info from '../lib/info';
 
-type Schedule = {
-	[day: number]: {
-		opens: string;
-		closes: string;
-	};
-};
+type Schedule = Record<number, {
+	opens: string;
+	closes: string;
+}>;
 
 const {schedule, averageDelivery, holidays, isDevelopment} = info;
 
