@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import {NextPage} from 'next';
+import {useRouter} from 'next/router';
 import NextImage from 'next/image';
 import {
 	Center,
@@ -46,13 +47,19 @@ import {
 	AlertDialogHeader,
 	AlertDialogContent,
 	AlertDialogOverlay,
-	chakra
+	chakra,
+	UnorderedList,
+	ListItem,
+	Flex,
+	Menu,
+	MenuList,
+	MenuItem
 } from '@chakra-ui/react';
 import {useRecoilState} from 'recoil';
 import {useForm} from 'react-hook-form';
 import useTranslation from 'next-translate/useTranslation';
 import {IoMdAdd, IoMdCart, IoMdTrash, IoMdRemove} from 'react-icons/io';
-import truncate from 'cli-truncate';
+import {HiOutlineTranslate} from 'react-icons/hi';
 
 import info from '../lib/info';
 import menu from '../lib/menu';
@@ -80,6 +87,8 @@ const ProductImage = chakra(NextImage, {
 });
 
 const Index: NextPage<unknown> = () => {
+	const router = useRouter();
+
 	const [cart, setCart] = useRecoilState(_cart);
 	const {register, handleSubmit, watch} = useForm<FormState>();
 	const {colorMode} = useColorMode();
@@ -87,8 +96,9 @@ const Index: NextPage<unknown> = () => {
 	const {isOpen, onOpen, onClose} = useDisclosure();
 	const btnRef = useRef();
 	const {isOpen: isAlertOpen, onOpen: onAlertOpen, onClose: onAlertClose} = useDisclosure();
+	const {isOpen: isMenuOpen, onOpen: onMenuOpen, onClose: onMenuClose} = useDisclosure();
 	const cancelRef = useRef();
-	const {t} = useTranslation('home');
+	const {t, lang} = useTranslation('home');
 
 	const items = cart.items.map(x => x.quantity).reduce((a, b) => a + b, 0);
 	const deliveryHours = getDeliveryHours(new Date());
@@ -109,6 +119,7 @@ const Index: NextPage<unknown> = () => {
 					width="4xl"
 					boxShadow="rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px"
 					backgroundColor={colorMode === 'dark' ? '#1A202C' : '#fff'}
+					position="relative"
 				>
 					{info.isDevelopment && (
 						<Tag
@@ -120,18 +131,52 @@ const Index: NextPage<unknown> = () => {
 							{t('development')}
 						</Tag>
 					)}
+					<Stack
+						position="absolute"
+						top="1rem"
+						right="1rem"
+					>
+						<Menu
+							isLazy
+							isOpen={isMenuOpen}
+							onOpen={onMenuOpen}
+							onClose={onMenuClose}
+						>
+							<IconButton
+								aria-label="Change language"
+								icon={<HiOutlineTranslate/>}
+								onClick={onMenuOpen}
+							/>
+							<MenuList>
+								<MenuItem
+									onClick={async () => {
+										await router.push('/', '/', {locale: 'en'});
+									}}
+								>
+									English
+								</MenuItem>
+								<MenuItem
+									onClick={async () => {
+										await router.push('/', '/', {locale: 'pl'});
+									}}
+								>
+									Polski
+								</MenuItem>
+							</MenuList>
+						</Menu>
+					</Stack>
 					<Stack spacing={5}>
 						<Stack alignItems="center" spacing={3}>
-							<Avatar name="Smart Pizza" src="images/pizza.jpg" size="2xl" draggable={false}>
+							<Avatar name={info.name} src="images/pizza.jpg" size="2xl" draggable={false}>
 								<Tooltip hasArrow label={deliveryHours && deliveryHours.length > 0 ? t('open') : t('closed')} aria-label={t('tooltip')} placement="right">
 									<AvatarBadge boxSize="2.8rem" bg={deliveryHours && deliveryHours.length > 0 ? 'green.500' : 'red.500'}/>
 								</Tooltip>
 							</Avatar>
 							<Heading>{info.name ?? t('restaurantName')}</Heading>
-							<Text color="gray.500">{info.description ?? t('restaurantDescription')}</Text>
+							<Text color="gray.500">{info.description[lang as 'en' | 'pl'] ?? t('restaurantDescription')}</Text>
 						</Stack>
 						<SimpleGrid minChildWidth="15rem" spacing={3} justifyContent="center" alignItems="center" pt="1rem">
-							{menu.map(item => (
+							{menu(lang as 'en' | 'pl').map(item => (
 								<Box key={item.name} borderWidth="1px" borderRadius="lg" padding="1rem">
 									<Stack spacing={3}>
 										<ProductImage
@@ -145,8 +190,32 @@ const Index: NextPage<unknown> = () => {
 											objectFit="cover"
 											borderRadius="md"
 										/>
-										<Heading size="md">{item.name}</Heading>
-										<Text as="i" color="gray.600" fontSize=".8rem">{truncate(item.ingredients.join(', '), 30)}</Text>
+										<Flex width="100%" justifyContent="space-between">
+											<Heading size="md">{item.name}</Heading>
+											<Text color="gray.500">ø 30</Text>
+										</Flex>
+										<Text as="i" color="gray.600" fontSize=".8rem">
+											{item.ingredients.join(', ').length >= 30 ? (
+												<Tooltip
+													hasArrow
+													closeOnMouseDown
+													padding={3}
+													aria-label={t('ingredients')}
+													label={
+														<>
+															<Heading size="sm" mb={1}>{t('ingredients')}</Heading>
+															<UnorderedList>
+																{item.ingredients.map(element => <ListItem key={element}>{element}</ListItem>)}
+															</UnorderedList>
+														</>
+													}
+												>
+													<Text>
+														{`${item.ingredients.join(', ').slice(0, 27)}...`}
+													</Text>
+												</Tooltip>
+											) : item.ingredients.join(', ')}
+										</Text>
 										<ButtonGroup isAttached>
 											{item.variants.map(element => (
 												<Button
@@ -344,7 +413,7 @@ const Index: NextPage<unknown> = () => {
 				aria-label={t('openCart')}
 				size="lg"
 				icon={
-					<Stack direction="row" spacing={3}>
+					<Stack direction="row" spacing={2}>
 						<IoMdCart/>
 						<Text>{t('cart')}</Text>
 						{cart.items.length > 0 && (
@@ -453,7 +522,7 @@ const Index: NextPage<unknown> = () => {
 							)}
 						</DrawerBody>
 
-						<DrawerFooter mb={10}>
+						<DrawerFooter paddingBottom="1rem">
 							<Button variant="outline" mr={3} onClick={onClose}>
 								{t('close')}
 							</Button>
