@@ -1,14 +1,25 @@
-const menu = [
+import info from './info';
+
+const {types} = info;
+
+const translatedIngredients = new Map([
+	['Cheese', {en: 'Cheese', pl: 'Ser'}],
+	['Mushrooms', {en: 'Mushrooms', pl: 'Grzyby'}],
+	['Ham', {en: 'Ham', pl: 'Szynka'}],
+	['Olives', {en: 'Olives', pl: 'Oliwki'}]
+]);
+
+const menu = (lang: 'en' | 'pl') => [
 	{
 		name: 'Margharita',
 		image: 'images/covers/margharita.jpg',
 		ingredients: [
-			'Cheese',
+			(translatedIngredients.get('Cheese') as { en: string; pl: string})[lang],
 			'Oregano'
 		],
 		variants: [
-			{type: 'Small', price: 19},
-			{type: 'Large', price: 24}
+			{type: types.small[lang], price: 19},
+			{type: types.large[lang], price: 24}
 		],
 		thickCrustFee: 0
 	},
@@ -16,13 +27,13 @@ const menu = [
 		name: 'Pepperoni',
 		image: 'images/covers/pepperoni.jpg',
 		ingredients: [
-			'Cheese',
+			(translatedIngredients.get('Cheese') as { en: string; pl: string})[lang],
 			'Pepperoni',
 			'Oregano'
 		],
 		variants: [
-			{type: 'Small', price: 24},
-			{type: 'Large', price: 28}
+			{type: types.small[lang], price: 24},
+			{type: types.large[lang], price: 28}
 		],
 		thickCrustFee: 0
 	},
@@ -36,8 +47,8 @@ const menu = [
 			'Parmigiano-Reggiano'
 		],
 		variants: [
-			{type: 'Small', price: 23},
-			{type: 'Large', price: 27}
+			{type: types.small[lang], price: 23},
+			{type: types.large[lang], price: 27}
 		],
 		thickCrustFee: 0
 	},
@@ -45,14 +56,14 @@ const menu = [
 		name: 'Capricciosa',
 		image: 'images/covers/capricciosa.jpg',
 		ingredients: [
-			'Cheese',
-			'Mushrooms',
-			'Ham',
-			'Olives'
+			(translatedIngredients.get('Cheese') as { en: string; pl: string})[lang],
+			(translatedIngredients.get('Mushrooms') as { en: string; pl: string})[lang],
+			(translatedIngredients.get('Ham') as { en: string; pl: string})[lang],
+			(translatedIngredients.get('Olives') as { en: string; pl: string})[lang]
 		],
 		variants: [
-			{type: 'Small', price: 22},
-			{type: 'Large', price: 26}
+			{type: types.small[lang], price: 22},
+			{type: types.large[lang], price: 26}
 		],
 		thickCrustFee: 0
 	}

@@ -1,6 +1,9 @@
 const info = {
 	name: 'Smart Pizza',
-	description: 'Your go-to pizza place! We offer fresh and tasty food and cheap prices.',
+	description: {
+		en: 'Your go-to pizza place! We offer fresh and tasty food and cheap prices.',
+		pl: 'Twoja miejscówka na pizzę! Oferujemy świeże i smaczne jedzenie oraz niskie ceny.'
+	},
 	currency: 'PLN',
 	callingCode: '+48',
 	/*
@@ -46,6 +49,16 @@ const info = {
 	holidays: [
 		'28/09'
 	],
+	types: {
+		small: {
+			en: 'Small',
+			pl: 'Mała'
+		},
+		large: {
+			en: 'Large',
+			pl: 'Duża'
+		}
+	},
 	// Whether the development mode should be enabled.
 	isDevelopment: true
 };
