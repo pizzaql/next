@@ -1,7 +1,9 @@
 import React, {useRef} from 'react';
 import {NextPage} from 'next';
+import dynamic from 'next/dynamic';
 import {useRouter} from 'next/router';
 import NextImage from 'next/image';
+
 import {
 	Center,
 	Box,
@@ -9,7 +11,6 @@ import {
 	Stack,
 	Avatar,
 	AvatarBadge,
-	Tooltip,
 	Heading,
 	SimpleGrid,
 	ButtonGroup,
@@ -29,31 +30,9 @@ import {
 	IconButton,
 	useDisclosure,
 	Tag,
-	Drawer,
-	DrawerBody,
-	DrawerFooter,
-	DrawerHeader,
-	DrawerOverlay,
-	DrawerContent,
-	DrawerCloseButton,
 	Divider,
-	Stat,
-	StatLabel,
-	StatNumber,
-	StatHelpText,
-	AlertDialog,
-	AlertDialogBody,
-	AlertDialogFooter,
-	AlertDialogHeader,
-	AlertDialogContent,
-	AlertDialogOverlay,
 	chakra,
-	UnorderedList,
-	ListItem,
-	Flex,
-	Menu,
-	MenuList,
-	MenuItem
+	Flex
 } from '@chakra-ui/react';
 import {useRecoilState} from 'recoil';
 import {useForm} from 'react-hook-form';
@@ -64,8 +43,32 @@ import {HiOutlineTranslate} from 'react-icons/hi';
 import info from '../lib/info';
 import menu from '../lib/menu';
 import {_cart} from '../lib/recoil-atoms';
-import {merge} from '../utils/merge';
 import {getDeliveryHours} from '../utils/get-delivery-hours';
+
+const Tooltip = dynamic(async () => (await import('@chakra-ui/react')).Tooltip);
+const Drawer = dynamic(async () => (await import('@chakra-ui/react')).Drawer);
+const DrawerBody = dynamic(async () => (await import('@chakra-ui/react')).DrawerBody);
+const DrawerHeader = dynamic(async () => (await import('@chakra-ui/react')).DrawerHeader);
+const DrawerFooter = dynamic(async () => (await import('@chakra-ui/react')).DrawerFooter);
+const DrawerOverlay = dynamic(async () => (await import('@chakra-ui/react')).DrawerOverlay);
+const DrawerContent = dynamic(async () => (await import('@chakra-ui/react')).DrawerContent);
+const DrawerCloseButton = dynamic(async () => (await import('@chakra-ui/react')).DrawerCloseButton);
+const Stat = dynamic(async () => (await import('@chakra-ui/react')).Stat);
+const StatLabel = dynamic(async () => (await import('@chakra-ui/react')).StatLabel);
+const StatNumber = dynamic(async () => (await import('@chakra-ui/react')).StatNumber);
+const StatHelpText = dynamic(async () => (await import('@chakra-ui/react')).StatHelpText);
+const AlertDialog = dynamic(async () => (await import('@chakra-ui/react')).AlertDialog);
+const AlertDialogBody = dynamic(async () => (await import('@chakra-ui/react')).AlertDialogBody);
+const AlertDialogHeader = dynamic(async () => (await import('@chakra-ui/react')).AlertDialogHeader);
+const AlertDialogFooter = dynamic(async () => (await import('@chakra-ui/react')).AlertDialogFooter);
+const AlertDialogContent = dynamic(async () => (await import('@chakra-ui/react')).AlertDialogContent);
+const AlertDialogOverlay = dynamic(async () => (await import('@chakra-ui/react')).AlertDialogOverlay);
+const UnorderedList = dynamic(async () => (await import('@chakra-ui/react')).UnorderedList);
+const ListItem = dynamic(async () => (await import('@chakra-ui/react')).ListItem);
+const Menu = dynamic(async () => (await import('@chakra-ui/react')).Menu);
+const MenuButton = dynamic(async () => (await import('@chakra-ui/react')).MenuButton);
+const MenuList = dynamic(async () => (await import('@chakra-ui/react')).MenuList);
+const MenuItem = dynamic(async () => (await import('@chakra-ui/react')).MenuItem);
 
 type FormState = {
 	name: string;
@@ -121,28 +124,26 @@ const Index: NextPage<unknown> = () => {
 					backgroundColor={colorMode === 'dark' ? '#1A202C' : '#fff'}
 					position="relative"
 				>
-					{info.isDevelopment && (
-						<Tag
-							textTransform="uppercase"
-							colorScheme="yellow"
-							variant="solid"
-							mb="1rem"
-						>
-							{t('development')}
-						</Tag>
-					)}
-					<Stack
-						position="absolute"
-						top="1rem"
-						right="1rem"
-					>
+					<div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+						{info.isDevelopment && (
+							<Tag
+								textTransform="uppercase"
+								colorScheme="yellow"
+								variant="solid"
+								mb="1rem"
+							>
+								{t('development')}
+							</Tag>
+						)}
 						<Menu
 							isLazy
 							isOpen={isMenuOpen}
+							placement="left-end"
 							onOpen={onMenuOpen}
 							onClose={onMenuClose}
 						>
-							<IconButton
+							<MenuButton
+								as={IconButton}
 								aria-label="Change language"
 								icon={<HiOutlineTranslate/>}
 								onClick={onMenuOpen}
@@ -164,7 +165,7 @@ const Index: NextPage<unknown> = () => {
 								</MenuItem>
 							</MenuList>
 						</Menu>
-					</Stack>
+					</div>
 					<Stack spacing={5}>
 						<Stack alignItems="center" spacing={3}>
 							<Avatar name={info.name} src="images/pizza.jpg" size="2xl" draggable={false}>
@@ -224,7 +225,9 @@ const Index: NextPage<unknown> = () => {
 													colorScheme="blue"
 													width="100%"
 													isDisabled={!deliveryHours || deliveryHours.length === 0}
-													onClick={() => {
+													onClick={async () => {
+														const {merge} = await import('../utils/merge');
+
 														setCart(previous => ({
 															items: merge(previous.items, {name: item.name, type: element.type, price: element.price, quantity: 1}),
 															total: previous.total + element.price

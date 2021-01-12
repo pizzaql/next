@@ -1,30 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
-import Router from 'next/router';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 import {RecoilRoot} from 'recoil';
 import {Global, css} from '@emotion/react';
 import {ChakraProvider} from '@chakra-ui/react';
-import debounce from 'lodash.debounce';
-import nprogress from 'nprogress';
 
 import {_cart, CartState} from '../lib/recoil-atoms';
 import StateSaver from '../components/state-saver';
 import info from '../lib/info';
-
-// Only show nprogress after 500ms (slow loading)
-const start = debounce(nprogress.start, 500);
-Router.events.on('routeChangeStart', start);
-Router.events.on('routeChangeComplete', () => {
-	start.cancel();
-	nprogress.done();
-	window.scrollTo(0, 0);
-});
-Router.events.on('routeChangeError', () => {
-	start.cancel();
-	nprogress.done();
-});
 
 const client = new ApolloClient({
 	uri: process.env.SERVER_URL,
